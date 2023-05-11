@@ -7,6 +7,6 @@ public class Start : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("Operation explanation");
     }
 }
