@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Misima/Screen/TitleScene.unity
+    guid: 1cdfa7d96e8b4854bb7b43e89eb3ace6
+  - enabled: 1
+    path: Assets/Misima/Screen/TestScene.unity
+    guid: 82e409470e78ca74a8fcc2197c7a92c4
   m_configObjects: {}
