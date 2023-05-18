@@ -5,12 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Test : MonoBehaviour
 {
-     void Update()
+    private void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("Operation explanation");
+            SceneManager.LoadScene("Mein");
         }
     }
 }
-
