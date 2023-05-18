@@ -9,12 +9,9 @@ EditorBuildSettings:
     path: Assets/Misima/Screen/TitleScene.unity
     guid: 1cdfa7d96e8b4854bb7b43e89eb3ace6
   - enabled: 1
-    path: Assets/Misima/Screen/SelectScene.unity
-    guid: c9f878abae726fc4298079adf9b9f1c6
+    path: Assets/Misima/Screen/TestScene.unity
+    guid: 82e409470e78ca74a8fcc2197c7a92c4
   - enabled: 1
     path: Assets/Misima/Screen/Operation explanation.unity
     guid: 29b8f88ca0a7fd8439680332fd63e1c7
-  - enabled: 1
-    path: Assets/Misima/Screen/TestScene.unity
-    guid: 82e409470e78ca74a8fcc2197c7a92c4
   m_configObjects: {}

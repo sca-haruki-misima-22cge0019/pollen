@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SelectYES : MonoBehaviour
 {
-    public void OnClickNextButton() 
+    public void OnClickstartButton() 
     {
-        SceneManager.LoadScene("Operation explanation");
+        SceneManager.LoadScene("TestScene");
     }
 }
