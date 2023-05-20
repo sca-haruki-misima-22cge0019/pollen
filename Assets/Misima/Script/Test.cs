@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Operation : MonoBehaviour
+public class Test : MonoBehaviour
 {
-     void Update()
+    private void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("TestScene");
+            SceneManager.LoadScene("Mein");
         }
     }
 }
-

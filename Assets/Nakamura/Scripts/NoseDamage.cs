@@ -16,11 +16,11 @@ public class NoseDamage : MonoBehaviour
     {
         if (Nose.enbl)
         {
-            anim.SetBool("DamageBl", false);
+            anim.SetBool("DamageBl", true);
         }
         else
         {
-            anim.SetBool("DamageBl", true);
+            anim.SetBool("DamageBl", false);
         }
     }
 

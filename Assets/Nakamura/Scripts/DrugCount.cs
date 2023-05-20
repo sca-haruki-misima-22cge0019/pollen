@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class ScoreCount : MonoBehaviour
+public class DrugCount : MonoBehaviour
 {
-    [SerializeField] GameObject ScoreObject;
-    private int score = 0;
+    [SerializeField] GameObject DrugObject;
+    private int drug = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +16,7 @@ public class ScoreCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Text ScoreText = ScoreObject.GetComponent<Text>();
-        ScoreText.text = "Score:" + score;
+        Text DrugText = DrugObject.GetComponent<Text>();
+        DrugText.text = "Žc‚è" + drug+"ƒR";
     }
 }

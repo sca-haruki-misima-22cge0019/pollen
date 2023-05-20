@@ -1,13 +1,11 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-
-public class ScoreCount : MonoBehaviour
+public class ShotCre : MonoBehaviour
 {
-    [SerializeField] GameObject ScoreObject;
-    private int score = 0;
+    [SerializeField] GameObject Shot;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +15,10 @@ public class ScoreCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Text ScoreText = ScoreObject.GetComponent<Text>();
-        ScoreText.text = "Score:" + score;
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Instantiate(Shot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
+        }
+            
     }
 }
