@@ -5,23 +5,27 @@ using UnityEngine.EventSystems;
 
 public class IgnoreScreen : MonoBehaviour
 {
-    private void Start()
-    {
+    void Start() {
+        //EventTriggerコンポーネントを取得
         EventTrigger eventTrigger = gameObject.GetComponent<EventTrigger>();
 
+        //イベントの設定に入る
         EventTrigger.Entry entry = new EventTrigger.Entry();
 
+        //PointerDown(押した瞬間に実行する)イベントタイプを設定
         entry.eventID = EventTriggerType.PointerDown;
 
-        entry.callback.AddListener((x) =>
+        //関数を設定
+        entry.callback.AddListener((x) => 
         {
             Trigger();
         });
 
+        //イベントの設定をEventTriggerに反映
         eventTrigger.triggers.Add(entry);
     }
 
-    public void Trigger()
+    public void Trigger() 
     {
         Debug.Log("Trigger");
     }
