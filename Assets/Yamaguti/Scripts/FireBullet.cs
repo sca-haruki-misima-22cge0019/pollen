@@ -40,12 +40,12 @@ public class FireBullet : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Rotate(0, 0, 0.02f);
+            transform.Rotate(0, 0, 0.2f);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Rotate(0, 0, -0.02f);
+            transform.Rotate(0, 0, -0.2f);
         }
     }
     /// <summary>
