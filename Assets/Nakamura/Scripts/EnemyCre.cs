@@ -21,8 +21,8 @@ public class EnemyCre : MonoBehaviour
     void Update()
     {
         //Debug.Log(time3);
-        
-        time += Time.deltaTime;
+
+        /*time += Time.deltaTime;
 
        float quantity = 0.3f;
         if (quantity <= time)//0.3秒ごとにランダムな値を出し、その値の回数分敵を生成する
@@ -51,14 +51,16 @@ public class EnemyCre : MonoBehaviour
                 Cre();
             }
             time3 = 0.0f;
-        }
-        
+        }*/
 
     }
+
+
     void Cre()
     {
         X = Random.Range(9.6f, 14.0f);
         Y = Random.Range(-4.5f, 4.5f);
         Instantiate(enemy, new Vector3(X, Y), Quaternion.identity);
     }
+        
 }

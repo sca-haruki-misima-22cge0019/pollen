@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 98bbc7b399a95c443a4d974d8b7da8da
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bai Jamjuree ExtraLight
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8604cf673ac108d449d12ca7034646e2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

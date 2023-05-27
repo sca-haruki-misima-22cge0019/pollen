@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShotCre : MonoBehaviour
 {
     [SerializeField] GameObject Shot;
+    [SerializeField] GameObject superShot;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,10 @@ public class ShotCre : MonoBehaviour
         {
             Instantiate(Shot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
         }
-            
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Instantiate(superShot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
+        }
     }
 }

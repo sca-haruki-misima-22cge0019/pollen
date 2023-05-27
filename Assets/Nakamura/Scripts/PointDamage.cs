@@ -2,25 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Barrier : MonoBehaviour
+public class PointDamage : MonoBehaviour
 {
+    public static bool Damage = false;
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-            
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "SuperDrug")
+        if (other.gameObject.tag == "Drug")
         {
-            other.gameObject.SetActive(false);
+            Damage = true;
         }
     }
 }

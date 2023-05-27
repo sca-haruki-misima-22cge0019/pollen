@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2269257198009297785}
   - component: {fileID: 2269257198009297784}
   - component: {fileID: 2269257198009297782}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shot
-  m_TagString: SuperDrug
+  m_TagString: Drug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
