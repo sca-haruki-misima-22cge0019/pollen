@@ -2010,7 +2010,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u82B1\u7C89\u3078\u306E\u9006\u8972"
+  m_Text: Hey Fever
 --- !u!222 &1721732168
 CanvasRenderer:
   m_ObjectHideFlags: 0
