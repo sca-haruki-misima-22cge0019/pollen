@@ -1,18 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public class enemy : MonoBehaviour
 {
-    [SerializeField]
-    [Tooltip("í«Ç¢Ç©ÇØÇÈëŒè€")]
-    private GameObject player;
-
-    private NavMeshAgent navMeshAgent;
-
-    public float speed = 3;
+    private GameObject target;
+    public float speed = 1;
     public enum ENEMY_TYPE
     {
         LINE,//Ç‹Ç¡Ç∑ÇÆêiÇﬁ
@@ -28,7 +21,7 @@ public class enemy : MonoBehaviour
     void Start()
     {
         centerY = transform.position.y;
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        target = GameObject.Find("Nose");
     }
 
     // Update is called once per frame
@@ -50,7 +43,8 @@ public class enemy : MonoBehaviour
 
         if (type == ENEMY_TYPE.TRACKING)
         {
-            navMeshAgent.destination = player.transform.position;
+            transform.LookAt(target.transform);
+            transform.position += transform.forward * speed;
         }
     }
 }
