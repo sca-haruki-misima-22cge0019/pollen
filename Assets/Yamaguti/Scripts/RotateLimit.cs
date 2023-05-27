@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class RotateLimit : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("最小角度(-180～180")]
@@ -26,7 +26,7 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         // 左右キーの入力を取得
-        float horizontal = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxis("Vertical");
         // 現在のGameObjectのY軸方向の角度を取得
         float currentYAngle = transform.eulerAngles.z;
         // 現在の角度が180より大きい場合

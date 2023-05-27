@@ -16,12 +16,13 @@ public class FireBullet : MonoBehaviour
     [Tooltip("弾の速さ")]
     private float speed = 30f;
 
+
     public int Numberbullet = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class FireBullet : MonoBehaviour
             Numberbullet = 10;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        /*if (Input.GetKey(KeyCode.W))
         {
             transform.Rotate(0, 0, 0.2f);
         }
@@ -46,7 +47,7 @@ public class FireBullet : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             transform.Rotate(0, 0, -0.2f);
-        }
+        }*/
     }
     /// <summary>
 	/// 弾の発射
@@ -64,7 +65,7 @@ public class FireBullet : MonoBehaviour
         // 出現させたボールの名前を"bullet"に変更
         newBall.name = bullet.name;
         // 出現させたボールを0.8秒後に消す
-        Destroy(newBall, 0.8f);
+        //Destroy(newBall, 0.8f);
         Numberbullet -= 1;
 
     }

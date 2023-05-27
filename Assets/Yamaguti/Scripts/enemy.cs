@@ -1,14 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class enemy : MonoBehaviour
 {
+    [SerializeField]
+    [Tooltip("追いかける対象")]
+    private GameObject player;
+
+    private NavMeshAgent navMeshAgent;
+
     public float speed = 3;
     public enum ENEMY_TYPE
     {
         LINE,//まっすぐ進む
-        CURVE//上下にカーブ
+        CURVE,//上下にカーブ
+        TRACKING
     }
     public ENEMY_TYPE type = ENEMY_TYPE.CURVE;
     public float cycleCount = 1;    // １秒間に往復する回数
@@ -19,6 +28,7 @@ public class enemy : MonoBehaviour
     void Start()
     {
         centerY = transform.position.y;
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -37,5 +47,10 @@ public class enemy : MonoBehaviour
         pos += -transform.right * speed * Time.fixedDeltaTime;
 
         transform.position = pos;
+
+        if (type == ENEMY_TYPE.TRACKING)
+        {
+            navMeshAgent.destination = player.transform.position;
+        }
     }
 }
