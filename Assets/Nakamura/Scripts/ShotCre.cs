@@ -21,9 +21,10 @@ public class ShotCre : MonoBehaviour
             Instantiate(Shot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             Instantiate(superShot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
         }
     }
+
 }
