@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Border
   - Bullet
+  - Drug
+  - BarrierPoint
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
