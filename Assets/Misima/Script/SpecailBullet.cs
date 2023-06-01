@@ -12,7 +12,7 @@ public class SpecailBullet : MonoBehaviour
         Invoke("SelfDestroy",30.0f);
 
         sphereObject.SetActive(false);
-        Invoke("SphereSet", 1.0f);
+        Invoke("SphereSet", 10.0f);
     }
     // Update is called once per frame
     void Update()
