@@ -422,6 +422,7 @@ GameObject:
   - component: {fileID: 2059612184}
   - component: {fileID: 2059612183}
   - component: {fileID: 2059612187}
+  - component: {fileID: 2059612188}
   m_Layer: 0
   m_Name: Specail
   m_TagString: Untagged
@@ -518,3 +519,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereObject: {fileID: 2059612182}
+--- !u!114 &2059612188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059612182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6563b0531069c4f43872e03eaac43cec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
