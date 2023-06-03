@@ -28,10 +28,5 @@ public class EnemyPos : MonoBehaviour
             EnemyCre.ScreenEnemy--;
             small = false;
         }
-
-        if (this.transform.position.x <= smaX)
-        {
-            this.gameObject.SetActive(false);
-        }
     }
 }

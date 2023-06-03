@@ -39,7 +39,7 @@ public class Nose : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             damageWall.SetActive(true);
-            collision.gameObject.SetActive(false);
+            Destroy(collision.gameObject);
             stop=true;
             Time.timeScale = 0;
         }   

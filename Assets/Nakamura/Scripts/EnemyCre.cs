@@ -22,7 +22,7 @@ public class EnemyCre : MonoBehaviour
     {
         //Debug.Log(time3);
 
-        /*time += Time.deltaTime;
+       time += Time.deltaTime;
 
        float quantity = 0.3f;
         if (quantity <= time)//0.3秒ごとにランダムな値を出し、その値の回数分敵を生成する
@@ -51,7 +51,7 @@ public class EnemyCre : MonoBehaviour
                 Cre();
             }
             time3 = 0.0f;
-        }*/
+        }
 
     }
 
