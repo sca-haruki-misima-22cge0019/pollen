@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DrugCount : MonoBehaviour
 {
@@ -29,6 +30,11 @@ public class DrugCount : MonoBehaviour
         if(Bos.transform.position.x <6.0f)
         {
             speed = 0.0f;
+        }
+
+        if(drug == 0)
+        {
+            SceneManager.LoadScene("ClearScene1");
         }
     }
 }

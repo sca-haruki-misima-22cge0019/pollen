@@ -6,6 +6,7 @@ public class Warning2 : MonoBehaviour
 {
     [SerializeField]GameObject Warning2nd;
     private Animator anim;
+    private bool scale = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,11 @@ public class Warning2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if(this.gameObject.transform.localScale == new Vector3(0.8f, 0.8f, 1.0f))
+        {
+            scale= true;
+        }
+        if (Input.GetKeyDown(KeyCode.Return) && scale)
         {
             this.gameObject.SetActive(false);
             anim.SetBool("WarningBL", true);
