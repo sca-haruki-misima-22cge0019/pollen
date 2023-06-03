@@ -22,12 +22,13 @@ public class ShotCre : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            drug--;
+
             if (drug == 0)
             {
                 drug = 10;
             }
-            drug--;
-            
+
             Instantiate(Shot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
         }
         Drug.sprite = DrugList[drug];

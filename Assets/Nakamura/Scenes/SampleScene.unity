@@ -772,6 +772,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shot: {fileID: 2269257198009297789, guid: 3085e91355a7b4141824c5ef14abfd19, type: 3}
   superShot: {fileID: 3078953851396727196, guid: 4d3a284f757f77c4190c57036d9916d8, type: 3}
+  Drug: {fileID: 0}
+  DrugList: []
 --- !u!1 &617686125
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300fc2f7651bf424b90c9f4d994c81e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageWall: {fileID: 0}
 --- !u!61 &617686129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1602,6 +1605,7 @@ MonoBehaviour:
   slider: {fileID: 28736534}
   Barrier: {fileID: 1630997943}
   BarrierHP: {fileID: 1043306785}
+  BosHp: {fileID: 0}
 --- !u!4 &1158606117
 Transform:
   m_ObjectHideFlags: 0
@@ -2747,7 +2751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrugObject: {fileID: 2043163465}
-  Bos: {fileID: 1841818977}
+  drug: 0
 --- !u!114 &2043163468
 MonoBehaviour:
   m_ObjectHideFlags: 0
