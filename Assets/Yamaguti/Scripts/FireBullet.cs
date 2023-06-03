@@ -16,8 +16,8 @@ public class FireBullet : MonoBehaviour
     [Tooltip("’e‚Ì‘¬‚³")]
     private float speed = 30f;
 
-
     public int Numberbullet = 10;
+
 
     // Start is called before the first frame update
     void Start()
