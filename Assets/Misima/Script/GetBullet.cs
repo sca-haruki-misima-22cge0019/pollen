@@ -25,7 +25,7 @@ public class GetBullet : MonoBehaviour
     {
         if(count >= 2)
         {
-            SceneManager.LoadScene("GameClearScene");
+            SceneManager.LoadScene("GameClearSceneStage1");
         }
     }
     // Update is called once per frame
