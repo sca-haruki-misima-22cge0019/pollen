@@ -10,6 +10,8 @@ TagManager:
   - Bullet
   - Drug
   - BarrierPoint
+  - Barrier
+  - SpecailBullet
   layers:
   - Default
   - TransparentFX
