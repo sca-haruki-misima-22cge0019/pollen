@@ -12,7 +12,7 @@ public class ScoreC: MonoBehaviour
 
     // ‰Šú‰»
     void Start() {
-        score_num = PlayerPrefs.GetInt("SCOER", 0);
+        score_num = PlayerPrefs.GetInt("SCORE", 0);
 
     }
     // XV

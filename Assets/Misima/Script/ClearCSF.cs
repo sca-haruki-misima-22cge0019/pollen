@@ -4,18 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ClearCS2 : MonoBehaviour
+public class ClearCSF : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start() 
+    void Start()
     {
-
+        
     }
+
     // Update is called once per frame
-    void Update() {
-        if(Input.GetMouseButtonDown(0))
+    void Update()
+    {
+        if(Input.GetMouseButtonDown(0)) 
         {
-            SceneManager.LoadScene("Bos");
+            SceneManager.LoadScene("TitleScene");
         }
     }
 }

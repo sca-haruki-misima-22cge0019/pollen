@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nakamura/Scenes/Stage2.unity
     guid: ac98ca68549d1924f825573b76b97b10
+  - enabled: 1
+    path: Assets/Nakamura/Scenes/Bos.unity
+    guid: 370f890b634b9a44f8c73b50fd24b517
+  - enabled: 1
+    path: Assets/Misima/Screen/GameClearSceneFinal.unity
+    guid: fd1b21dc0ea7ce246bd9521c480be6ab
   m_configObjects: {}
