@@ -8,19 +8,19 @@ public class ScoreC: MonoBehaviour
 {
 
     public GameObject score_object = null; // Textオブジェクト
-    public int score_num = 0; // スコア変数
+    public int score = 0; // スコア変数
 
     // 初期化
     void Start() {
-        score_num = PlayerPrefs.GetInt("SCORE", 0);
-
+        score = PlayerPrefs.GetInt("SCORE", 0);
     }
+
     // 更新
     void Update() {
         // オブジェクトからTextコンポーネントを取得
         Text score_text = score_object.GetComponent<Text>();
         // テキストの表示を入れ替える
-        score_text.text = "Score:" + score_num;
+        score_text.text = "Score:" + score;
         
     }
 }
