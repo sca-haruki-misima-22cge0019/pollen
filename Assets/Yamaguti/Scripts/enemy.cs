@@ -22,6 +22,9 @@ public class enemy : MonoBehaviour
     {
         centerY = transform.position.y;
         target = GameObject.Find("Nose");
+
+        int test1 = LayerMask.NameToLayer("Enemy");
+        Physics.IgnoreLayerCollision(test1, test1);
     }
 
     // Update is called once per frame

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletDestroy : MonoBehaviour
 {
+    public int energy = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,14 @@ public class BulletDestroy : MonoBehaviour
         if(transform.position.x >= 45)
         {
             Destroy(gameObject);
+        }
+    }
+    void OnTrigerEnter(Collider collider) 
+    {
+        if(collider.gameObject.tag == "Enemy") {
+            if(energy <= 0) {
+                Destroy(gameObject);
+            }
         }
     }
 }
