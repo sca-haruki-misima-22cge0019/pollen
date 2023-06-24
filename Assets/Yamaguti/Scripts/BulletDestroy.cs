@@ -19,7 +19,7 @@ public class BulletDestroy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void OnTriggerEnter(Collider collider) 
+    void OnTriggerEnter2D(Collider2D collider) 
     {
         if(collider.gameObject.tag == "Enemy") {
             //if(energy <= 0) {

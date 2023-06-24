@@ -61,13 +61,13 @@ public class FireBullet : MonoBehaviour
     private void LauncherShot()
     {
         // 弾を発射する場所を取得
-        Vector3 bulletPosition = firingPoint.transform.position;
+        Vector2 bulletPosition = firingPoint.transform.position;
         // 上で取得した場所に、"bullet"のPrefabを出現させる
         GameObject newBall = Instantiate(bullet, bulletPosition, transform.rotation);
         // 出現させたボールのright(x軸方向)
-        Vector3 direction = newBall.transform.right;
+        Vector2 direction = newBall.transform.right;
         // 弾の発射方向にnewBallのx方向(ローカル座標)を入れ、弾オブジェクトのrigidbodyに衝撃力を加える
-        newBall.GetComponent<Rigidbody>().AddForce(direction * speed, ForceMode.Impulse);
+        newBall.GetComponent<Rigidbody2D>().AddForce(direction * speed, ForceMode2D.Impulse);
         // 出現させたボールの名前を"bullet"に変更
         newBall.name = bullet.name;
         // 出現させたボールを0.8秒後に消す
