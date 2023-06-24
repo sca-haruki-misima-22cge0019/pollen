@@ -50,13 +50,6 @@ public class SceneImage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            SceneManager.LoadScene("Stage2");
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            SceneManager.LoadScene("Bos");
-        }
+
     }
 }

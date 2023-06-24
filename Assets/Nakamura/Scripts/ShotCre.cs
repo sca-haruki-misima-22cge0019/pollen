@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShotCre : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ShotCre : MonoBehaviour
     [SerializeField] GameObject DrugCount;
     public List<Sprite> DrugList = new List<Sprite>();
     private int drug = 10;
+    public static int superdrug = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,8 +38,9 @@ public class ShotCre : MonoBehaviour
         }
         Drug.sprite = DrugList[drug];
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (SceneManager.GetActiveScene().name == "Bos" && Input.GetKeyDown(KeyCode.M))
         {
+            superdrug--;
             Instantiate(superShot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
         }
     }
