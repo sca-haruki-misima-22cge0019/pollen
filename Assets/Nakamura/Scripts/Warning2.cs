@@ -18,7 +18,7 @@ public class Warning2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.gameObject.transform.localScale == new Vector3(0.8f, 0.8f, 1.0f))
+        if(this.gameObject.transform.localScale == new Vector3(1.0f, 1.0f, 1.0f))
         {
             scale= true;
         }

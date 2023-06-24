@@ -23,7 +23,22 @@ public class WarningTitle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timecount)
+        if(PoseSelect.workingNo)
+        {
+            backanim.SetBool("WarningBL", false);
+            PoseSelect.workingNo = false;
+        }
+
+        if(PoseSelect.workingYes)
+        {
+            Titleback.SetActive(true);
+            titleanim.SetBool("TitleBL", true);
+            timecount = true;
+            PoseSelect.workingYes = false;
+        }
+
+
+        if (timecount)
         {
             time += Time.deltaTime + Time.unscaledDeltaTime;
             Debug.Log(time);
@@ -32,18 +47,5 @@ public class WarningTitle : MonoBehaviour
                 SceneManager.LoadScene("Title");
             }
         }
-    }
-
-   
-    public void back()
-    {
-        backanim.SetBool("WarningBL", false);
-    }
-
-    public void title()
-    {
-        Titleback.SetActive(true);
-        titleanim.SetBool("TitleBL", true);
-        timecount = true;   
     }
 }

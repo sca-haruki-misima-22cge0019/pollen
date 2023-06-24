@@ -20,11 +20,26 @@ public class DrugCount : MonoBehaviour
     void Update()
     {
         Text DrugText = DrugObject.GetComponent<Text>();
-        DrugText.text = "‚ ‚Æ" + drug+"ƒR";
+        DrugText.text = drug.ToString();
 
-        if(drug == 0)
+        if (SceneManager.GetActiveScene().name == "Stage1" && drug==0)
         {
-            SceneManager.LoadScene("ClearScene1");
+            SceneManager.LoadScene("GameClearSceneStage1");
+        }
+        if (SceneManager.GetActiveScene().name == "Stage2" && drug == 0)
+        {
+            SceneManager.LoadScene("GameClearSceneStage2");
+        }
+
+        if (SceneManager.GetActiveScene().name == "Bos" && drug == 0)
+        {
+            float time =0.0f;
+            time +=Time.deltaTime;
+            if(time >=3.0f)
+            {
+                SceneManager.LoadScene("GameOverScene");
+            }
+            
         }
     }
 }

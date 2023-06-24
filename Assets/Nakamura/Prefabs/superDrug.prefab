@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3078953851396727193}
   - component: {fileID: 3078953851396727191}
   - component: {fileID: 5172192564850895060}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: superDrug
   m_TagString: SuperDrug
   m_Icon: {fileID: 0}

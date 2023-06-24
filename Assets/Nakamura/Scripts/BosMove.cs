@@ -16,7 +16,7 @@ public class BosMove : MonoBehaviour
     void Update()
     {
         this.gameObject.transform.position -= new Vector3(Time.deltaTime * speed, 0.0f);
-        if (this.gameObject.transform.position.x < 6.0f)
+        if (this.gameObject.transform.position.x < 6.7f)
         {
             speed = 0.0f;
         }

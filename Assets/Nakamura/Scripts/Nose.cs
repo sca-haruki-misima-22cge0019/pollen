@@ -5,6 +5,7 @@ using UnityEngine;
 public class Nose : MonoBehaviour
 {
     [SerializeField]GameObject damageWall;
+    [SerializeField] GameObject Pose;
     private bool stop;
     private float time ;
     private Animator anim;
@@ -12,18 +13,20 @@ public class Nose : MonoBehaviour
     void Start()
     {
         anim = damageWall.GetComponent<Animator>();
-        anim.updateMode = AnimatorUpdateMode.UnscaledTime;
         stop = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(stop)
+        if (stop && Pose.activeSelf == false)
         {
+            anim.updateMode = AnimatorUpdateMode.UnscaledTime;
             time += Time.unscaledDeltaTime;
+            
             anim.SetBool("DamageBL", true);
-            if (time >=1.0f)
+
+            if (time >=1.0f && Pose.activeSelf == false)
             {
                 Time.timeScale = 1;
                 damageWall.SetActive(false);
@@ -31,6 +34,16 @@ public class Nose : MonoBehaviour
                 time =0;
                 stop = false;
             }
+        }
+
+        if (Pose.activeSelf == true)
+        {
+            anim.speed = 0.0f;
+
+        }
+        else
+        {
+            anim.speed = 1.0f;
         }
     }
 
@@ -40,7 +53,7 @@ public class Nose : MonoBehaviour
         {
             damageWall.SetActive(true);
             Destroy(collision.gameObject);
-            stop=true;
+            stop = true;
             Time.timeScale = 0;
         }   
     }
