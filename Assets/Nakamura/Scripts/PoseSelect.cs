@@ -13,9 +13,13 @@ public class PoseSelect : MonoBehaviour
     public List<GameObject> Buttonselect2 = new List<GameObject>();
     public List<Sprite> WhiteImageselect2 = new List<Sprite>();
     public List<Sprite> Imageselect2 = new List<Sprite>();
-    private Animator anim;
+    private Animator warninganim;
+    private Animator explanim;
+    private Animator explanim2;
     [SerializeField] GameObject warning;
     [SerializeField] GameObject warningPanel;
+    [SerializeField] GameObject expl;
+    [SerializeField] GameObject expl2;
     private int select = 0;
     private int select2 = 0;
     public static bool workingNo = false;
@@ -23,8 +27,14 @@ public class PoseSelect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = warning.GetComponent<Animator>();
-        anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+        warninganim = warning.GetComponent<Animator>();
+        warninganim.updateMode = AnimatorUpdateMode.UnscaledTime;
+        explanim = expl.GetComponent<Animator>();
+        explanim.updateMode = AnimatorUpdateMode.UnscaledTime;
+        expl.SetActive(false);
+        explanim2 = expl2.GetComponent<Animator>();
+        explanim2.updateMode = AnimatorUpdateMode.UnscaledTime;
+        expl2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -54,17 +64,32 @@ public class PoseSelect : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                if (select == 0)
+                Debug.Log(expl.transform.localScale);
+                /*if (select == 0)
                 {
-                    Debug.Log("Setumei");
-                }
-                else if (select == 1)
+                    expl.SetActive(true);
+                    explanim.SetBool("ExplBL", true);
+                    if(Input.GetKeyDown(KeyCode.Return) && expl.transform.localScale == new Vector3(12, 7, 1))
+                    {
+                        expl.SetActive(false);
+                        explanim.SetBool("ExplBL", false);
+                        expl2.SetActive(true);
+                        explanim2.SetBool("ExplBL", true);
+                        Debug.Log("SD");
+                    }
+                    if (Input.GetKeyDown(KeyCode.Return) && expl2.transform.localScale == new Vector3(12, 7, 1))
+                    {
+                        expl2.SetActive(false);
+                        explanim2.SetBool("ExplBL", false);
+                    }
+                }*/
+                if (select == 1)
                 {
                     warning.transform.localScale = new Vector3(0, 0, 0);
                     warning.SetActive(true);
-                    anim.SetBool("WarningBL", true);
+                    warninganim.SetBool("WarningBL", true);
                 }
-                else
+                else if (select == 2)
                 {
                     Time.timeScale = 1;
                     this.gameObject.SetActive(false);
