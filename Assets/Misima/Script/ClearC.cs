@@ -7,17 +7,16 @@ using UnityEngine.UI;
 public class ClearC : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
 
     }
- 
+
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("Stage2");
-        }
+    void Update() {
+
+    }
+    public void OnClickBackButton() {
+        SceneManager.LoadScene("Stage2");
     }
 }
+

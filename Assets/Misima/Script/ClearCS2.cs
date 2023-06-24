@@ -12,10 +12,12 @@ public class ClearCS2 : MonoBehaviour
 
     }
     // Update is called once per frame
-    void Update() {
-        if(Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("Bos");
-        }
+    void Update() 
+    {
+
+    }
+    public void OnClickBackButton() 
+    {
+        SceneManager.LoadScene("Bos");
     }
 }
