@@ -15,10 +15,8 @@ public class ClearCSF : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-    public void OnClickBackButton() 
-    {
-        SceneManager.LoadScene("TitleScene");
+        if(Input.GetKeyDown(KeyCode.Return)) {
+            SceneManager.LoadScene("TitleScene");
+        }
     }
 }
