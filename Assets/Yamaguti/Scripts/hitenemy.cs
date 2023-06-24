@@ -19,9 +19,10 @@ public class hitenemy : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         energy--;
-
+        Debug.Log("energy");
         if (energy <= 0)
         {
+            Debug.Log("Destoy");
             Destroy(gameObject);
         }
     }

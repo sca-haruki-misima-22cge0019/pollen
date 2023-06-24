@@ -20,7 +20,14 @@ public class hit : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         energy--;
+        if (energy == 2)
+        {
 
+        }
+        if (energy == 1)
+        {
+
+        }
         if (energy <= 0)
         {
             SceneManager.LoadScene("GameOverScene");

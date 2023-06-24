@@ -34,7 +34,7 @@ public class FireBullet : MonoBehaviour
             // íeÇî≠éÀÇ∑ÇÈ
             LauncherShot();
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R)&&Numberbullet==0)
         {
             StartCoroutine(Shotwait());
         }
@@ -52,7 +52,7 @@ public class FireBullet : MonoBehaviour
 
     IEnumerator Shotwait()
     {
-        yield return new WaitForSeconds(0.3f);//0.3ïbë“Ç¡ÇƒÇ©ÇÁíe10î≠ï‚è[
+        yield return new WaitForSeconds(0.7f);//0.3ïbë“Ç¡ÇƒÇ©ÇÁíe10î≠ï‚è[
         Numberbullet = 10;
     }
     /// <summary>

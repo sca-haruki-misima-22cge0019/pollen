@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletDestroy : MonoBehaviour
 {
-    public int energy = 1;
+    //public int energy = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,16 +14,19 @@ public class BulletDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x >= 45)
+        Debug.Log("AAA");
+        if (transform.position.x >= 45.0f)
         {
+            //Debug.Log("aaa");
             Destroy(gameObject);
         }
     }
     void OnTriggerEnter2D(Collider2D collider) 
     {
-        if(collider.gameObject.tag == "Enemy") {
+        Debug.Log("tttt");
+        if(collider.gameObject.CompareTag("Enemy")) {
             //if(energy <= 0) {
-                //Debug.Log("AAA");
+                Debug.Log("AAA");
                 Destroy(gameObject);
             //}
         }
