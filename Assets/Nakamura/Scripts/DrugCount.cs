@@ -8,8 +8,8 @@ public class DrugCount : MonoBehaviour
 {
     [SerializeField] GameObject DrugObject;
     public int drug;
+    private float time = 0.0f;
 
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +20,33 @@ public class DrugCount : MonoBehaviour
     void Update()
     {
         Text DrugText = DrugObject.GetComponent<Text>();
-        DrugText.text = "Ç†Ç∆" + drug+"ÉR";
+        DrugText.text = drug.ToString();
 
-        if(drug == 0)
+        if (SceneManager.GetActiveScene().name == "Stage1" && drug==0)
         {
-            SceneManager.LoadScene("ClearScene1");
+            SceneManager.LoadScene("GameClearSceneStage1");
+        }
+        if (SceneManager.GetActiveScene().name == "Stage2" && drug == 0)
+        {
+            SceneManager.LoadScene("GameClearSceneStage2");
+        }
+
+        if (SceneManager.GetActiveScene().name == "Bos")
+        {
+            drug = ShotCre.superdrug;
+            if(drug <=0)
+            {
+                Debug.Log("ASDFG");
+                
+                time += Time.deltaTime;
+                Debug.Log(time);
+                if (time >= 2.0f)
+                {
+                    SceneManager.LoadScene("GameOverScene");
+                }
+            }
+           
+            
         }
     }
 }

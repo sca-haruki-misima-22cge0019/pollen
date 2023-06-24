@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Barrier : MonoBehaviour
 {
+    [SerializeField] GameObject Effect;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class Barrier : MonoBehaviour
     {
         if (other.gameObject.tag == "SuperDrug")
         {
+            Instantiate(Effect,other.gameObject.transform.position, Quaternion.identity);
             other.gameObject.SetActive(false);
         }
     }

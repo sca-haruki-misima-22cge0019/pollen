@@ -3,14 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShotCre : MonoBehaviour
 {
     [SerializeField] GameObject Shot;
     [SerializeField] GameObject superShot;
     [SerializeField] Image Drug;
+    [SerializeField] GameObject DrugCount;
     public List<Sprite> DrugList = new List<Sprite>();
     private int drug = 10;
+    public static int superdrug = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,21 +23,24 @@ public class ShotCre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Time.timeScale != 0&&Input.GetKeyDown(KeyCode.Space))
         {
             drug--;
+           
 
-            if (drug == 0)
+            if (drug == -1)
             {
                 drug = 10;
             }
-
+            Text DrugText = DrugCount.GetComponent<Text>();
+            DrugText.text = drug.ToString();
             Instantiate(Shot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
         }
         Drug.sprite = DrugList[drug];
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (SceneManager.GetActiveScene().name == "Bos" && Input.GetKeyDown(KeyCode.M))
         {
+            superdrug--;
             Instantiate(superShot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
         }
     }

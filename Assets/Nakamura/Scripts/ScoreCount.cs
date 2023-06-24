@@ -31,32 +31,32 @@ public class ScoreCount : MonoBehaviour
         if(score<=9)
         {
 
-            ScoreText.text = "Score:00000" + score;
+            ScoreText.text = "SCORE：00000" + score;
         }
         else if (score <= 99)
         {
 
-            ScoreText.text = "Score:0000" + score;
+            ScoreText.text = "SCORE：0000" + score;
         }
         else if (score <= 999)
         {
 
-            ScoreText.text = "Score:000" + score;
+            ScoreText.text = "SCORE：000" + score;
         }
         else if (score <= 9999)
         {
 
-            ScoreText.text = "Score:00" + score;
+            ScoreText.text = "SCORE：00" + score;
         }
         else if (score <= 99999)
         {
 
-            ScoreText.text = "Score:0" + score;
+            ScoreText.text = "SCORE：0" + score;
         }
         else
         {
 
-            ScoreText.text = "Score:" + score;
+            ScoreText.text = "SCORE：" + score;
         }
 
         
