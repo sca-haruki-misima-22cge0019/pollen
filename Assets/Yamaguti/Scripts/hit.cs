@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class hit : MonoBehaviour
 {
@@ -16,12 +17,13 @@ public class hit : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         energy--;
 
         if (energy <= 0)
         {
+            SceneManager.LoadScene("GameOverScene");
             Destroy(gameObject);
         }
     }
