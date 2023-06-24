@@ -18,7 +18,7 @@ public class FireBullet : MonoBehaviour
 
     public int Numberbullet = 10;
 
-
+    bool flag = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +36,7 @@ public class FireBullet : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Numberbullet = 10;
+            StartCoroutine(Shotwait());
         }
 
         /*if (Input.GetKey(KeyCode.W))
@@ -48,6 +48,12 @@ public class FireBullet : MonoBehaviour
         {
             transform.Rotate(0, 0, -0.2f);
         }*/
+    }
+
+    IEnumerator Shotwait()
+    {
+        yield return new WaitForSeconds(0.3f);//0.3ïbë“Ç¡ÇƒÇ©ÇÁíe10î≠ï‚è[
+        Numberbullet = 10;
     }
     /// <summary>
 	/// íeÇÃî≠éÀ

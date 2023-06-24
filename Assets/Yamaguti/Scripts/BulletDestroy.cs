@@ -19,12 +19,13 @@ public class BulletDestroy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void OnTrigerEnter(Collider collider) 
+    void OnTriggerEnter(Collider collider) 
     {
         if(collider.gameObject.tag == "Enemy") {
-            if(energy <= 0) {
+            //if(energy <= 0) {
+                //Debug.Log("AAA");
                 Destroy(gameObject);
-            }
+            //}
         }
     }
 }
