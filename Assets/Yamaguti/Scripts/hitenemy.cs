@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class hit : MonoBehaviour
+public class hitenemy : MonoBehaviour
 {
     public int energy = 3;
     // Start is called before the first frame update
@@ -20,17 +19,10 @@ public class hit : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         energy--;
-        if (energy == 2)
-        {
-
-        }
-        if (energy == 1)
-        {
-
-        }
+        Debug.Log("energy");
         if (energy <= 0)
         {
-            SceneManager.LoadScene("GameOverScene");
+            Debug.Log("Destoy");
             Destroy(gameObject);
         }
     }

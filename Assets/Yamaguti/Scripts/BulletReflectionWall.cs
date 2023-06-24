@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BulletReflectionWall : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // Triggerで接触したオブジェクトは
         // 全てボールとみなすことにする
-        var rb = other.GetComponent<Rigidbody>();
+        var rb = other.GetComponent<Rigidbody2D>();
         if (rb == null) return;
 
         // 入射ベクトル（速度）
@@ -16,7 +16,7 @@ public class BulletReflectionWall : MonoBehaviour
         // 法線ベクトル
         var inNormal = transform.up;
         // 反射ベクトル（速度）
-        var result = Vector3.Reflect(inDirection, inNormal);
+        var result = Vector2.Reflect(inDirection, inNormal);
 
         // バウンド後の速度をボールに反映
         rb.velocity = result;

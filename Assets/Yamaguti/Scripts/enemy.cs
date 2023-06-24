@@ -23,14 +23,14 @@ public class enemy : MonoBehaviour
         centerY = transform.position.y;
         target = GameObject.Find("Nose");
 
-        int test1 = LayerMask.NameToLayer("Enemy");
-        Physics.IgnoreLayerCollision(test1, test1);
+        //int test1 = LayerMask.NameToLayer("Enemy");
+        //Physics.IgnoreLayerCollision(test1, test1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
+        Vector2 pos = transform.position;
         // è„â∫Ç…ÉJÅ[Éu
         if (type == ENEMY_TYPE.CURVE)
         {
@@ -40,7 +40,7 @@ public class enemy : MonoBehaviour
                 pos.y = Mathf.Sin(cycleRadian) * curveLength + centerY;
             }
         }
-        pos += -transform.right * speed * Time.fixedDeltaTime;
+        pos += new Vector2(-1 * speed * Time.fixedDeltaTime,0);
 
         transform.position = pos;
 
