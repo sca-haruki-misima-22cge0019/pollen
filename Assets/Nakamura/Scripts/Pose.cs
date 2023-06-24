@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Pose : MonoBehaviour
 {
-    [SerializeField]GameObject poseobject;
+    [SerializeField] GameObject poseobject;
     [SerializeField] GameObject warning;
     private Animator anim;
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class Pose : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             poseobject.SetActive(true);
             Time.timeScale = 0;
@@ -35,7 +35,7 @@ public class Pose : MonoBehaviour
     {
         warning.transform.localScale = new Vector3(0, 0, 0);
         warning.SetActive(true);
-        anim.SetBool("WarningBL",true);
+        anim.SetBool("WarningBL", true);
     }
 
     public void GameReturn()
@@ -44,3 +44,4 @@ public class Pose : MonoBehaviour
         poseobject.SetActive(false);
     }
 }
+

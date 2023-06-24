@@ -19,6 +19,7 @@ public class BossHp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hp = 2;
         if(hp <= 0)
         {
             SceneManager.LoadScene("GameClearSceneFinal"); 
