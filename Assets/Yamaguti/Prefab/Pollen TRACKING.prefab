@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2388707419764901255}
   - component: {fileID: 2923833032703537237}
   - component: {fileID: 7118354158652578247}
-  - component: {fileID: 4006855280573165912}
   - component: {fileID: -3646840093208406364}
+  - component: {fileID: -8290800524944658199}
   m_Layer: 6
   m_Name: Pollen TRACKING
   m_TagString: Enemy
@@ -131,19 +131,6 @@ MonoBehaviour:
   type: 2
   cycleCount: 0.05
   curveLength: 2
---- !u!114 &4006855280573165912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3475169752695039973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 561a85da30a0d65449dc3655f1e04221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energy: 1
 --- !u!114 &-3646840093208406364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +143,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1606e180e74ca459df382d48812fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8290800524944658199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3475169752695039973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ec1f34d98ee1d41bddfe41b4058318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energy: 1

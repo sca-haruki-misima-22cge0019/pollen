@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 7400978218612909867}
   - component: {fileID: 7400978218612909868}
   - component: {fileID: 7400978218612909871}
-  - component: {fileID: 7400978218612909865}
   - component: {fileID: -543137649834472884}
   - component: {fileID: -8824449572707316817}
   - component: {fileID: 4735741093750723496}
+  - component: {fileID: -6601781447725103564}
   m_Layer: 6
   m_Name: Pollen LINE
   m_TagString: Enemy
@@ -102,19 +102,6 @@ MonoBehaviour:
   type: 0
   cycleCount: 0.05
   curveLength: 4
---- !u!114 &7400978218612909865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7400978218612909872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 561a85da30a0d65449dc3655f1e04221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energy: 1
 --- !u!114 &-543137649834472884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,3 +151,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &-6601781447725103564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400978218612909872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ec1f34d98ee1d41bddfe41b4058318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energy: 1
