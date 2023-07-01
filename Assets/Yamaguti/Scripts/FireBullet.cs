@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FireBullet : MonoBehaviour
 {
@@ -19,6 +20,13 @@ public class FireBullet : MonoBehaviour
     public int Numberbullet = 10;
 
     bool flag = true;
+
+    [Tooltip("残弾数")]
+    [SerializeField] Image Drug;
+    [Tooltip("残弾")]
+    [SerializeField] GameObject DrugCount;
+    public List<Sprite> DrugList = new List<Sprite>();
+    private int drug = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,16 +36,25 @@ public class FireBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Text DrugText = DrugCount.GetComponent<Text>();
+        DrugText.text = drug.ToString();
         // スペースキーが押されたかを判定
         if (Input.GetKeyDown(KeyCode.Space)&&Numberbullet>0)
         {
             // 弾を発射する
             LauncherShot();
+            if (drug >= 0)
+            {
+                drug--;
+            }
         }
         if (Input.GetKeyDown(KeyCode.R)&&Numberbullet==0)
         {
             StartCoroutine(Shotwait());
+            drug = 10;
         }
+
+        Drug.sprite = DrugList[drug];
 
         /*if (Input.GetKey(KeyCode.W))
         {

@@ -17,6 +17,7 @@ public class enemy : MonoBehaviour
     public float curveLength = 2;   // カーブの最大距離
     float cycleRadian = 0;          // サインに渡す値
     float centerY;                  // Y座標の中心
+
     // Start is called before the first frame update
     void Start()
     {
