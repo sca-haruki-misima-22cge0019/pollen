@@ -15,6 +15,7 @@ TagManager:
   - SuperDrugMove
   - Boost
   - Mask
+  - Nose
   layers:
   - Default
   - TransparentFX

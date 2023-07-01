@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class ShotCre : MonoBehaviour
 {
-    [SerializeField] GameObject Shot;
-    [SerializeField] GameObject superShot;
     [SerializeField] Image Drug;
     [SerializeField] GameObject DrugCount;
     public List<Sprite> DrugList = new List<Sprite>();
@@ -23,26 +21,23 @@ public class ShotCre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Text DrugText = DrugCount.GetComponent<Text>();
+        DrugText.text = drug.ToString();
         if (Time.timeScale != 0&&Input.GetKeyDown(KeyCode.Space))
         {
-            drug--;
-           
-
-            if (drug == -1)
+            if (drug >0)
             {
-                drug = 10;
+                drug --;
             }
-            Text DrugText = DrugCount.GetComponent<Text>();
-            DrugText.text = drug.ToString();
-            Instantiate(Shot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
+
+        }
+
+        if (drug == 0 && Input.GetKeyDown(KeyCode.R))
+        {
+            drug = 10;
+
         }
         Drug.sprite = DrugList[drug];
-
-        if (SceneManager.GetActiveScene().name == "Bos" && Input.GetKeyDown(KeyCode.M))
-        {
-            superdrug--;
-            Instantiate(superShot, new Vector3(-7.8f, 0.0f), Quaternion.identity);
-        }
     }
 
 }

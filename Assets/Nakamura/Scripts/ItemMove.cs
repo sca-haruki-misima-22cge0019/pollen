@@ -20,7 +20,7 @@ public class ItemMove : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Drug")
+        if (other.gameObject.tag == "Drug" || other.gameObject.tag =="Nose")
         {
             this.gameObject.SetActive(false);
         }

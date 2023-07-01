@@ -2771,7 +2771,7 @@ GameObject:
   - component: {fileID: 1244393965}
   m_Layer: 0
   m_Name: Nose
-  m_TagString: Untagged
+  m_TagString: Nose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3626,13 +3626,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535422337}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d6d9aec0dcbe1b439ca8e0c8dc149d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shot: {fileID: 2269257198009297789, guid: 3085e91355a7b4141824c5ef14abfd19, type: 3}
-  superShot: {fileID: 3078953851396727196, guid: 4d3a284f757f77c4190c57036d9916d8, type: 3}
   Drug: {fileID: 694948309}
   DrugCount: {fileID: 494478333}
   DrugList:
@@ -3662,6 +3660,7 @@ MonoBehaviour:
   Itemselect:
   - {fileID: 8514296169995873671, guid: 933763ccd8ff0814ba5b0b91f5e85155, type: 3}
   - {fileID: 1424960972918974640, guid: 5fabcafbff7304c44bdee62c4e421cad, type: 3}
+  - {fileID: 883222760781395253, guid: 458712169afb1b040911ce8dcd5d7cf3, type: 3}
 --- !u!114 &1535422341
 MonoBehaviour:
   m_ObjectHideFlags: 0
