@@ -24,6 +24,7 @@ public class Warning2 : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Return) && scale)
         {
+            this.gameObject.transform.localScale = new Vector3(0.0f, 0.0f, 0.0f);
             this.gameObject.SetActive(false);
             anim.SetBool("WarningBL", true);
         }

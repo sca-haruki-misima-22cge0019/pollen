@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BarrierPoint : MonoBehaviour
 {
@@ -9,20 +10,21 @@ public class BarrierPoint : MonoBehaviour
     public List<GameObject> oriList = new List<GameObject>();
 
     private int rnd;
-    private int hp;
+    private  int hp;
     private int maxhp = 8;
-    //private bool bar;
-   // private float fadetime = 0.3f; 
+    private float nowhp;
     [SerializeField] Slider slider;
     [SerializeField] GameObject Barrier;
     [SerializeField] CanvasGroup BarrierBar;
     [SerializeField] GameObject BosHp;
     private Animator BarrierFlashanim;
+    private Animator Baranim;
     // Start is called before the first frame update
     void Start()
     {
         
         BarrierFlashanim = Barrier.GetComponent<Animator>();
+        Baranim = slider.GetComponent<Animator>();
         Invoke("firstpoint",4.0f);
         slider.value = 1;
         hp = maxhp;
@@ -32,11 +34,16 @@ public class BarrierPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            PointDamage.Damage = true;
+            Debug.Log("LL");
+            hp = 0;
+        }
         //Debug.Log(i);
         if (PointDamage.Damage)
         {
-            hp--;
-            slider.value = (float)hp / (float)maxhp;
+            StartCoroutine(DecreaseHPAnimation(maxhp, --hp));
 
             BarrierFlashanim.SetBool("BarrierBL",true);
 
@@ -45,25 +52,25 @@ public class BarrierPoint : MonoBehaviour
             Invoke("Flash",1.0f);
             PointDamage.Damage = false;   
         }
-        /*if(bar)
-        {
-            Invoke("fade",1.0f);
-            
-            Debug.Log(BarrierBar.alpha);
-            if(BarrierBar.alpha <= 0.0f)
-            {
-                bar = false;
-            }
-        }*/
         
     }
 
-    void fade()
+    IEnumerator DecreaseHPAnimation(int oldHP, int newHP)
     {
-        BarrierBar.alpha -= 0.01f;
+        nowhp = (float)newHP / (float)oldHP;
+        Debug.Log(nowhp);
+        while (slider.value >= nowhp)
+        {
+            slider.value -= 0.001f;
+            yield return null;
+        }
+
+        Debug.Log(slider.value);
     }
+
     void firstpoint()
     {
+        Baranim.SetBool("BarBL", true);
         rnd = Random.Range(0, hp);
         nowList[rnd].gameObject.SetActive(true);
     }
@@ -71,42 +78,33 @@ public class BarrierPoint : MonoBehaviour
     {
         if (hp <= 0)
         {
-            Barrier.SetActive(false);
-            BosHp.SetActive(true);
+            Baranim.SetBool("BarDownBL", true);
             nowList.AddRange(oriList);
-            hp = maxhp;
-            slider.value = 1;
-            PointDamage.Damage = false;
-
-
-            /*bar = true;
-            if(!bar)
-            {
-                Barrier.SetActive(false);
-                BosHp.SetActive(true);
-                nowList.AddRange(oriList);
-                hp = maxhp;
-                slider.value = 1;
-                PointDamage.Damage = false;
-
-
-                rnd = Random.Range(0, hp);
-                nowList[rnd].gameObject.SetActive(true);
-                BarrierFlashanim.SetBool("BarrierBL", false);
-            }*/
-
+            Invoke("Down", 1.0f);
         }
-        /*else
+        else
         {
             rnd = Random.Range(0, hp);
             nowList[rnd].gameObject.SetActive(true);
 
             BarrierFlashanim.SetBool("BarrierBL", false);
-        }*/
+        }
+
+    }
+
+    void Down()
+    {
+        Baranim.SetBool("BarBL", false);
+        Baranim.SetBool("BarDownBL", false);
+        Barrier.SetActive(false);
+        BosHp.SetActive(true);
+        hp = maxhp;
+        slider.value = 1;
+        PointDamage.Damage = false;
+
         rnd = Random.Range(0, hp);
         nowList[rnd].gameObject.SetActive(true);
 
         BarrierFlashanim.SetBool("BarrierBL", false);
-
     }
 }

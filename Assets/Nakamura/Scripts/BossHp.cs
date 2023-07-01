@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class BossHp : MonoBehaviour
 {
     public static int hp;
-    private int maxhp = 4;
+    private int maxhp = 5;
+    private float nowhp;
     [SerializeField] Slider slider;
     // Start is called before the first frame update
     void Start()
@@ -19,11 +20,7 @@ public class BossHp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hp = 2;
-        if(hp <= 0)
-        {
-            SceneManager.LoadScene("GameClearSceneFinal"); 
-        }
+        
         
     }
 
@@ -32,10 +29,23 @@ public class BossHp : MonoBehaviour
         if (other.gameObject.tag == "SuperDrug")
         {
             other.gameObject.SetActive(false);
-            hp--;
-            
-            slider.value = (float)hp / (float)maxhp;
-            Debug.Log(slider.value);
+            StartCoroutine(DecreaseHPAnimation(maxhp, --hp));
+            if (slider.value <= 0.0f)
+            {
+                SceneManager.LoadScene("GameClearSceneFinal");
+            }
         }
+    }
+    IEnumerator DecreaseHPAnimation(int oldHP, int newHP)
+    {
+        nowhp = (float)newHP / (float)oldHP;
+        Debug.Log(nowhp);
+        while (slider.value >= nowhp)
+        {
+            slider.value -= 0.001f;
+            yield return null;
+        }
+       
+        Debug.Log(slider.value);
     }
 }
