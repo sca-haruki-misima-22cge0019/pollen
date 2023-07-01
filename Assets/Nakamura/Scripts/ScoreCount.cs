@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ScoreCount : MonoBehaviour
 {
     [SerializeField] GameObject ScoreObject;
-    private int score = 0;
+    public static int score = 0;
    
     void Start()
     {
@@ -19,15 +19,6 @@ public class ScoreCount : MonoBehaviour
     {
         //Debug.Log(score.Length)
         Text ScoreText = ScoreObject.GetComponent<Text>();
-
-        if(Input.GetKey(KeyCode.L))
-        {
-            score++;
-            if (score > 999999)
-            {
-                score = 999999;
-            }
-        }
         if(score<=9)
         {
 

@@ -17,6 +17,7 @@ public class enemy : MonoBehaviour
     public float curveLength = 2;   // カーブの最大距離
     float cycleRadian = 0;          // サインに渡す値
     float centerY;                  // Y座標の中心
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,24 +31,28 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 pos = transform.position;
-        // 上下にカーブ
-        if (type == ENEMY_TYPE.CURVE)
+        if(Time.timeScale !=0)
         {
-            if (cycleCount > 0)
+            Vector2 pos = transform.position;
+            // 上下にカーブ
+            if (type == ENEMY_TYPE.CURVE)
             {
-                cycleRadian += (cycleCount * 2 * Mathf.PI) / 50;
-                pos.y = Mathf.Sin(cycleRadian) * curveLength + centerY;
+                if (cycleCount > 0)
+                {
+                    cycleRadian += (cycleCount * 2 * Mathf.PI) / 50;
+                    pos.y = Mathf.Sin(cycleRadian) * curveLength + centerY;
+                }
+            }
+            pos += new Vector2(-1 * speed * Time.fixedDeltaTime, 0);
+
+            transform.position = pos;
+
+            if (type == ENEMY_TYPE.TRACKING)
+            {
+                transform.LookAt(target.transform);
+                transform.position += transform.forward * speed;
             }
         }
-        pos += new Vector2(-1 * speed * Time.fixedDeltaTime,0);
-
-        transform.position = pos;
-
-        if (type == ENEMY_TYPE.TRACKING)
-        {
-            transform.LookAt(target.transform);
-            transform.position += transform.forward * speed;
-        }
+        
     }
 }

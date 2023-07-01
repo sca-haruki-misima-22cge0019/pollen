@@ -36,7 +36,6 @@ public class DrugCount : MonoBehaviour
             drug = ShotCre.superdrug;
             if(drug <=0)
             {
-                Debug.Log("ASDFG");
                 
                 time += Time.deltaTime;
                 Debug.Log(time);
@@ -45,7 +44,14 @@ public class DrugCount : MonoBehaviour
                     SceneManager.LoadScene("GameOverScene");
                 }
             }
-           
+        }
+        else
+        {
+            if(Item.drug)
+            {
+                drug--;
+                Item.drug = false;
+            }
             
         }
     }
