@@ -10,7 +10,7 @@ public class enemy : MonoBehaviour
     {
         LINE,//まっすぐ進む
         CURVE,//上下にカーブ
-        TRACKING
+        TRACKING//追尾
     }
     public ENEMY_TYPE type = ENEMY_TYPE.CURVE;
     public float cycleCount = 1;    // １秒間に往復する回数
@@ -50,7 +50,7 @@ public class enemy : MonoBehaviour
             if (type == ENEMY_TYPE.TRACKING)
             {
                 transform.LookAt(target.transform);
-                transform.position += transform.forward * speed;
+                transform.position += transform.forward * speed / 50;
             }
         }
         

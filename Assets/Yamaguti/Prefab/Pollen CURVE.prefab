@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da20a25fd01249d46bc5c4486aed99cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.4
   type: 1
-  cycleCount: 0.05
-  curveLength: 2
+  cycleCount: 0.02
+  curveLength: 3
 --- !u!114 &2588516639574644499
 MonoBehaviour:
   m_ObjectHideFlags: 0
