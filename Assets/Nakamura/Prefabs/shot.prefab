@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2269257198009297784}
   - component: {fileID: 9170341086901558464}
   - component: {fileID: 4594563982481118971}
+  - component: {fileID: 24867546793851362}
   m_Layer: 0
   m_Name: shot
   m_TagString: Drug
@@ -148,3 +149,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mask: {fileID: 6240021217980938100, guid: 26cfe1df3d7ffe842b9f8293a73a89bb, type: 3}
+--- !u!114 &24867546793851362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2269257198009297789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd803b479aab24c4fa29ff142990c69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
