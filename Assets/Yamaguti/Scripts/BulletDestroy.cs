@@ -30,5 +30,19 @@ public class BulletDestroy : MonoBehaviour
                 Destroy(gameObject);
             //}
         }
+        if (collider.gameObject.CompareTag("Mask"))
+        {
+            //if(energy <= 0) {
+            Debug.Log("BBB");
+            Destroy(gameObject);
+            //}
+        }
+        if (collider.gameObject.CompareTag("SuperDrugMove"))
+        {
+            //if(energy <= 0) {
+            Debug.Log("CCC");
+            Destroy(gameObject);
+            //}
+        }
     }
 }

@@ -12,6 +12,9 @@ TagManager:
   - BarrierPoint
   - Barrier
   - SpecailBullet
+  - SuperDrugMove
+  - Boost
+  - Mask
   layers:
   - Default
   - TransparentFX
@@ -21,8 +24,8 @@ TagManager:
   - UI
   - Enemy
   - Wall
-  - 
-  - 
+  - Mask
+  - MovesuperDrug
   - 
   - 
   - 

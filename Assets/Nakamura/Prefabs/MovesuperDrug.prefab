@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8514296169995873669}
   - component: {fileID: 8514296169995873668}
   - component: {fileID: -5707605267869049036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MovesuperDrug
   m_TagString: SuperDrugMove
   m_Icon: {fileID: 0}
