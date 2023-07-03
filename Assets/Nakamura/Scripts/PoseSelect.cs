@@ -9,20 +9,26 @@ public class PoseSelect : MonoBehaviour
     public List<GameObject> Buttonselect = new List<GameObject>();
     public List<Sprite> WhiteImageselect = new List<Sprite>();
     public List<Sprite> Imageselect = new List<Sprite>();
+    public List<Sprite> BlackImageselect = new List<Sprite>();
 
     public List<GameObject> Buttonselect2 = new List<GameObject>();
     public List<Sprite> WhiteImageselect2 = new List<Sprite>();
     public List<Sprite> Imageselect2 = new List<Sprite>();
+    public List<Sprite> BlackImageselect2 = new List<Sprite>();
+
     private Animator warninganim;
     private Animator warninganim2;
     private Animator explanim;
     private Animator explanim2;
+
     [SerializeField] GameObject warning;
     [SerializeField] GameObject warning2;
     [SerializeField] GameObject expl;
     [SerializeField] GameObject expl2;
+
     private int select = 0;
     private int select2 = 0;
+
     public static bool workingNo = false;
     public static bool workingYes = false;
     // Start is called before the first frame update
@@ -43,11 +49,10 @@ public class PoseSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(warning.transform.localScale);
-        if (warning.transform.lossyScale.y == 1.0f)
+        if (warning.transform.lossyScale.y !=0.0f)
         {
             Debug.Log("XFGHJ");
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyUp(KeyCode.Return))
             {
 
                 warning.transform.localScale = new Vector3(0, 0, 0);
@@ -58,16 +63,17 @@ public class PoseSelect : MonoBehaviour
         }
         
 
-        else if (warning2.transform.lossyScale.y == 1.0f)
+        else if (warning2.transform.lossyScale.y != 0.0f)
         {
             Debug.Log("D");
-            if (Input.GetKeyDown(KeyCode.A))
+
+            if (Input.GetKeyUp(KeyCode.A))
             {
                 Buttonselect2[select2].GetComponent<Image>().sprite = Imageselect2[select2];
                 select2 = 0;
 
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyUp(KeyCode.D))
             {
                 Buttonselect2[select2].GetComponent<Image>().sprite = Imageselect2[select2];
                 select2 = 1;
@@ -75,7 +81,12 @@ public class PoseSelect : MonoBehaviour
             }
             Buttonselect2[select2].GetComponent<Image>().sprite = WhiteImageselect2[select2];
 
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKey(KeyCode.Return))
+            {
+                Buttonselect2[select2].GetComponent<Image>().sprite = BlackImageselect2[select2];
+            }
+
+            if (Input.GetKeyUp(KeyCode.Return))
             {
                 if (select2 == 0)
                 {
@@ -88,9 +99,9 @@ public class PoseSelect : MonoBehaviour
             }
         }
 
-        else if (expl.transform.lossyScale.y == 7.0f)
+        else if (expl.transform.lossyScale.y != 0.0f)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyUp(KeyCode.Return))
             {
                 expl.transform.localScale = new Vector3(0,0,0);
                 expl.SetActive(false);
@@ -100,10 +111,10 @@ public class PoseSelect : MonoBehaviour
             }
         }
 
-        else if (expl2.transform.lossyScale.y == 7.0f)
+        else if (expl2.transform.lossyScale.y != 0.0f)
         {
             Debug.Log("B");
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyUp(KeyCode.Return))
             {
                 expl2.transform.localScale = new Vector3(0, 0, 0);
                 expl2.SetActive(false);
@@ -113,7 +124,7 @@ public class PoseSelect : MonoBehaviour
 
         else
         {
-            //Debug.Log("A");
+            Debug.Log(select);
             if (Input.GetKeyDown(KeyCode.W))
             {
                 Debug.Log("A1");
@@ -135,30 +146,39 @@ public class PoseSelect : MonoBehaviour
 
             }
             Buttonselect[select].GetComponent<Image>().sprite = WhiteImageselect[select];
-           
-            if (Input.GetKeyDown(KeyCode.Return))
+
+            if (Input.GetKey(KeyCode.Return))
             {
+                Debug.Log("SDFGHJKL");
+                Buttonselect[select].GetComponent<Image>().sprite = BlackImageselect[select];
+            }
+            if (Input.GetKeyUp(KeyCode.Return))
+            {
+                Buttonselect[select].GetComponent<Image>().sprite = Imageselect[select];
+                Debug.Log(Buttonselect[select].GetComponent<Image>().sprite);
                 switch (select)
                 {
                     case 0:
+                        Time.timeScale = 1;
+                        this.gameObject.SetActive(false);
+                        break;
+
+
+                    case 1:
+                        
                         expl.SetActive(true);
                         explanim.SetBool("ExplBL", true);
                         break;
 
-                    case 1:
+                    default:
                         warning.SetActive(true);
                         warninganim.SetBool("WarningBL", true);
                         break;
 
-                    default:
-                        Time.timeScale = 1;
-                        this.gameObject.SetActive(false);
-                        break;
+
                 }
             }
-        }
-        
-        
 
+        }
     }
 }
