@@ -27,6 +27,11 @@ public class FireBullet : MonoBehaviour
     [SerializeField] GameObject DrugCount;
     public List<Sprite> DrugList = new List<Sprite>();
     private int drug = 10;
+
+    //[SerializeField] float angle; // Šp“x
+    //Vector3 velocity; // ˆÚ“®—Ê
+    //bool boost = false;
+
     // Start is called before the first frame update
     void Start()
     {
