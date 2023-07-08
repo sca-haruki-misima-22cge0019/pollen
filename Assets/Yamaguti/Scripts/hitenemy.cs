@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class hitenemy : MonoBehaviour
 {
-    public int energy = 3;
+    public int Enemyenergy = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +18,9 @@ public class hitenemy : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
-        energy--;
+        Enemyenergy--;
         Debug.Log("energy");
-        if (energy <= 0)
+        if (Enemyenergy <= 0)
         {
             Debug.Log("Destoy");
             Destroy(gameObject);

@@ -429,7 +429,7 @@ MonoBehaviour:
   - {fileID: 3475169752695039973, guid: fe35e64888f2ec041bf8015fe51767a6, type: 3}
   pos: {fileID: 624039287}
   pos2: {fileID: 2105984179}
-  generateFrame: 650
+  generateFrame: 1800
 --- !u!1 &494478333
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
   - {fileID: 7043490982799478258, guid: d56bdca71df51f443a5e0bb133504f09, type: 3}
   pos: {fileID: 1223510482}
   pos2: {fileID: 161954403}
-  generateFrame: 650
+  generateFrame: 2850
 --- !u!4 &615735212
 Transform:
   m_ObjectHideFlags: 0
@@ -1790,12 +1790,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244393961}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.67, y: 1.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1244393964
 MonoBehaviour:
@@ -1809,7 +1809,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 561a85da30a0d65449dc3655f1e04221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energy: 35
+  energy: 20
+  spriteRenderer: {fileID: 1244393962}
+  Nose1: {fileID: 21300000, guid: 34e21af0b51f6ff4f869acebd9467603, type: 3}
+  Nose2: {fileID: 21300000, guid: 6d40d06fca3be2847a671677be6824f4, type: 3}
 --- !u!50 &1244393965
 Rigidbody2D:
   serializedVersion: 4
@@ -1954,8 +1957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5b5367e87388647822e85a29a395f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinAngle: -45
-  MaxAngle: 45
+  MinAngle: -60
+  MaxAngle: 60
   rotationSpeed: 1
 --- !u!114 &1415172185
 MonoBehaviour:
@@ -2319,7 +2322,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1522777681
 GameObject:
