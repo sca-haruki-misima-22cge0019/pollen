@@ -1406,7 +1406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrugObject: {fileID: 769729950}
-  drug: 2
+  drug: 3
 --- !u!114 &769729953
 MonoBehaviour:
   m_ObjectHideFlags: 0
