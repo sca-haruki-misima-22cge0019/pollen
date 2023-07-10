@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class EnemySelect : MonoBehaviour
 {
+    [Header("íºêiå^â‘ï≤")]
+    [SerializeField] GameObject StraightEnemy;
+    [Header("ÉEÉFÅ[Éuå^â‘ï≤")]
+    [SerializeField] GameObject WaveEnemy;
+    [SerializeField] GameObject WaveEnemy2;
+    [Header("í«îˆå^â‘ï≤")]
+    [SerializeField] GameObject TrackingEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,23 +21,22 @@ public class EnemySelect : MonoBehaviour
     void Update()
     {
         
-    }
+    } 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.name);
-        if (other.gameObject.name == "Pollen CURVE(Clone)")
+        if (other.gameObject.name == StraightEnemy.name+ "(Clone)")
         {
-            ScoreCount.score +=100;
+            ScoreCount.score +=22;
         }
 
-        if (other.gameObject.name == "Pollen LINE(Clone)")
+        if (other.gameObject.name == WaveEnemy.name + "(Clone)" || other.gameObject.name == WaveEnemy2.name + "(Clone)")
         {
-            ScoreCount.score += 200;
+            ScoreCount.score += 30;
         }
 
-        if (other.gameObject.name == "Pollen TRACKING(Clone)")
+        if (other.gameObject.name == TrackingEnemy.name + "(Clone)")
         {
-            ScoreCount.score += 300;
+            ScoreCount.score += 13;
         }
     }
 }
