@@ -43,21 +43,25 @@ public class FireBullet : MonoBehaviour
     {
         Text DrugText = DrugCount.GetComponent<Text>();
         DrugText.text = drug.ToString();
-        // スペースキーが押されたかを判定
-        if (Input.GetKeyDown(KeyCode.Space)&&Numberbullet>0)
+        if(Time.timeScale == 1)//ポーズ画面が映っていないならば
         {
-            // 弾を発射する
-            LauncherShot();
-            if (drug >= 0)
+            // スペースキーが押されたかを判定
+            if (Input.GetKeyDown(KeyCode.Space) && Numberbullet > 0)
             {
-                drug--;
+                // 弾を発射する
+                LauncherShot();
+                if (drug >= 0)
+                {
+                    drug--;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.R) && Numberbullet == 0)
+            {
+                StartCoroutine(Shotwait());
+                drug = 10;
             }
         }
-        if (Input.GetKeyDown(KeyCode.R)&&Numberbullet==0)
-        {
-            StartCoroutine(Shotwait());
-            drug = 10;
-        }
+        
 
         Drug.sprite = DrugList[drug];
 
