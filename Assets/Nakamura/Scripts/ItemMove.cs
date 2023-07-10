@@ -15,8 +15,11 @@ public class ItemMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0.0f,0.0f,0.5f));
-        transform.position += new Vector3(-speed*Time.deltaTime, 0.0f, 0.0f);
+        if (Time.timeScale == 1)
+        {
+            transform.Rotate(new Vector3(0.0f, 0.0f, 0.5f));
+            transform.position += new Vector3(-speed * Time.deltaTime, 0.0f, 0.0f);
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
