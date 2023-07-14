@@ -35,7 +35,7 @@ public class hit : MonoBehaviour
         if (energy <= 0)
         {
             SceneManager.LoadScene("GameOverScene");
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

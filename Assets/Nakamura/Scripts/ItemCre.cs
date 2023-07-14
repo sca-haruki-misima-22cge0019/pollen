@@ -8,44 +8,51 @@ public class ItemCre : MonoBehaviour
     public List<GameObject> Itemselect = new List<GameObject>();
     float X;
     float Y;
-    float Itemcount = 5.0f;
+    float Itemcount = 10.0f;
     float time = 0.0f;
-    int rnd;
+    int item;
+    float rndItem;
+
 
     [Header("アイテムの確率")]
-    public float nune;
     public float mask;
     public float boost;
     public float super;
-    private float[] Item;
+    private float[] Item = new float[3];
     private float ItemTotal;
 
     // Start is called before the first frame update
     void Start()
     {
-        Item[0] = nune;
-        Item[1] = mask;
-        Item[2] = boost;
-        Item[3] = super;
+        super = 0;
+        Item[0] = mask;
+        Item[1] = boost;
+        Item[2] = super;
+
 
         for(int i = 0; i<Item.Length;i++)
         {
+            //Debug.Log(Item[i]);
             ItemTotal+=Item[i];
         }
+        //Debug.Log(ItemTotal);
+        rndItem = Random.Range(0.0f, ItemTotal);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(ItemTotal);
         time += Time.deltaTime;
         if(Itemcount <= time)
         {
             ItemRandom();
             X = Random.Range(9.6f, 14.0f);
             Y = Random.Range(-2.71f,3.42f);
-            Instantiate(Itemselect[rnd], new Vector3(X, Y), Quaternion.identity);
+            Instantiate(Itemselect[item], new Vector3(X, Y), Quaternion.identity);
             time = 0.0f;
+            Item[2] += 0.5f;
+            ItemTotal += 0.5f;
         }
         
     }
@@ -53,14 +60,16 @@ public class ItemCre : MonoBehaviour
     void ItemRandom()
     {
         float total = 0;
-        float rnd = Random.Range(0.0f,ItemTotal);
 
-        for (int i = 0; i < Item.Length; i++)
+        for (item = 0; item < Item.Length; item++)
         {
-            total += Item[i];
-            if(rnd <total)
+            total += Item[item];
+            if(rndItem <=total)
             {
-
+                Debug.Log(total);
+                Debug.Log(rndItem);
+                rndItem = Random.Range(0.0f, ItemTotal);
+                break;
             }
         }
     }
