@@ -8,7 +8,7 @@ public class ItemCre : MonoBehaviour
     public List<GameObject> Itemselect = new List<GameObject>();
     float X;
     float Y;
-    float Itemcount = 10.0f;
+    public float Itemcount = 10.0f;
     float time = 0.0f;
     int item;
     float rndItem;
