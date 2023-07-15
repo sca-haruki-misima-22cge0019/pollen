@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 581508388}
   m_Layer: 7
   m_Name: UnderWall (1)
-  m_TagString: Untagged
+  m_TagString: Border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 758482527}
   m_Layer: 7
   m_Name: UnderWall
-  m_TagString: Untagged
+  m_TagString: Border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
