@@ -14,6 +14,7 @@ public class BackG : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         //ƒJƒƒ‰”ÍˆÍ‚Ìæ“¾
         cameraRecrMin = Camera.main.ViewportToWorldPoint(new Vector2(Camera.main.transform.position.x,0));
     }

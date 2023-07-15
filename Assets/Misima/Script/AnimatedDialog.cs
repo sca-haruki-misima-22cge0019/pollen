@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
 /// <summary>
 /// ダイアログのアニメーション
 /// </summary>
@@ -38,6 +37,8 @@ public class AnimatedDialog : MonoBehaviour
 
         //アニメ―ション待機
         StartCoroutine(WaitAnimation("Shown"));
+
+        Debug.Log("押された");
     }
     //閉じる
     public void BACK()
