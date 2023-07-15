@@ -14,6 +14,8 @@ public class BackG : MonoBehaviour
         //ƒJƒƒ‰‚Ì”ÍˆÍ‚ğæ“¾
         cameraRectMin = Camera.main.ViewportToWorldPoint
             (new Vector3(0, 0, Camera.main.transform.position.z));
+
+        Time.timeScale = 1;
     }
     void Update()
     {
