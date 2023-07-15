@@ -2940,7 +2940,7 @@ MonoBehaviour:
   - {fileID: 1424960972918974640, guid: 5fabcafbff7304c44bdee62c4e421cad, type: 3}
   - {fileID: 883222760781395253, guid: 458712169afb1b040911ce8dcd5d7cf3, type: 3}
   - {fileID: 8514296169995873671, guid: 933763ccd8ff0814ba5b0b91f5e85155, type: 3}
-  Itemcount: 5
+  Itemcount: 10
   mask: 1
   boost: 1
   super: 0
