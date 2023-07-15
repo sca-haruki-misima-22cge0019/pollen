@@ -27,7 +27,8 @@ public class FireBullet : MonoBehaviour
     [SerializeField] GameObject DrugCount;
     public List<Sprite> DrugList = new List<Sprite>();
     private int drug = 10;
-
+    private Animator anim;
+    [SerializeField] GameObject DrugObject;
     //[SerializeField] float angle; // äpìx
     //Vector3 velocity; // à⁄ìÆó 
     //bool boost = false;
@@ -35,7 +36,7 @@ public class FireBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = DrugObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -57,8 +58,8 @@ public class FireBullet : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.R) && Numberbullet == 0)
             {
+                anim.SetBool("DrugBL", true);
                 StartCoroutine(Shotwait());
-                drug = 10;
             }
         }
         
@@ -80,6 +81,8 @@ public class FireBullet : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);//0.3ïbë“Ç¡ÇƒÇ©ÇÁíe10î≠ï‚è[
         Numberbullet = 10;
+        drug = 10;
+        anim.SetBool("DrugBL", false);
     }
     /// <summary>
 	/// íeÇÃî≠éÀ
