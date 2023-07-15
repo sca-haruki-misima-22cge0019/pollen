@@ -26,7 +26,7 @@ public class FireBullet : MonoBehaviour
     [Tooltip("écíe")]
     [SerializeField] GameObject DrugCount;
     public List<Sprite> DrugList = new List<Sprite>();
-    private int drug = 10;
+    //private int drug = 10;
     private Animator anim;
     [SerializeField] GameObject DrugObject;
     //[SerializeField] float angle; // äpìx
@@ -43,20 +43,27 @@ public class FireBullet : MonoBehaviour
     void Update()
     {
         Text DrugText = DrugCount.GetComponent<Text>();
-        DrugText.text = drug.ToString();
+        DrugText.text = Numberbullet.ToString();
         if(Time.timeScale == 1)//É|Å[ÉYâÊñ Ç™âfÇ¡ÇƒÇ¢Ç»Ç¢Ç»ÇÁÇŒ
         {
+ 
             // ÉXÉyÅ[ÉXÉLÅ[Ç™âüÇ≥ÇÍÇΩÇ©ÇîªíË
             if (Input.GetKeyDown(KeyCode.Space) && Numberbullet > 0)
             {
                 // íeÇî≠éÀÇ∑ÇÈ
                 LauncherShot();
-                if (drug >= 0)
-                {
-                    drug--;
-                }
+                Drug.sprite = DrugList[Numberbullet];
+                //if (Numberbullet >= 0)
+                //{
+                //  Numberbullet--;
+                //}
             }
-            if (Input.GetKeyDown(KeyCode.R) && Numberbullet == 0)
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                anim.SetBool("DrugBL", true);
+                StartCoroutine(Shotwait());
+            }
+            if (Numberbullet == 0)
             {
                 anim.SetBool("DrugBL", true);
                 StartCoroutine(Shotwait());
@@ -64,7 +71,7 @@ public class FireBullet : MonoBehaviour
         }
         
 
-        Drug.sprite = DrugList[drug];
+        
 
         /*if (Input.GetKey(KeyCode.W))
         {
@@ -81,7 +88,7 @@ public class FireBullet : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);//0.3ïbë“Ç¡ÇƒÇ©ÇÁíe10î≠ï‚è[
         Numberbullet = 10;
-        drug = 10;
+        //drug = 10;
         anim.SetBool("DrugBL", false);
     }
     /// <summary>
@@ -102,5 +109,6 @@ public class FireBullet : MonoBehaviour
         // èoåªÇ≥ÇπÇΩÉ{Å[ÉãÇ0.8ïbå„Ç…è¡Ç∑
         //Destroy(newBall, 0.8f);
         Numberbullet -= 1;
+
     }
 }
