@@ -1,38 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BackG : MonoBehaviour
 {
-    [SerializeField]
-    float scrollSpeed = -1;
+    private const float K_maxLength = 1f;
+    private const string K_PropName = "_MainTex";
 
-    Vector3 cameraRectMin;
+    [SerializeField]
+    private Vector2 m_offsetSpeed;
+
+    private Material m_material;
 
     void Start()
     {
-        //カメラの範囲を取得
-        cameraRectMin = Camera.main.ViewportToWorldPoint
-            (new Vector3(0, 0, Camera.main.transform.position.z));
-
-        Time.timeScale = 1;
+        if(GetComponent<Image>() is Image i)
+        {
+            m_material = i.material;
+        }
     }
     void Update()
     {
-        Move();
-    }
-    void Move()
-    {
-        transform.Translate(Vector3.right * scrollSpeed * Time.deltaTime);
-        //X軸方向にスクロール
-
-        //カメラの左端から完全に出たら、右端に瞬間移動
-        if (transform.position.x < (cameraRectMin.x - Camera.main.transform.position.x) * 2)
-
+        if(m_material)
         {
-            transform.position = new Vector2
-                ((Camera.main.transform.position.x - cameraRectMin.x) * 2,
-                transform.position.y);
+            var x = Mathf.Repeat(Time.time * m_offsetSpeed.x, K_maxLength);
+            var y = Mathf.Repeat(Time.time * m_offsetSpeed.x, K_maxLength);
+            var offset = new Vector2(x,y);
+            m_material.SetTextureOffset(K_PropName,offset);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if(m_material)
+        {
+            m_material.SetTextureOffset(K_PropName,Vector2.zero);
         }
     }
 }
