@@ -17,7 +17,7 @@ public class FireBullet : MonoBehaviour
     [Tooltip("弾の速さ")]
     private float speed = 30f;
 
-    public int Numberbullet = 10;
+    public int Numberbullet;
 
     bool flag = true;
 
@@ -29,6 +29,7 @@ public class FireBullet : MonoBehaviour
     //private int drug = 10;
     private Animator anim;
     [SerializeField] GameObject DrugObject;
+    private Text DrugText;
     //[SerializeField] float angle; // 角度
     //Vector3 velocity; // 移動量
     //bool boost = false;
@@ -36,38 +37,49 @@ public class FireBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DrugText = DrugCount.GetComponent<Text>();
         anim = DrugObject.GetComponent<Animator>();
+        Numberbullet = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Text DrugText = DrugCount.GetComponent<Text>();
-        DrugText.text = Numberbullet.ToString();
-        if(Time.timeScale == 1)//ポーズ画面が映っていないならば
+        Debug.Log(Numberbullet);
+        if (Time.timeScale == 1)//ポーズ画面が映っていないならば
         {
- 
+
+
             // スペースキーが押されたかを判定
-            if (Input.GetKeyDown(KeyCode.Space) && Numberbullet > 0)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                // 弾を発射する
-                LauncherShot();
-                Drug.sprite = DrugList[Numberbullet];
+                if(Numberbullet == 1)
+                {
+                    LauncherShot();
+                    anim.SetBool("DrugBL", true);
+                    StartCoroutine(Shotwait());
+ 
+                }
+                if(Numberbullet > 0)
+                {
+                    // 弾を発射する
+                    LauncherShot();
+                }
+               
+
                 //if (Numberbullet >= 0)
                 //{
                 //  Numberbullet--;
                 //}
+                
             }
             if (Input.GetKeyDown(KeyCode.R))
             {
                 anim.SetBool("DrugBL", true);
                 StartCoroutine(Shotwait());
             }
-            if (Numberbullet == 0)
-            {
-                anim.SetBool("DrugBL", true);
-                StartCoroutine(Shotwait());
-            }
+
+
         }
         
 
@@ -86,8 +98,11 @@ public class FireBullet : MonoBehaviour
 
     IEnumerator Shotwait()
     {
+
         yield return new WaitForSeconds(0.7f);//0.3秒待ってから弾10発補充
         Numberbullet = 10;
+        DrugText.text = Numberbullet.ToString();
+        Drug.sprite = DrugList[Numberbullet];
         //drug = 10;
         anim.SetBool("DrugBL", false);
     }
@@ -96,6 +111,10 @@ public class FireBullet : MonoBehaviour
 	/// </summary>
     private void LauncherShot()
     {
+        Numberbullet -= 1;
+        DrugText.text = Numberbullet.ToString();
+        Debug.Log(Numberbullet);
+        Drug.sprite = DrugList[Numberbullet];
         // 弾を発射する場所を取得
         Vector2 bulletPosition = firingPoint.transform.position;
         // 上で取得した場所に、"bullet"のPrefabを出現させる
@@ -108,7 +127,6 @@ public class FireBullet : MonoBehaviour
         newBall.name = bullet.name;
         // 出現させたボールを0.8秒後に消す
         //Destroy(newBall, 0.8f);
-        Numberbullet -= 1;
 
     }
 }
