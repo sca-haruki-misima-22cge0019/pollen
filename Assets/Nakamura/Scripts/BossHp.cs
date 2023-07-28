@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class BossHp : MonoBehaviour
 {
-    public static int hp;
+    private int hp;
     private int maxhp = 5;
     private float nowhp;
     [SerializeField] Slider slider;
+    public bool damage = false;
+    public bool death;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,8 @@ public class BossHp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+        Debug.Log(death);
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -30,22 +32,31 @@ public class BossHp : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             StartCoroutine(DecreaseHPAnimation(maxhp, --hp));
-            if (slider.value <= 0.0f)
-            {
-                SceneManager.LoadScene("GameClearSceneFinal");
-            }
+            Debug.Log(slider.value);
         }
     }
     IEnumerator DecreaseHPAnimation(int oldHP, int newHP)
     {
+        Debug.Log(hp);
+        if (hp == 0)
+        {
+            Debug.Log("A");
+            damage = false;
+            death = true;
+        }
+        else
+        {
+            Debug.Log("S");
+            damage = true;
+        }
+
         nowhp = (float)newHP / (float)oldHP;
-        Debug.Log(nowhp);
+        //Debug.Log(nowhp);
         while (slider.value >= nowhp)
         {
             slider.value -= 0.001f;
             yield return null;
         }
-       
-        Debug.Log(slider.value);
+        //Debug.Log(slider.value);
     }
 }

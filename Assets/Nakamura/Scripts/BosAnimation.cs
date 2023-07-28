@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Spine.Unity;
+using Spine;
+using UnityEngine.SceneManagement;
 public class BosAnimation : MonoBehaviour
 {
-	[SerializeField]
-	private string testAnimationName = "デフォルト2";
+	[SerializeField] private string AnimationName = "デフォルト";
+	[SerializeField] private float time = 20.0f;
 
 	/// <summary> ゲームオブジェクトに設定されているSkeletonAnimation </summary>
 	private SkeletonAnimation skeletonAnimation = default;
@@ -13,32 +15,71 @@ public class BosAnimation : MonoBehaviour
 	/// <summary> Spineアニメーションを適用するために必要なAnimationState </summary>
 	private Spine.AnimationState spineAnimationState = default;
 
-	private void Start()
+	void Start()
 	{
 		// ゲームオブジェクトのSkeletonAnimationを取得
 		skeletonAnimation = GetComponent<SkeletonAnimation>();
-
 		// SkeletonAnimationからAnimationStateを取得
 		spineAnimationState = skeletonAnimation.AnimationState;
+
+		StartCoroutine("Loop");
 	}
 
-	private void Update()
+	void Update()
 	{
-		// Aキーの入力でアニメーションを切り替えるテスト
-		if (Input.GetKeyDown(KeyCode.A))
+		BossHp bosHp = GetComponent<BossHp>();
+		Debug.Log(bosHp.death);
+		if (bosHp.death)
 		{
-			PlayAnimation();
+			AnimationName = "死亡";
+			spineAnimationState.SetAnimation(0, AnimationName, true);
+			TrackEntry trackEntry = spineAnimationState.SetAnimation(0, AnimationName, false);
+			trackEntry.Complete += End;
+			bosHp.death = false;
+		}
+		if (bosHp.damage)
+		{
+			AnimationName = "スーパー花粉錠剤ダメージ";
+			spineAnimationState.SetAnimation(0, AnimationName, true);
+			TrackEntry trackEntry = spineAnimationState.SetAnimation(0, AnimationName, false);
+			trackEntry.Complete += OnCompleteAnimation;
+			bosHp.damage = false;
+		}
+
+	}
+
+	private IEnumerator Loop()
+	{
+		while (true)
+		{
+			BossHp bosHp = GetComponent<BossHp>();
+			if (bosHp.death)
+			{
+				break;
+			}
+			yield return new WaitForSeconds(time);
+			AnimationSecond();
+
 		}
 	}
 
-	/// <summary>
-	/// Spineアニメーションを再生
-	/// testAnimationNameに再生したいアニメーション名を記載してください。
-	/// </summary>
-	private void PlayAnimation()
+	private void AnimationSecond()
 	{
-		// アニメーション「testAnimationName」を再生
-		spineAnimationState.SetAnimation(0, testAnimationName, true);
+		AnimationName = "デフォルト2";
+		spineAnimationState.SetAnimation(0, AnimationName, true);
+		TrackEntry trackEntry = spineAnimationState.SetAnimation(0, AnimationName, false);
+		trackEntry.Complete += OnCompleteAnimation;
 	}
 
+	private void OnCompleteAnimation(TrackEntry trackEntry)
+	{
+		//Debug.Log("アニメーション終了");
+		AnimationName = "デフォルト";
+		spineAnimationState.SetAnimation(0, AnimationName, true);
+	}
+
+	private void End(TrackEntry trackEntry)
+	{
+		SceneManager.LoadScene("GameClearSceneFinal");
+	}
 }
