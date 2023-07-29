@@ -384,7 +384,7 @@ MonoBehaviour:
   - {fileID: 3414190121282512270, guid: 4861f1bf8e8dc06449d99d3eaffc4f81, type: 3}
   pos: {fileID: 624039287}
   pos2: {fileID: 2105984179}
-  generateFrame: 600
+  generateFrame: 400
 --- !u!1 &494478333
 GameObject:
   m_ObjectHideFlags: 0
