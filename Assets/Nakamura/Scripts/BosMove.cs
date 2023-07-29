@@ -9,7 +9,7 @@ public class BosMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.transform.position = new Vector3(25,5,0);
+        //this.gameObject.transform.position.y = new Vector3(25,5,0);
     }
 
     // Update is called once per frame
