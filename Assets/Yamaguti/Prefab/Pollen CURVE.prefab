@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ec1f34d98ee1d41bddfe41b4058318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemyenergy: 1
+  Enemyenergy: 2
 --- !u!50 &-6533123170817680904
 Rigidbody2D:
   serializedVersion: 4

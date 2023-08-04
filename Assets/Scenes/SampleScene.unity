@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -328,6 +328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energy: 3
+  spriteRenderer: {fileID: 0}
+  Nose1: {fileID: 0}
+  Nose2: {fileID: 0}
 --- !u!1 &522866396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1078,10 @@ MonoBehaviour:
   bullet: {fileID: 807591758193652539, guid: 1ce7368df25978749984f20a6ce5e556, type: 3}
   speed: 50
   Numberbullet: 10
+  Drug: {fileID: 0}
+  DrugCount: {fileID: 0}
+  DrugList: []
+  DrugObject: {fileID: 0}
 --- !u!1 &2086404044
 GameObject:
   m_ObjectHideFlags: 0

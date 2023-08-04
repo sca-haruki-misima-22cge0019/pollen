@@ -15,6 +15,7 @@ public class PollenDestroy : MonoBehaviour
     {
         if (transform.position.x == -15)
         {
+            Debug.Log("sinderu");
             Destroy(gameObject);
         }
     }
