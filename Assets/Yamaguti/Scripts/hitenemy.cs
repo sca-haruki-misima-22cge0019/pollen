@@ -23,7 +23,10 @@ public class hitenemy : MonoBehaviour
         Debug.Log("energy");
         if (Enemyenergy <= 0)
         {
-            Instantiate(outburst, this.gameObject.transform.position, Quaternion.identity);
+            if(collider.gameObject.tag !="Nose")
+            {
+                Instantiate(outburst, this.gameObject.transform.position, Quaternion.identity);
+            }
             Debug.Log("Destoy");
             Destroy(gameObject);
 

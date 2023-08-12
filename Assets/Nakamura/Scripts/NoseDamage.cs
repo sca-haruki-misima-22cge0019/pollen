@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Blast : MonoBehaviour
+public class NoseDamage : MonoBehaviour
 {
-    [SerializeField] GameObject outburst;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +20,9 @@ public class Blast : MonoBehaviour
     {
         if(collider.gameObject.tag == "Enemy")
         {
-            Instantiate(outburst,collider.gameObject.transform.position, Quaternion.identity);
+            Debug.Log("Des");
+            Destroy(collider.gameObject);
+            
         }
     }
 }
