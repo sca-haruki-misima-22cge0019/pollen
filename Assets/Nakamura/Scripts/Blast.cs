@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hitenemy : MonoBehaviour
+public class Blast : MonoBehaviour
 {
     [SerializeField] GameObject outburst;
-    public int Enemyenergy = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,16 +16,12 @@ public class hitenemy : MonoBehaviour
     {
         
     }
+
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Enemyenergy--;
-        Debug.Log("energy");
-        if (Enemyenergy <= 0)
+        if(collider.gameObject.tag == "Enemy")
         {
-            Instantiate(outburst, this.gameObject.transform.position, Quaternion.identity);
-            Debug.Log("Destoy");
-            Destroy(gameObject);
-
+            Instantiate(outburst,collider.gameObject.transform.position, Quaternion.identity);
         }
     }
 }

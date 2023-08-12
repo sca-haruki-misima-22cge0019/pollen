@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: -6533123170817680904}
   - component: {fileID: 4530021164626893959}
   - component: {fileID: -4325498384666284675}
-  - component: {fileID: 5775983280536793937}
   m_Layer: 6
   m_Name: Pollen CURVE
   m_TagString: Enemy
@@ -166,16 +165,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5775983280536793937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606759889503778390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fdf290de418e16449bcadc7e7eb9caf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bom: {fileID: 223812188603037133, guid: 99211d824b97f674cb2fd8728246b87e, type: 3}

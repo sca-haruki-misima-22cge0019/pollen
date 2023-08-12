@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyBom : MonoBehaviour
+public class GameOverScene : MonoBehaviour
 {
-    [SerializeField] GameObject bom;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +17,8 @@ public class EnemyBom : MonoBehaviour
         
     }
 
-    void OnDisable()
+    void End()
     {
-        Instantiate(bom,transform.position, Quaternion.identity);
-        Debug.Log("Bom");
+        SceneManager.LoadScene("GameOverScene");
     }
 }

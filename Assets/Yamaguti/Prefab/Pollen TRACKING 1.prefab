@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 1321628036438390606}
   - component: {fileID: 3282943083830574029}
   - component: {fileID: 5430305360955898351}
-  - component: {fileID: 7781004355873057858}
   m_Layer: 6
   m_Name: Pollen TRACKING 1
   m_TagString: Enemy
@@ -160,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ec1f34d98ee1d41bddfe41b4058318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outburst: {fileID: 223812188603037133, guid: 99211d824b97f674cb2fd8728246b87e, type: 3}
   Enemyenergy: 3
 --- !u!50 &1321628036438390606
 Rigidbody2D:
@@ -249,16 +249,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7781004355873057858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3414190121282512270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fdf290de418e16449bcadc7e7eb9caf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bom: {fileID: 223812188603037133, guid: 99211d824b97f674cb2fd8728246b87e, type: 3}

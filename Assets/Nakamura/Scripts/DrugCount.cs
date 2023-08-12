@@ -34,16 +34,6 @@ public class DrugCount : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Bos")
         {
             drug = ShotCre.superdrug;
-            if(drug <=0)
-            {
-                
-                time += Time.deltaTime;
-                Debug.Log(time);
-                if (time >= 2.0f)
-                {
-                    SceneManager.LoadScene("GameOverScene");
-                }
-            }
         }
         else
         {
