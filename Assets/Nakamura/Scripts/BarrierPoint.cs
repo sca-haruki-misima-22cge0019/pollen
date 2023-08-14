@@ -8,15 +8,16 @@ public class BarrierPoint : MonoBehaviour
 {
     public List<GameObject> nowList = new List<GameObject>();
     public List<GameObject> oriList = new List<GameObject>();
+    public List<GameObject> Bar = new List<GameObject>();
 
     private int rnd;
     private  int hp;
     private int maxhp = 8;
     private float nowhp;
-    [SerializeField] Slider slider;
+    int count = 40;
     [SerializeField] GameObject Barrier;
-    [SerializeField] CanvasGroup BarrierBar;
     [SerializeField] GameObject BosHp;
+    [SerializeField] GameObject BarrierBar;
     private Animator BarrierFlashanim;
     private Animator Baranim;
     // Start is called before the first frame update
@@ -24,9 +25,8 @@ public class BarrierPoint : MonoBehaviour
     {
         
         BarrierFlashanim = Barrier.GetComponent<Animator>();
-        Baranim = slider.GetComponent<Animator>();
+        Baranim = BarrierBar.GetComponent<Animator>();
         Invoke("firstpoint",4.0f);
-        slider.value = 1;
         hp = maxhp;
         BosHp.SetActive(false);
     }
@@ -43,8 +43,7 @@ public class BarrierPoint : MonoBehaviour
         //Debug.Log(i);
         if (PointDamage.Damage)
         {
-            StartCoroutine(DecreaseHPAnimation(maxhp, --hp));
-
+            HpDown();
             BarrierFlashanim.SetBool("BarrierBL",true);
 
             nowList[rnd].gameObject.SetActive(false);
@@ -54,20 +53,6 @@ public class BarrierPoint : MonoBehaviour
         }
         
     }
-
-    IEnumerator DecreaseHPAnimation(int oldHP, int newHP)
-    {
-        nowhp = (float)newHP / (float)oldHP;
-        Debug.Log(nowhp);
-        while (slider.value >= nowhp)
-        {
-            slider.value -= 0.001f;
-            yield return null;
-        }
-
-        Debug.Log(slider.value);
-    }
-
     void firstpoint()
     {
         Baranim.SetBool("BarBL", true);
@@ -92,6 +77,27 @@ public class BarrierPoint : MonoBehaviour
 
     }
 
+    void HpDown()
+    {
+        hp--;
+        StartCoroutine(BarrierDecline(0.1f));
+    }
+    IEnumerator BarrierDecline(float second)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(second);
+            count--;
+            Image barimage = Bar[count].GetComponent<Image>();
+            barimage.color = new Color(0, 0, 0, 255);
+            Debug.Log("Loop");
+            if(count%5 == 0)
+            {
+                break;
+            }
+        }
+    }
+
     void Down()
     {
         Baranim.SetBool("BarBL", false);
@@ -99,7 +105,7 @@ public class BarrierPoint : MonoBehaviour
         Barrier.SetActive(false);
         BosHp.SetActive(true);
         hp = maxhp;
-        slider.value = 1;
+        count = 40;
         PointDamage.Damage = false;
 
         rnd = Random.Range(0, hp);
