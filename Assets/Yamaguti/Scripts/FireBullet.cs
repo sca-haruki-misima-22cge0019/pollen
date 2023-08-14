@@ -45,11 +45,11 @@ public class FireBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Numberbullet);
+
         if (Time.timeScale == 1)//ポーズ画面が映っていないならば
         {
 
-
+            Debug.Log(DrugList);
             // スペースキーが押されたかを判定
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -103,6 +103,7 @@ public class FireBullet : MonoBehaviour
         Numberbullet = 10;
         DrugText.text = Numberbullet.ToString();
         Drug.sprite = DrugList[Numberbullet];
+        Debug.Log(Numberbullet);
         //drug = 10;
         anim.SetBool("DrugBL", false);
     }

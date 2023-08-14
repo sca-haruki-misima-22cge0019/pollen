@@ -13,7 +13,7 @@ public class PollenDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -7)
+        if (transform.position.x < -10)
         {
             Debug.Log("sinderu");
             Destroy(gameObject);

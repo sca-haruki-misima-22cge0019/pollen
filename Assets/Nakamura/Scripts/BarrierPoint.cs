@@ -8,7 +8,7 @@ public class BarrierPoint : MonoBehaviour
 {
     public List<GameObject> nowList = new List<GameObject>();
     public List<GameObject> oriList = new List<GameObject>();
-    public List<GameObject> Bar = new List<GameObject>();
+    //public List<GameObject> Bar = new List<GameObject>();
 
     private int rnd;
     private  int hp;
@@ -25,7 +25,7 @@ public class BarrierPoint : MonoBehaviour
     {
         
         BarrierFlashanim = Barrier.GetComponent<Animator>();
-        Baranim = BarrierBar.GetComponent<Animator>();
+        //Baranim = BarrierBar.GetComponent<Animator>();
         Invoke("firstpoint",4.0f);
         hp = maxhp;
         BosHp.SetActive(false);
@@ -88,8 +88,8 @@ public class BarrierPoint : MonoBehaviour
         {
             yield return new WaitForSeconds(second);
             count--;
-            Image barimage = Bar[count].GetComponent<Image>();
-            barimage.color = new Color(0, 0, 0, 255);
+            //Image barimage = Bar[count].GetComponent<Image>();
+            //barimage.color = new Color(0, 0, 0, 255);
             Debug.Log("Loop");
             if(count%5 == 0)
             {
