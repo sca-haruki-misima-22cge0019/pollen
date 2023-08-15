@@ -49,7 +49,6 @@ public class FireBullet : MonoBehaviour
         if (Time.timeScale == 1)//ポーズ画面が映っていないならば
         {
 
-            Debug.Log(DrugList);
             // スペースキーが押されたかを判定
             if (Input.GetKeyDown(KeyCode.Space))
             {

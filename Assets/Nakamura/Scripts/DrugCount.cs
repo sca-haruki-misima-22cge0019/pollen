@@ -33,7 +33,7 @@ public class DrugCount : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Bos")
         {
-            drug = ShotCre.superdrug;
+            drug = 5;
         }
         else
         {

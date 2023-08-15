@@ -55,7 +55,7 @@ public class BarrierPoint : MonoBehaviour
     }
     void firstpoint()
     {
-        Baranim.SetBool("BarBL", true);
+        //Baranim.SetBool("BarBL", true);
         rnd = Random.Range(0, hp);
         nowList[rnd].gameObject.SetActive(true);
     }

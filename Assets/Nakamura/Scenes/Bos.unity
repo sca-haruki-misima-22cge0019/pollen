@@ -2020,12 +2020,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882397156}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d6d9aec0dcbe1b439ca8e0c8dc149d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Drug: {fileID: 1666820465}
+  Drug: {fileID: 0}
   DrugCount: {fileID: 1078760478}
   DrugList:
   - {fileID: 21300000, guid: c8d6157d5c1e27a43a8b2a663e250951, type: 3}
@@ -2039,6 +2039,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0952f32473f29ea40ae81ab9391d292e, type: 3}
   - {fileID: 21300000, guid: 8c0f1ebcb9c76ec4e8ca7366300a9978, type: 3}
   - {fileID: 21300000, guid: 4b62a854ddc59fc479d43a5428dc144a, type: 3}
+  drug: 10
 --- !u!114 &882397158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4688,7 +4689,6 @@ MonoBehaviour:
   - {fileID: 1000032171}
   - {fileID: 1738433280}
   - {fileID: 1667894629}
-  Bar: []
   Barrier: {fileID: 1958003541}
   BosHp: {fileID: 1873938325}
   BarrierBar: {fileID: 28757924}
