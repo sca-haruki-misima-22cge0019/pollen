@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class BarrierPoint : MonoBehaviour
 {
-    public List<GameObject> nowList = new List<GameObject>();
-    public List<GameObject> oriList = new List<GameObject>();
+    public List<GameObject> Nowtarget = new List<GameObject>();
+    public List<GameObject> Alltarget = new List<GameObject>();
     public List<GameObject> Bar = new List<GameObject>();
 
     private int rnd;
@@ -46,9 +46,9 @@ public class BarrierPoint : MonoBehaviour
         {
             HpDown();
             BarrierFlashanim.SetBool("BarrierBL", true);
-
-            nowList[rnd].gameObject.SetActive(false);
-            nowList.RemoveAt(rnd);
+            GetComponent<AudioSource>().Play();
+            Nowtarget[rnd].gameObject.SetActive(false);
+            Nowtarget.RemoveAt(rnd);
             Invoke("Flash", 1.0f);
             PointDamage.Damage = false;
         }
@@ -58,20 +58,20 @@ public class BarrierPoint : MonoBehaviour
     {
         Baranim.SetBool("BarBL", true);
         rnd = Random.Range(0, hp);
-        nowList[rnd].gameObject.SetActive(true);
+        Nowtarget[rnd].gameObject.SetActive(true);
     }
     void Flash()
     {
         if (hp <= 0)
         {
             Baranim.SetBool("BarDownBL", true);
-            nowList.AddRange(oriList);
+            Nowtarget.AddRange(Alltarget);
             Invoke("Down", 1.0f);
         }
         else
         {
             rnd = Random.Range(0, hp);
-            nowList[rnd].gameObject.SetActive(true);
+            Nowtarget[rnd].gameObject.SetActive(true);
 
             BarrierFlashanim.SetBool("BarrierBL", false);
         }
@@ -118,7 +118,7 @@ public class BarrierPoint : MonoBehaviour
         PointDamage.Damage = false;
 
         rnd = Random.Range(0, hp);
-        nowList[rnd].gameObject.SetActive(true);
+        Nowtarget[rnd].gameObject.SetActive(true);
 
         BarrierFlashanim.SetBool("BarrierBL", false);
     }

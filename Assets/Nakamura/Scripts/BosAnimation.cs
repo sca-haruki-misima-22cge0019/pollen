@@ -39,6 +39,7 @@ public class BosAnimation : MonoBehaviour
 		}
 		if (bosHp.damage)
 		{
+			GetComponent<AudioSource>().Play();
 			AnimationName = "スーパー花粉錠剤ダメージ";
 			spineAnimationState.SetAnimation(0, AnimationName, true);
 			TrackEntry trackEntry = spineAnimationState.SetAnimation(0, AnimationName, false);
