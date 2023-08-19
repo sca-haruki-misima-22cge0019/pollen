@@ -8844,7 +8844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156422, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156423, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_RootOrder
@@ -8937,7 +8937,7 @@ GameObject:
   - component: {fileID: 6817040738749717194}
   - component: {fileID: 6817040738749717189}
   - component: {fileID: 6817040738749717188}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BossBarrier
   m_TagString: Barrier
   m_Icon: {fileID: 0}
@@ -9112,7 +9112,7 @@ GameObject:
   - component: {fileID: 6817040739076104311}
   - component: {fileID: 6817040739076104308}
   - component: {fileID: 6817040739076104312}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BossPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9250,7 +9250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156422, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156423, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_RootOrder
@@ -9311,7 +9311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156422, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156423, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_RootOrder
@@ -9372,7 +9372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156422, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156423, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_RootOrder
@@ -9433,7 +9433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156422, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156423, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_RootOrder
@@ -9494,7 +9494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156422, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156423, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_RootOrder
@@ -9555,7 +9555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156422, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156423, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_RootOrder
@@ -9652,7 +9652,7 @@ GameObject:
   - component: {fileID: 5972983546127822198}
   - component: {fileID: 1022948624}
   - component: {fileID: 6817040740550636220}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9929,7 +9929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156422, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 358477937215156423, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
       propertyPath: m_RootOrder
