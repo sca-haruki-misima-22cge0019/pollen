@@ -3404,8 +3404,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firingPoint: {fileID: 1242877325}
   bullet: {fileID: 2269257198009297789, guid: 3085e91355a7b4141824c5ef14abfd19, type: 3}
+  superdrug: {fileID: 3078953851396727196, guid: 4d3a284f757f77c4190c57036d9916d8, type: 3}
   speed: 20
+  superdrugspeed: 10
   Numberbullet: 10
+  Numbersuperdrug: 5
   Drug: {fileID: 1666820465}
   DrugCount: {fileID: 1078760478}
   DrugList:

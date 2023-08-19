@@ -14,10 +14,20 @@ public class FireBullet : MonoBehaviour
     private GameObject bullet;
 
     [SerializeField]
+    [Tooltip("特殊弾")]
+    private GameObject superdrug;
+
+    [SerializeField]
     [Tooltip("弾の速さ")]
     private float speed = 30f;
 
+    [SerializeField]
+    [Tooltip("特殊弾の速さ")]
+    private float superdrugspeed = 30f;
+
     public int Numberbullet;
+
+    public int Numbersuperdrug;
 
     bool flag = true;
 
@@ -40,6 +50,7 @@ public class FireBullet : MonoBehaviour
         DrugText = DrugCount.GetComponent<Text>();
         anim = DrugObject.GetComponent<Animator>();
         Numberbullet = 10;
+        Numbersuperdrug = 5;
     }
 
     // Update is called once per frame
@@ -76,6 +87,14 @@ public class FireBullet : MonoBehaviour
             {
                 anim.SetBool("DrugBL", true);
                 StartCoroutine(Shotwait());
+            }
+
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                if(Numbersuperdrug > 0)
+                {
+                    SuperdrugShot();
+                }
             }
 
 
@@ -128,5 +147,21 @@ public class FireBullet : MonoBehaviour
         // 出現させたボールを0.8秒後に消す
         //Destroy(newBall, 0.8f);
 
+    }
+    private void SuperdrugShot()
+    {
+        Numbersuperdrug -= 1;
+        // 弾を発射する場所を取得
+        Vector2 bulletPosition = firingPoint.transform.position;
+        // 上で取得した場所に、"bullet"のPrefabを出現させる
+        GameObject newBall = Instantiate(superdrug, bulletPosition, transform.rotation);
+        // 出現させたボールのright(x軸方向)
+        Vector2 direction = newBall.transform.right;
+        // 弾の発射方向にnewBallのx方向(ローカル座標)を入れ、弾オブジェクトのrigidbodyに衝撃力を加える
+        newBall.GetComponent<Rigidbody2D>().AddForce(direction * superdrugspeed, ForceMode2D.Impulse);
+        // 出現させたボールの名前を"bullet"に変更
+        newBall.name = superdrug.name;
+        // 出現させたボールを0.8秒後に消す
+        //Destroy(newBall, 0.8f);
     }
 }
