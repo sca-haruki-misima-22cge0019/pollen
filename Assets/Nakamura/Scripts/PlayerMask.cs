@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Blast : MonoBehaviour
+public class PlayerMask : MonoBehaviour
 {
+    GameObject Fulcrum;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +14,12 @@ public class Blast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void MaskEnd()
     {
-        if(collider.gameObject.tag == "Enemy")
-        {
-            Destroy(collider.gameObject);
-        }
+        Fulcrum = GameObject.Find("NoseFulcrum");
+        Fulcrum.tag = "Untagged";
     }
 }

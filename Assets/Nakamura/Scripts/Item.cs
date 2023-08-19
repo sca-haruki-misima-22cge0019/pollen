@@ -7,11 +7,12 @@ public class Item : MonoBehaviour
     public static bool drug;
     [Header("プレイヤーが装着するマスク")]
     [SerializeField] GameObject Mask;
-    private int mask = 0;
+    GameObject Fulcrum;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -22,11 +23,11 @@ public class Item : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Mask" && mask == 0)
+        Fulcrum = GameObject.Find("NoseFulcrum");
+        if (other.gameObject.tag == "Mask")
         {
             Instantiate(Mask, Mask.transform.position, Quaternion.identity);
-            mask++;
-            Invoke("MaskMove",3.0f);
+            Fulcrum.tag ="Mask";
         }
         if (other.gameObject.tag == "SuperDrugMove")
         {
@@ -36,10 +37,5 @@ public class Item : MonoBehaviour
         {
             
         }
-    }
-
-    void MaskMove()
-    {
-        mask = 0;
     }
 }
