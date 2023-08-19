@@ -15,7 +15,7 @@ public class BulletDestroy : MonoBehaviour
     void Update()
     {
         Debug.Log("AAA");
-        if (transform.position.x >= 45.0f)
+        if (transform.position.x >= 9.2f)
         {
             //Debug.Log("aaa");
             Destroy(gameObject);

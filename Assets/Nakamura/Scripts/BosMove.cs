@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BosMove : MonoBehaviour
 {
-    private float speed = 5.0f;
+    [SerializeField] float speed;
     // Start is called before the first frame update
     void Start()
     {

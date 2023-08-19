@@ -8,10 +8,10 @@ public class BarrierPoint : MonoBehaviour
 {
     public List<GameObject> nowList = new List<GameObject>();
     public List<GameObject> oriList = new List<GameObject>();
-    //public List<GameObject> Bar = new List<GameObject>();
+    public List<GameObject> Bar = new List<GameObject>();
 
     private int rnd;
-    private  int hp;
+    private int hp;
     private int maxhp = 8;
     private float nowhp;
     int count = 40;
@@ -23,10 +23,10 @@ public class BarrierPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Bar.RemoveAt(0);
         BarrierFlashanim = Barrier.GetComponent<Animator>();
-        //Baranim = BarrierBar.GetComponent<Animator>();
-        Invoke("firstpoint",4.0f);
+        Baranim = BarrierBar.GetComponent<Animator>();
+        Invoke("firstpoint", 2.0f);
         hp = maxhp;
         BosHp.SetActive(false);
     }
@@ -34,6 +34,7 @@ public class BarrierPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(count);
         if (Input.GetKeyDown(KeyCode.U))
         {
             PointDamage.Damage = true;
@@ -44,18 +45,18 @@ public class BarrierPoint : MonoBehaviour
         if (PointDamage.Damage)
         {
             HpDown();
-            BarrierFlashanim.SetBool("BarrierBL",true);
+            BarrierFlashanim.SetBool("BarrierBL", true);
 
             nowList[rnd].gameObject.SetActive(false);
             nowList.RemoveAt(rnd);
-            Invoke("Flash",1.0f);
-            PointDamage.Damage = false;   
+            Invoke("Flash", 1.0f);
+            PointDamage.Damage = false;
         }
-        
+
     }
     void firstpoint()
     {
-        //Baranim.SetBool("BarBL", true);
+        Baranim.SetBool("BarBL", true);
         rnd = Random.Range(0, hp);
         nowList[rnd].gameObject.SetActive(true);
     }
@@ -84,17 +85,20 @@ public class BarrierPoint : MonoBehaviour
     }
     IEnumerator BarrierDecline(float second)
     {
-        while (true)
+        while (count >=0)
         {
             yield return new WaitForSeconds(second);
             count--;
-            //Image barimage = Bar[count].GetComponent<Image>();
-            //barimage.color = new Color(0, 0, 0, 255);
-            Debug.Log("Loop");
-            if(count%5 == 0)
+            if(count >=0)
             {
-                break;
+                Image barimage = Bar[count].GetComponent<Image>();
+                barimage.color = new Color(0, 0, 0, 255);
+                if (count % 5 == 0)
+                {
+                    break;
+                }
             }
+            
         }
     }
 
@@ -105,7 +109,12 @@ public class BarrierPoint : MonoBehaviour
         Barrier.SetActive(false);
         BosHp.SetActive(true);
         hp = maxhp;
-        count = 40;
+        for(int count= 0; count<=39;count++)
+        {
+            Image barimage = Bar[count].GetComponent<Image>();
+            barimage.color = new Color(1, 1, 1, 255);
+        }
+        count= 40;
         PointDamage.Damage = false;
 
         rnd = Random.Range(0, hp);
