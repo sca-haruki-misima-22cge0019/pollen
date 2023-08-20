@@ -44,6 +44,7 @@ public class WarningTitle : MonoBehaviour
             Debug.Log(time);
             if(time >=2.0f)
             {
+                Time.timeScale= 1;
                 SceneManager.LoadScene("TitleScene");
             }
         }

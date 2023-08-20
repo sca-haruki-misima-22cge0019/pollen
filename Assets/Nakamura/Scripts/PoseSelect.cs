@@ -51,7 +51,6 @@ public class PoseSelect : MonoBehaviour
     {
         if (warning.transform.lossyScale.y !=0.0f)
         {
-            Debug.Log("XFGHJ");
             if (Input.GetKeyUp(KeyCode.Return))
             {
 
@@ -149,7 +148,6 @@ public class PoseSelect : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Return))
             {
-                Debug.Log("SDFGHJKL");
                 Buttonselect[select].GetComponent<Image>().sprite = BlackImageselect[select];
             }
             if (Input.GetKeyUp(KeyCode.Return))

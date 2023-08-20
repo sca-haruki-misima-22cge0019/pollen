@@ -13,7 +13,10 @@ public class DrugCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (SceneManager.GetActiveScene().name == "Bos")
+        {
+            drug = 5;
+        }
     }
 
     // Update is called once per frame
@@ -31,18 +34,17 @@ public class DrugCount : MonoBehaviour
             SceneManager.LoadScene("GameClearSceneStage2");
         }
 
-        if (SceneManager.GetActiveScene().name == "Bos")
+        if(Item.drug)
         {
-            drug = 5;
+            drug--;
+            Item.drug = false;
         }
-        else
+        if(Input.GetKeyDown(KeyCode.M)&& SceneManager.GetActiveScene().name == "Bos")
         {
-            if(Item.drug)
+            if(drug >0)
             {
                 drug--;
-                Item.drug = false;
             }
-            
         }
     }
 }
