@@ -3256,8 +3256,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firingPoint: {fileID: 261334001}
   bullet: {fileID: 2269257198009297789, guid: 3085e91355a7b4141824c5ef14abfd19, type: 3}
+  superdrug: {fileID: 0}
   speed: 20
+  superdrugspeed: 30
   Numberbullet: 10
+  Numbersuperdrug: 0
   Drug: {fileID: 678411050}
   DrugCount: {fileID: 1257726104}
   DrugList:
@@ -3273,6 +3276,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8c0f1ebcb9c76ec4e8ca7366300a9978, type: 3}
   - {fileID: 21300000, guid: 4b62a854ddc59fc479d43a5428dc144a, type: 3}
   DrugObject: {fileID: 678411047}
+  BoostTime: 3
 --- !u!114 &1829248781
 MonoBehaviour:
   m_ObjectHideFlags: 0
