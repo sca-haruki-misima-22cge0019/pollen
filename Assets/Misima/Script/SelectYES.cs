@@ -7,6 +7,6 @@ public class SelectYES : MonoBehaviour
 {
     public void OnClickstartButton() 
     {
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("View of the world");
     }
 }
