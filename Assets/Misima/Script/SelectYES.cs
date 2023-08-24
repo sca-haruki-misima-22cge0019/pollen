@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SelectYES : MonoBehaviour
 {
-
     private void OnClickstartButton() 
     {
         SceneManager.LoadScene("View of the world");
