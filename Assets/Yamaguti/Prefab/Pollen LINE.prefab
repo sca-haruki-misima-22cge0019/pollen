@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6601781447725103564}
   - component: {fileID: -3218839691223962182}
   - component: {fileID: -4874447850480159898}
+  - component: {fileID: -5504801677841040093}
   m_Layer: 6
   m_Name: Pollen LINE
   m_TagString: Enemy
@@ -168,3 +169,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5504801677841040093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400978218612909872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb0d469aa3ae4814a967c3b5d4604638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

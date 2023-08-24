@@ -24,6 +24,7 @@ public class DamageWall : MonoBehaviour
         if (collider.gameObject.tag == "Enemy" && nose.tag == "Untagged")
         {
             anim.SetBool("DamageBL", true);
+            GetComponent<AudioSource>().Play();
             Invoke("RedStop",0.4f);
         }
     }

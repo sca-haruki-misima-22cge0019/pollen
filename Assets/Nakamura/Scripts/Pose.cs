@@ -19,7 +19,7 @@ public class Pose : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             AudioSource audio = GetComponent<AudioSource>();
-            audio.volume = 0.5f;
+            audio.volume = 0.2f;
             poseobject.SetActive(true);
             Time.timeScale = 0;
         }
@@ -27,7 +27,7 @@ public class Pose : MonoBehaviour
         if(Time.timeScale == 1)
         {
             AudioSource audio = GetComponent<AudioSource>();
-            audio.volume = 1;
+            audio.volume = 0.3f;
         }
     }
 

@@ -23,35 +23,44 @@ public class BarrierTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TimeUIObject.SetActive(false);
-        if (!Barrier.activeSelf)
+        BossHp bosHp = GetComponent<BossHp>();
+        if(!(bosHp.death))
         {
-            noTime += Time.deltaTime;
-            Baranim.SetBool("BarBL", true);
-
-            if (noTime >= 7.0f)
+            TimeUIObject.SetActive(false);
+            if (!Barrier.activeSelf)
             {
-                TimeUIObject.SetActive(true);
-                int count = (int)noTime;
-                count = 10-count;
-                Text TimeText = TimeUIObject.GetComponent<Text>();
-                TimeText.text = count.ToString();
+                noTime += Time.deltaTime;
+                Baranim.SetBool("BarBL", true);
+
+                if (noTime >= 7.0f)
+                {
+                    TimeUIObject.SetActive(true);
+                    int count = (int)noTime;
+                    count = 10 - count;
+                    Text TimeText = TimeUIObject.GetComponent<Text>();
+                    TimeText.text = count.ToString();
+                }
+            }
+            else
+            {
+                Baranim.SetBool("BarBL", false);
+            }
+
+            if (noTime >= 10.0f)
+            {
+                Baranim.SetBool("BarDownBL", true);
+                Invoke("Down", 1.0f);
+                noTime = 0.0f;
+                Barrier.SetActive(true);
+                TimeUIObject.SetActive(false);
+                BarrierHpanim.SetBool("BarBL", true);
             }
         }
         else
         {
-            Baranim.SetBool("BarBL", false);
+            gameObject.SetActive(false);
         }
-
-        if (noTime >= 10.0f)
-        {
-            Baranim.SetBool("BarDownBL", true);
-            Invoke("Down",1.0f);
-            noTime = 0.0f;
-            Barrier.SetActive(true);
-            TimeUIObject.SetActive(false);
-            BarrierHpanim.SetBool("BarBL", true);
-        }
+        
     }
 
     void Down()

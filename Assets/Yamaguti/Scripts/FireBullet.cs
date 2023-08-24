@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FireBullet : MonoBehaviour
 {
@@ -43,6 +44,11 @@ public class FireBullet : MonoBehaviour
     GameObject Bullet;
     [SerializeField] int BoostTime;
     float time;
+    [SerializeField] private AudioSource Shot;
+    [SerializeField] private AudioSource SuperShot;
+    [SerializeField] private AudioClip ShotSound;
+    [SerializeField] private AudioClip SuperShotSound;
+
     //[SerializeField] float angle; // 角度
     //Vector3 velocity; // 移動量
     //bool boost = false;
@@ -66,7 +72,8 @@ public class FireBullet : MonoBehaviour
             // スペースキーが押されたかを判定
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if(Numberbullet == 1)
+                Shot.PlayOneShot(ShotSound);
+                if (Numberbullet == 1)
                 {
                     LauncherShot();
                     anim.SetBool("DrugBL", true);
@@ -92,9 +99,10 @@ public class FireBullet : MonoBehaviour
                 StartCoroutine(Shotwait());
             }
 
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetKeyDown(KeyCode.M) && SceneManager.GetActiveScene().name == "Bos")
             {
-                if(Numbersuperdrug > 0)
+                SuperShot.PlayOneShot(SuperShotSound);
+                if (Numbersuperdrug > 0)
                 {
                     SuperdrugShot();
                 }
