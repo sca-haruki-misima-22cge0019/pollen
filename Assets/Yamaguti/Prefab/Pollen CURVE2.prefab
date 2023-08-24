@@ -77,6 +77,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outburst: {fileID: 223812188603037133, guid: 99211d824b97f674cb2fd8728246b87e, type: 3}
+  StraightEnemy: {fileID: 7400978218612909872, guid: cde44b7bed20860408deae1e6d21ced5, type: 3}
+  TrackingEnemy: {fileID: 3414190121282512270, guid: 4861f1bf8e8dc06449d99d3eaffc4f81, type: 3}
   Enemyenergy: 2
 --- !u!50 &8403609066856382759
 Rigidbody2D:

@@ -131,7 +131,7 @@ public class FireBullet : MonoBehaviour
     IEnumerator Shotwait()
     {
 
-        yield return new WaitForSeconds(0.7f);//0.3•b‘Ò‚Á‚Ä‚©‚ç’e10”­•â[
+        yield return new WaitForSeconds(0.5f);//0.3•b‘Ò‚Á‚Ä‚©‚ç’e10”­•â[
         Numberbullet = 10;
         DrugText.text = Numberbullet.ToString();
         Drug.sprite = DrugList[Numberbullet];
