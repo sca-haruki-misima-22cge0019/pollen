@@ -1,7 +1,7 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemCre : MonoBehaviour
 {
@@ -29,11 +29,15 @@ public class ItemCre : MonoBehaviour
         Item[1] = boost;
         Item[2] = super;
 
+        if (SceneManager.GetActiveScene().name == "Bos")
+        {
+            Itemselect.RemoveAt(2);
+        }
 
-        for(int i = 0; i<Item.Length;i++)
+        for (int i = 0; i < Item.Length; i++)
         {
             //Debug.Log(Item[i]);
-            ItemTotal+=Item[i];
+            ItemTotal += Item[i];
         }
         //Debug.Log(ItemTotal);
         rndItem = Random.Range(0.0f, ItemTotal);
@@ -44,17 +48,17 @@ public class ItemCre : MonoBehaviour
     {
         Debug.Log(ItemTotal);
         time += Time.deltaTime;
-        if(Itemcount <= time)
+        if (Itemcount <= time)
         {
             ItemRandom();
             X = Random.Range(9.6f, 14.0f);
-            Y = Random.Range(-2.71f,3.42f);
+            Y = Random.Range(-2.71f, 3.42f);
             Instantiate(Itemselect[item], new Vector3(X, Y), Quaternion.identity);
             time = 0.0f;
             Item[2] += 0.5f;
             ItemTotal += 0.5f;
         }
-        
+
     }
 
     void ItemRandom()
@@ -64,7 +68,7 @@ public class ItemCre : MonoBehaviour
         for (item = 0; item < Item.Length; item++)
         {
             total += Item[item];
-            if(rndItem <=total)
+            if (rndItem <= total)
             {
                 Debug.Log(total);
                 Debug.Log(rndItem);

@@ -1908,10 +1908,9 @@ GameObject:
   - component: {fileID: 882397162}
   - component: {fileID: 882397161}
   - component: {fileID: 882397160}
-  - component: {fileID: 882397159}
-  - component: {fileID: 882397158}
   - component: {fileID: 882397163}
   - component: {fileID: 882397157}
+  - component: {fileID: 882397158}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2024,30 +2023,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 882397156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b657b2cf6db6d14883b9771096385dc, type: 3}
+  m_Script: {fileID: 11500000, guid: f0609b58bce944649a87ac3cbbf2a3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Itemselect:
-  - {fileID: 8514296169995873671, guid: 933763ccd8ff0814ba5b0b91f5e85155, type: 3}
   - {fileID: 1424960972918974640, guid: 5fabcafbff7304c44bdee62c4e421cad, type: 3}
   - {fileID: 883222760781395253, guid: 458712169afb1b040911ce8dcd5d7cf3, type: 3}
-  Itemcount: 10
-  mask: 0
-  boost: 0
-  super: 0
---- !u!114 &882397159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882397156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5843df626171568448f8f69e054e83dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 3674641550447689476, guid: b16392917a8ae1b479baf5e7353aa646, type: 3}
+  itemTime: 5
 --- !u!81 &882397160
 AudioListener:
   m_ObjectHideFlags: 0
