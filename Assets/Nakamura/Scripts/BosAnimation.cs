@@ -69,12 +69,13 @@ public class BosAnimation : MonoBehaviour
             {
 				yield break;
             }
-			else
+			yield return new WaitForSeconds(time);
+			if(!bosHp.death)
             {
-				yield return new WaitForSeconds(time);
 				AnimationSecond();
 			}
 			
+
 		}
 	}
 

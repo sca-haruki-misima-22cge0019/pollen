@@ -150,6 +150,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mask: {fileID: 6240021217980938100, guid: 26cfe1df3d7ffe842b9f8293a73a89bb, type: 3}
+  item: {fileID: 3034686567806855503}
+  mask: {fileID: -3954420809849946277}
+  itemSound: {fileID: 8300000, guid: 327a142a55def8d498efcc53ebe99637, type: 3}
+  maskSound: {fileID: 8300000, guid: 3ec370d541b437d4b95ac6236f1f741e, type: 3}
 --- !u!82 &3034686567806855503
 AudioSource:
   m_ObjectHideFlags: 0
