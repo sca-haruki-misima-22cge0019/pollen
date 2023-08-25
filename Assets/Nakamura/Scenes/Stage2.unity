@@ -1271,7 +1271,7 @@ MonoBehaviour:
   - {fileID: 3414190121282512270, guid: 4861f1bf8e8dc06449d99d3eaffc4f81, type: 3}
   pos: {fileID: 673790155}
   pos2: {fileID: 1828748985}
-  generateFrame: 600
+  generateFrame: 80
 --- !u!4 &660984664
 Transform:
   m_ObjectHideFlags: 0
@@ -2305,7 +2305,7 @@ MonoBehaviour:
   - {fileID: 7043490982799478258, guid: d56bdca71df51f443a5e0bb133504f09, type: 3}
   pos: {fileID: 950911266}
   pos2: {fileID: 1906944372}
-  generateFrame: 60
+  generateFrame: 120
 --- !u!4 &1461674223
 Transform:
   m_ObjectHideFlags: 0
