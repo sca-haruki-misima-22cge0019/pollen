@@ -5,11 +5,13 @@ using UnityEngine;
 public class ItemMove : MonoBehaviour
 {
    [SerializeField]float speed =1.0f;
-  
+    [SerializeField] private AudioSource get;
+    [SerializeField] private AudioClip getSound;
+    bool delete = false;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -19,14 +21,30 @@ public class ItemMove : MonoBehaviour
         {
             transform.Rotate(new Vector3(0.0f, 0.0f, 0.5f));
             transform.position += new Vector3(-speed * Time.deltaTime, 0.0f, 0.0f);
+            if(delete)
+            {
+                Invoke("Delete",0.25f);
+            }
         }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Drug" || other.gameObject.tag =="Nose")
+        if (other.gameObject.tag =="Nose")
         {
             this.gameObject.SetActive(false);
+            
+            
         }
+        if(other.gameObject.tag == "Drug")
+        {
+            get.PlayOneShot(getSound);
+            delete = true;
+        }
+    }
+
+    void Delete()
+    {
+        this.gameObject.SetActive(false);
     }
 
 }

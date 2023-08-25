@@ -7,6 +7,7 @@ public class Pose : MonoBehaviour
 {
     [SerializeField] GameObject poseobject;
     private Animator anim;
+    [SerializeField] GameObject BosHp;
     // Start is called before the first frame update
     void Start()
     {

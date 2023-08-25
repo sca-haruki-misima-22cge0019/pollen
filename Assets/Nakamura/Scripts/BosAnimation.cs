@@ -8,6 +8,11 @@ public class BosAnimation : MonoBehaviour
 {
 	[SerializeField] private string AnimationName = "デフォルト";
 	[SerializeField] private float time = 20.0f;
+	[SerializeField] private AudioSource damage;
+	[SerializeField] private AudioSource die;
+	[SerializeField] private AudioClip damageSound;
+	[SerializeField] private AudioClip dieSound;
+	[SerializeField] private AudioSource bgm;
 
 	/// <summary> ゲームオブジェクトに設定されているSkeletonAnimation 
 	private SkeletonAnimation skeletonAnimation = default;
@@ -35,6 +40,7 @@ public class BosAnimation : MonoBehaviour
 
 		if (bosHp.death && !isPlayingAnimation)
 		{
+			die.PlayOneShot(dieSound);
 			time = 60.0f;
 			isPlayingAnimation = true;
 			AnimationName = "死亡";
@@ -45,7 +51,7 @@ public class BosAnimation : MonoBehaviour
 
 		if (bosHp.damage)
 		{
-			GetComponent<AudioSource>().Play();
+			damage.PlayOneShot(damageSound);
 			AnimationName = "スーパー花粉錠剤ダメージ";
 			spineAnimationState.SetAnimation(0, AnimationName, false);
 			TrackEntry trackEntry = spineAnimationState.GetCurrent(0);
@@ -59,15 +65,16 @@ public class BosAnimation : MonoBehaviour
 		BossHp bosHp = GetComponent<BossHp>();
 		while (true)
 		{
-			if (bosHp.death)
-			{
+			if(bosHp.death)
+            {
 				yield break;
-			}
+            }
 			else
-			{
+            {
 				yield return new WaitForSeconds(time);
 				AnimationSecond();
 			}
+			
 		}
 	}
 

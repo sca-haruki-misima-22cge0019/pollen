@@ -37,7 +37,7 @@ public class Bgm : MonoBehaviour
         else
         {
             AudioSource audio = GetComponent<AudioSource>();
-            audio.volume = 1;
+            audio.volume = 0.4f;
         }
     }
 }
