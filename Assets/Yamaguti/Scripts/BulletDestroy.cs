@@ -23,7 +23,6 @@ public class BulletDestroy : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider) 
     {
-        Debug.Log("tttt");
         if(collider.gameObject.CompareTag("Enemy")) {
             //if(energy <= 0) {
                 Debug.Log("AAA");

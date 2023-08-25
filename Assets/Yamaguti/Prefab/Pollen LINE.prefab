@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da20a25fd01249d46bc5c4486aed99cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.4
+  speed: 1.4
   type: 0
   cycleCount: 0
   curveLength: 0
