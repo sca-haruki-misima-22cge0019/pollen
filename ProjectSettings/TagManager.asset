@@ -17,6 +17,7 @@ TagManager:
   - Mask
   - Nose
   - Diffusion
+  - Target
   layers:
   - Default
   - TransparentFX
