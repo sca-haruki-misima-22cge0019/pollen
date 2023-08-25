@@ -22,6 +22,15 @@ public class DrugCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(SceneManager.GetActiveScene().name == "Bos" && drug == 0)
+        {
+            time +=Time.deltaTime;
+            if(time >=3.0f)
+            {
+                SceneManager.LoadScene("GameOverScene");
+            }
+        }
+
         Text DrugText = DrugObject.GetComponent<Text>();
         DrugText.text = drug.ToString();
 
