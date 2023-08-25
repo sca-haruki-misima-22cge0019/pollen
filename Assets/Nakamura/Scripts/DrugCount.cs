@@ -37,7 +37,7 @@ public class DrugCount : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Stage1" && drug==0)
         {
             Normaltime += Time.deltaTime;
-            if(Normaltime >=0.2f)
+            if(Normaltime >=0.3f)
             {
                 SceneManager.LoadScene("GameClearSceneStage1");
                 Normaltime = 0.0f;
