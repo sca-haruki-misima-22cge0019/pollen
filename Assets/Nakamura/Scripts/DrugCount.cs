@@ -25,7 +25,7 @@ public class DrugCount : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Bos" && drug == 0)
         {
             Bostime +=Time.deltaTime;
-            if(Bostime >=3.0f)
+            if(Bostime >=5.0f)
             {
                 SceneManager.LoadScene("GameOverScene");
             }

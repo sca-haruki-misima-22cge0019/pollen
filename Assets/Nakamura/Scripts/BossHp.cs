@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BossHp : MonoBehaviour
 {
     private int hp;
-    private int maxhp = 5;
+    private int maxhp = 4;
     private float nowhp;
     [SerializeField] Slider slider;
     public bool damage = false;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 742407153}
   - component: {fileID: 742407152}
   - component: {fileID: 742407151}
+  - component: {fileID: 742407154}
   m_Layer: 5
   m_Name: TitleButton
   m_TagString: Untagged
@@ -590,7 +591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 40dae7b1c2261374791ac6c823da4c1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 076955311e86530478c74a0e6945de1a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -608,6 +609,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742407149}
   m_CullTransparentMesh: 1
+--- !u!114 &742407154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742407149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f606560d49cc54d8c987cab8bcaca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  push: {fileID: 21300000, guid: 7ea95dcf2ca55b543a0facf9258fc207, type: 3}
+  up: {fileID: 21300000, guid: 076955311e86530478c74a0e6945de1a, type: 3}
 --- !u!1 &814269961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,11 +1109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
