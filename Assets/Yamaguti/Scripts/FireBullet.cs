@@ -93,11 +93,11 @@ public class FireBullet : MonoBehaviour
                 //}
                 
             }
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                anim.SetBool("DrugBL", true);
-                StartCoroutine(Shotwait());
-            }
+            //if (Input.GetKeyDown(KeyCode.R))
+            //{
+            //    anim.SetBool("DrugBL", true);
+            //    StartCoroutine(Shotwait());
+            //}
 
             if (Input.GetKeyDown(KeyCode.M) && SceneManager.GetActiveScene().name == "Bos")
             {

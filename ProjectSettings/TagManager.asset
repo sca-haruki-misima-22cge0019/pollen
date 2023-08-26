@@ -18,6 +18,8 @@ TagManager:
   - Nose
   - Diffusion
   - Target
+  - target
+  - Border2
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BulletReflectionWall : MonoBehaviour
 {
-    int count = 0;
+    //int count = 0;
+    //int count2 = 0;
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("1");
@@ -29,8 +30,29 @@ public class BulletReflectionWall : MonoBehaviour
 
                 // バウンド後の速度をボールに反映
                 rb.velocity = result;
-                ++count;
-            //}
+                //++count;
+        //    }
+        //}
+        //if (other.gameObject.CompareTag("Border2"))
+        //{
+        //    if(count2 < 2)
+        //    {
+        //        // Triggerで接触したオブジェクトは
+        //        // 全てボールとみなすことにする
+        //        var rb = other.GetComponent<Rigidbody2D>();
+        //        if (rb == null) return;
+        //
+        //        // 入射ベクトル（速度）
+        //        var inDirection = rb.velocity;
+        //        // 法線ベクトル
+        //        var inNormal = transform.up;
+        //        // 反射ベクトル（速度）
+        //        var result = Vector2.Reflect(inDirection, inNormal);
+        //
+        //        // バウンド後の速度をボールに反映
+        //        rb.velocity = result;
+        //        ++count2;
+        //    }
         //}
     }
         
