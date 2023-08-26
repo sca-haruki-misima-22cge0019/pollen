@@ -22,7 +22,7 @@ public class enemy : MonoBehaviour
     void Start()
     {
         centerY = transform.position.y;
-        target = GameObject.Find("target");
+        target = GameObject.Find("Nose");
 
         //int test1 = LayerMask.NameToLayer("Enemy");
         //Physics.IgnoreLayerCollision(test1, test1);
