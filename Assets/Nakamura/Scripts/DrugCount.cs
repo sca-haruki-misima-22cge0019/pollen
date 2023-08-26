@@ -8,8 +8,8 @@ public class DrugCount : MonoBehaviour
 {
     [SerializeField] GameObject DrugObject;
     public int drug;
-    private float time = 0.0f;
-
+    private float Bostime = 0.0f;
+    private float Normaltime = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +22,37 @@ public class DrugCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(SceneManager.GetActiveScene().name == "Bos" && drug == 0)
+        {
+            Bostime +=Time.deltaTime;
+            if(Bostime >=5.0f)
+            {
+                SceneManager.LoadScene("GameOverScene");
+            }
+        }
+
         Text DrugText = DrugObject.GetComponent<Text>();
         DrugText.text = drug.ToString();
 
         if (SceneManager.GetActiveScene().name == "Stage1" && drug==0)
         {
-            SceneManager.LoadScene("GameClearSceneStage1");
+            Normaltime += Time.deltaTime;
+            if(Normaltime >=0.3f)
+            {
+                SceneManager.LoadScene("GameClearSceneStage1");
+                Normaltime = 0.0f;
+            }
+            
         }
         if (SceneManager.GetActiveScene().name == "Stage2" && drug == 0)
         {
-            SceneManager.LoadScene("GameClearSceneStage2");
+            Normaltime += Time.deltaTime;
+            if (Normaltime >= 0.2f)
+            {
+                SceneManager.LoadScene("GameClearSceneStage2");
+                Normaltime = 0.0f;
+            }
+                
         }
 
         if(Item.drug)

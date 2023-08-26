@@ -9,7 +9,6 @@ public class Item : MonoBehaviour
     [SerializeField] GameObject Mask;
     GameObject Fulcrum;
     GameObject launcher;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +28,7 @@ public class Item : MonoBehaviour
         {
             Instantiate(Mask, Mask.transform.position, Quaternion.identity);
             Fulcrum.tag = "Mask";
+
         }
         if (other.gameObject.tag == "SuperDrugMove")
         {

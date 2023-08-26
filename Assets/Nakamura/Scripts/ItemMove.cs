@@ -5,11 +5,11 @@ using UnityEngine;
 public class ItemMove : MonoBehaviour
 {
    [SerializeField]float speed =1.0f;
-  
+    [SerializeField] GameObject SE;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -23,8 +23,15 @@ public class ItemMove : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Drug" || other.gameObject.tag =="Nose")
+        if (other.gameObject.tag =="Nose")
         {
+            this.gameObject.SetActive(false);
+            
+            
+        }
+        if(other.gameObject.tag == "Drug")
+        {
+            Instantiate(SE, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             this.gameObject.SetActive(false);
         }
     }

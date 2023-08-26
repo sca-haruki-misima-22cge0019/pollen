@@ -8,12 +8,20 @@ public class BosAnimation : MonoBehaviour
 {
 	[SerializeField] private string AnimationName = "デフォルト";
 	[SerializeField] private float time = 20.0f;
+	[SerializeField] private AudioSource damage;
+	[SerializeField] private AudioSource die;
+	[SerializeField] private AudioClip damageSound;
+	[SerializeField] private AudioClip dieSound;
+	[SerializeField] private AudioSource bgm;
 
-	/// <summary> ゲームオブジェクトに設定されているSkeletonAnimation </summary>
+	/// <summary> ゲームオブジェクトに設定されているSkeletonAnimation 
 	private SkeletonAnimation skeletonAnimation = default;
 
-	/// <summary> Spineアニメーションを適用するために必要なAnimationState </summary>
+	/// <summary> Spineアニメーションを適用するために必要なAnimationState 
 	private Spine.AnimationState spineAnimationState = default;
+
+	private bool isPlayingAnimation = false;
+
 
 	void Start()
 	{
@@ -29,37 +37,44 @@ public class BosAnimation : MonoBehaviour
 	{
 		BossHp bosHp = GetComponent<BossHp>();
 		Debug.Log(bosHp.death);
-		if (bosHp.death)
+
+		if (bosHp.death && !isPlayingAnimation)
 		{
+			die.PlayOneShot(dieSound);
+			time = 60.0f;
+			isPlayingAnimation = true;
 			AnimationName = "死亡";
-			spineAnimationState.SetAnimation(0, AnimationName, true);
-			TrackEntry trackEntry = spineAnimationState.SetAnimation(0, AnimationName, false);
+			spineAnimationState.SetAnimation(0, AnimationName, false);
+			TrackEntry trackEntry = spineAnimationState.GetCurrent(0);
 			trackEntry.Complete += End;
-			bosHp.death = false;
 		}
+
 		if (bosHp.damage)
 		{
-			GetComponent<AudioSource>().Play();
+			damage.PlayOneShot(damageSound);
 			AnimationName = "スーパー花粉錠剤ダメージ";
-			spineAnimationState.SetAnimation(0, AnimationName, true);
-			TrackEntry trackEntry = spineAnimationState.SetAnimation(0, AnimationName, false);
+			spineAnimationState.SetAnimation(0, AnimationName, false);
+			TrackEntry trackEntry = spineAnimationState.GetCurrent(0);
 			trackEntry.Complete += OnCompleteAnimation;
 			bosHp.damage = false;
 		}
-
 	}
 
 	private IEnumerator Loop()
 	{
+		BossHp bosHp = GetComponent<BossHp>();
 		while (true)
 		{
-			BossHp bosHp = GetComponent<BossHp>();
-			if (bosHp.death)
-			{
-				break;
-			}
+			if(bosHp.death)
+            {
+				yield break;
+            }
 			yield return new WaitForSeconds(time);
-			AnimationSecond();
+			if(!bosHp.death)
+            {
+				AnimationSecond();
+			}
+			
 
 		}
 	}
@@ -67,16 +82,16 @@ public class BosAnimation : MonoBehaviour
 	private void AnimationSecond()
 	{
 		AnimationName = "デフォルト2";
-		spineAnimationState.SetAnimation(0, AnimationName, true);
-		TrackEntry trackEntry = spineAnimationState.SetAnimation(0, AnimationName, false);
+		spineAnimationState.SetAnimation(0, AnimationName, false);
+		TrackEntry trackEntry = spineAnimationState.GetCurrent(0);
 		trackEntry.Complete += OnCompleteAnimation;
 	}
 
 	private void OnCompleteAnimation(TrackEntry trackEntry)
 	{
-		//Debug.Log("アニメーション終了");
 		AnimationName = "デフォルト";
 		spineAnimationState.SetAnimation(0, AnimationName, true);
+		isPlayingAnimation = false; // アニメーション再生フラグをリセット
 	}
 
 	private void End(TrackEntry trackEntry)

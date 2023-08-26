@@ -1,7 +1,7 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PollenRandom : MonoBehaviour
 {
@@ -12,6 +12,8 @@ public class PollenRandom : MonoBehaviour
 
     int frame = 0;
     [SerializeField] int generateFrame = 30;        // 生成する間隔
+
+    GameObject bos;
 
     // Start is called before the first frame update
     void Start()
@@ -27,20 +29,38 @@ public class PollenRandom : MonoBehaviour
     {
         if(Time.timeScale != 0)
         {
-            ++frame;
-
-            if (frame > generateFrame)
+            if (SceneManager.GetActiveScene().name == "Bos")
             {
-                frame = 0;
-
-                // ランダムで種類と位置を決める
-                int index = Random.Range(0, enemyList.Count);
-                float posX = Random.Range(minX, maxX);
-                float posY = Random.Range(minY, maxY);
-
-                Instantiate(enemyList[index], new Vector3(posX, posY, 0), Quaternion.identity);
+                bos = GameObject.Find("Boss");
+                BossHp bosHp = bos.GetComponent<BossHp>();
+                if (!(bosHp.death))
+                {
+                   Cre();
+                }
             }
+            else
+            {
+                Cre();
+            }
+           
+            
         }
-       
+    }
+
+    void Cre()
+    {
+        ++frame;
+
+        if (frame > generateFrame)
+        {
+            frame = 0;
+
+            // ランダムで種類と位置を決める
+            int index = Random.Range(0, enemyList.Count);
+            float posX = Random.Range(minX, maxX);
+            float posY = Random.Range(minY, maxY);
+
+            Instantiate(enemyList[index], new Vector3(posX, posY, 0), Quaternion.identity);
+        }
     }
 }
