@@ -22,7 +22,7 @@ public class BossHp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(death);
+        //Debug.Log(death);
 
     }
 
@@ -30,6 +30,7 @@ public class BossHp : MonoBehaviour
     {
         if (other.gameObject.tag == "SuperDrug")
         {
+            damage = true;
             other.gameObject.SetActive(false);
             StartCoroutine(DecreaseHPAnimation(maxhp, --hp));
             Debug.Log(slider.value);
@@ -46,8 +47,9 @@ public class BossHp : MonoBehaviour
         }
         else
         {
+            
             Debug.Log("S");
-            damage = true;
+            
         }
 
         nowhp = (float)newHP / (float)oldHP;

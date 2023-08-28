@@ -34,7 +34,6 @@ public class BarrierPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(count);
         if (Input.GetKeyDown(KeyCode.U))
         {
             PointDamage.Damage = true;
