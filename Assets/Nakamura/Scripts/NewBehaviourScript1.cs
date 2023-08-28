@@ -7,8 +7,6 @@ public class NewBehaviourScript1 : MonoBehaviour
     Animator animator;
     [SerializeField] float SecondMotionTime;
     float time = 0.0f;
-    float movetime = 2.4f;
-    float damagetime = 2.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,41 +18,38 @@ public class NewBehaviourScript1 : MonoBehaviour
     void Update()
     {
         BossHp bosHp = GetComponent<BossHp>();
-        Debug.Log(bosHp.damage);
-        
-        Damage();
-        //Move();
-       
-    }
-
-    /*void Move()
-    {
-        if (time >= SecondMotionTime)
+        if (!bosHp.damage)
         {
-            animator.SetBool("Default2BL", true);
-            if (time >= SecondMotionTime + movetime)
+            time += Time.deltaTime;
+            if (time >= SecondMotionTime)
             {
-                animator.SetBool("Default2BL", false);
-                time = 0.0f;
+                animator.SetBool("Default2BL", true);
+
             }
         }
-    }*/
+        
 
-    void Damage()
-    {
-        BossHp bosHp = GetComponent<BossHp>();
-        if (bosHp.damage)
+        
+        if(bosHp.damage)
         {
             animator.SetBool("DamageBL", true);
-            time += Time.deltaTime;
-            if (time >= damagetime)
-            {
-                animator.SetBool("DamageBL", false);
-                bosHp.damage = false;
-                time = 0.0f;
-            }
-            
+            bosHp.damage = false;
         }
-        
+        if (bosHp.death)
+        {
+            animator.SetBool("DeathBL", true);
+        }
+
     }
+    public void Default2()
+    {
+        animator.SetBool("Default2BL", false);
+        time = 0.0f;
+    }
+
+    public void Damage()
+    {
+        animator.SetBool("DamageBL", false);
+    }
+
 }

@@ -10,7 +10,7 @@ public class BossHp : MonoBehaviour
     private float nowhp;
     [SerializeField] Slider slider;
     public bool damage = false;
-    public bool death;
+    public bool death = false;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +56,7 @@ public class BossHp : MonoBehaviour
         //Debug.Log(nowhp);
         while (slider.value >= nowhp)
         {
-            slider.value -= 0.001f;
+            slider.value -= 0.01f;
             yield return null;
         }
         //Debug.Log(slider.value);
