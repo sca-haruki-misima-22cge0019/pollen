@@ -7,6 +7,8 @@ public class NewBehaviourScript1 : MonoBehaviour
     Animator animator;
     [SerializeField] float SecondMotionTime;
     float time = 0.0f;
+    bool end = false;
+    float speed = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,10 @@ public class NewBehaviourScript1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(end)
+        {
+            transform.position -=new Vector3(0,Time.deltaTime*speed);
+        }
         BossHp bosHp = GetComponent<BossHp>();
         if (!bosHp.damage)
         {
@@ -50,6 +56,11 @@ public class NewBehaviourScript1 : MonoBehaviour
     public void Damage()
     {
         animator.SetBool("DamageBL", false);
+    }
+
+    public void End()
+    {
+        end = true;
     }
 
 }
