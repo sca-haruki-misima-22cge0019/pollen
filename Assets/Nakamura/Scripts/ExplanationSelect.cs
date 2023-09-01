@@ -14,6 +14,10 @@ public class ExplanationSelect : MonoBehaviour
     [SerializeField] Image M;
     [SerializeField] Image P;
     [SerializeField] Image sp;
+    [SerializeField] GameObject start;
+    [SerializeField] GameObject ButtonFlash;
+    Animator anim;
+    Animator Flashanim;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +69,11 @@ public class ExplanationSelect : MonoBehaviour
         }
         if (!Second.activeSelf)
         {
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                GameObject.Find("Panel Chenge").GetComponent<PanelChenge>().NextView();
+            }
+            /*
             if (Input.GetKeyDown(KeyCode.D))
             {
                 select = 0;
@@ -77,9 +86,26 @@ public class ExplanationSelect : MonoBehaviour
                 FirstButtonselect[select].GetComponent<Image>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                 FirstButtonselect[select - 1].GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
+            */
         }
         else
         {
+            anim = start.GetComponent<Animator>();
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                if(anim.enabled)
+                {
+                    SceneManager.LoadScene("Stage1");
+                }
+                else
+                {
+                    anim.enabled = true;
+                    Flashanim = ButtonFlash.GetComponent<Animator>();
+                    Flashanim.enabled = true;
+                }
+                
+            }
+            /*
             if (Input.GetKeyDown(KeyCode.D))
             {
                 select = 0;
@@ -92,10 +118,11 @@ public class ExplanationSelect : MonoBehaviour
                 FirstButtonselect[select].GetComponent<Image>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                 FirstButtonselect[select - 2].GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
+            */
         }
         
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        /*if (Input.GetKeyDown(KeyCode.Return))
         {
             if(select == 0)
             {
@@ -113,6 +140,6 @@ public class ExplanationSelect : MonoBehaviour
                 GameObject.Find("Panel Chenge").GetComponent<PanelChenge>().CloseView();
                 select = 1;
             }
-        }
+        }*/
     }
 }
