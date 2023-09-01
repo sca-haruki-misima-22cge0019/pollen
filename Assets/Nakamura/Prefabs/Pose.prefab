@@ -3726,6 +3726,7 @@ GameObject:
   - component: {fileID: 7256622627006278185}
   - component: {fileID: 7256622627006278190}
   - component: {fileID: 7256622627006278186}
+  - component: {fileID: 960953454566561894}
   m_Layer: 5
   m_Name: ExplScreen
   m_TagString: Untagged
@@ -3831,6 +3832,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: 1}
   m_UseGraphicAlpha: 1
+--- !u!114 &960953454566561894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7256622627006278191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5b5786cec6eac24c80a36a79f7efa25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  super: {fileID: 8954182040105538724}
 --- !u!1 &7356794372019653019
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,7 +4178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4063655844671630790
 RectTransform:
   m_ObjectHideFlags: 0
