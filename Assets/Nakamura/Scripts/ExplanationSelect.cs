@@ -9,6 +9,11 @@ public class ExplanationSelect : MonoBehaviour
     public List<GameObject> FirstButtonselect = new List<GameObject>();
     int select=1;
     [SerializeField] GameObject Second;
+    [SerializeField]Image W;
+    [SerializeField] Image S;
+    [SerializeField] Image M;
+    [SerializeField] Image P;
+    [SerializeField] Image sp;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +23,47 @@ public class ExplanationSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!Second.activeSelf)
+        if(Input.GetKey(KeyCode.W))
+        {
+            W.enabled = true;
+        }
+        else
+        {
+            W.enabled = false;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            S.enabled = true;
+        }
+        else
+        {
+            S.enabled = false;
+        }
+        if (Input.GetKey(KeyCode.M))
+        {
+            M.enabled = true;
+        }
+        else
+        {
+            M.enabled = false;
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            P.enabled = true;
+        }
+        else
+        {
+            P.enabled = false;
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            sp.enabled = true;
+        }
+        else
+        {
+            sp.enabled = false;
+        }
+        if (!Second.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.D))
             {
