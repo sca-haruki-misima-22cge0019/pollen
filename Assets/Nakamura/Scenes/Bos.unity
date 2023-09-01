@@ -1771,7 +1771,7 @@ MonoBehaviour:
   - {fileID: 7043490982799478258, guid: d56bdca71df51f443a5e0bb133504f09, type: 3}
   pos: {fileID: 1126563857}
   pos2: {fileID: 126515124}
-  generateFrame: 120
+  generateFrame: 200
 --- !u!4 &809869972
 Transform:
   m_ObjectHideFlags: 0
@@ -3386,7 +3386,7 @@ MonoBehaviour:
   - {fileID: 3414190121282512270, guid: 4861f1bf8e8dc06449d99d3eaffc4f81, type: 3}
   pos: {fileID: 1594635152}
   pos2: {fileID: 25890192}
-  generateFrame: 80
+  generateFrame: 100
 --- !u!4 &1258608317
 Transform:
   m_ObjectHideFlags: 0
@@ -10587,11 +10587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e76989a1ecc0c4cb40d647eb44ecc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  SecondMotionTime: 0
-  time: 0
-  end: 0
-  speed: 5
 --- !u!1001 &6817040740674991499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11382,50 +11377,50 @@ MonoBehaviour:
   - {fileID: 2002534163}
   - {fileID: 1779065379}
   Bar:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3916609088221543339}
+  - {fileID: 3916609088221543339}
+  - {fileID: 3916609086350842342}
+  - {fileID: 3916609087327110633}
+  - {fileID: 3916609087767385430}
+  - {fileID: 3916609087594119747}
+  - {fileID: 3916609086957938521}
+  - {fileID: 3916609088192808182}
+  - {fileID: 3916609087753006724}
+  - {fileID: 3916609086357727471}
+  - {fileID: 3916609088154552427}
+  - {fileID: 3916609086839388421}
+  - {fileID: 3916609087049162065}
+  - {fileID: 3916609087472392752}
+  - {fileID: 3916609087640653110}
+  - {fileID: 3916609086988377042}
+  - {fileID: 3916609087975745381}
+  - {fileID: 3916609087409958593}
+  - {fileID: 3916609086953406455}
+  - {fileID: 3916609086585924099}
+  - {fileID: 3916609087312297349}
+  - {fileID: 3916609087114020600}
+  - {fileID: 3916609087733428264}
+  - {fileID: 3916609086874675590}
+  - {fileID: 3916609086413909532}
+  - {fileID: 3916609087624250051}
+  - {fileID: 3916609087120139712}
+  - {fileID: 3916609086774669766}
+  - {fileID: 3916609086909703394}
+  - {fileID: 3916609087500667623}
+  - {fileID: 3916609086615295030}
+  - {fileID: 3916609087971720569}
+  - {fileID: 3916609086416998670}
+  - {fileID: 3916609087576355283}
+  - {fileID: 3916609086373677284}
+  - {fileID: 3916609086435875009}
+  - {fileID: 3916609087019786154}
+  - {fileID: 3916609087812987322}
+  - {fileID: 3916609087674002322}
+  - {fileID: 3916609088298387546}
+  - {fileID: 3916609087037345586}
   Barrier: {fileID: 8180478873096130661}
-  BosHp: {fileID: 0}
-  BarrierBar: {fileID: 0}
+  BosHp: {fileID: 1873938325}
+  BarrierBar: {fileID: 3916609087744556680}
 --- !u!1 &8180478872355758852
 GameObject:
   m_ObjectHideFlags: 0
@@ -11761,7 +11756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Effect: {fileID: 5968630670070911356, guid: 9b9caeb48e7424f42be5ff11add33cfc, type: 3}
-  count: {fileID: 0}
+  count: {fileID: 1858595076}
 --- !u!1001 &8180478873149635964
 PrefabInstance:
   m_ObjectHideFlags: 0

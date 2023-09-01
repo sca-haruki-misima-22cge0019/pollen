@@ -11,7 +11,7 @@ public class PollenRandom : MonoBehaviour
     float minX, maxX, minY, maxY;                   // ¶¬”ÍˆÍ
 
     int frame = 0;
-    [SerializeField] int generateFrame = 30;        // ¶¬‚·‚éŠÔŠu
+    [SerializeField] int generateFrame;        // ¶¬‚·‚éŠÔŠu
 
     GameObject bos;
 
