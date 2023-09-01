@@ -10,6 +10,7 @@ public class DrugCount : MonoBehaviour
     public int drug;
     private float Bostime = 0.0f;
     private float Normaltime = 0.0f;
+    private int count= 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,7 +58,13 @@ public class DrugCount : MonoBehaviour
 
         if(Item.drug)
         {
-            drug--;
+            count++;
+            if(count == 2)
+            {
+                drug--;
+                count = 0;
+            }
+           
             Item.drug = false;
         }
         if(Input.GetKeyDown(KeyCode.M)&& SceneManager.GetActiveScene().name == "Bos")

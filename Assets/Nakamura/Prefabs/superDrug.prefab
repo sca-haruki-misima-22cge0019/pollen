@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3078953851396727193}
   - component: {fileID: 3078953851396727191}
   - component: {fileID: 5172192564850895060}
+  - component: {fileID: -7965806511803451931}
   m_Layer: 13
   m_Name: superDrug
   m_TagString: SuperDrug
@@ -148,3 +149,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054dc10974d5f4649b25cfd8c08d3341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7965806511803451931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3078953851396727196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffff1aec57b19343803cf685e47a6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrugHP: 2

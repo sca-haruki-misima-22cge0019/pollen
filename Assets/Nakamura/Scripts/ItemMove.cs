@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemMove : MonoBehaviour
 {
-   [SerializeField]float speed =1.0f;
+    [SerializeField]float speed =1.0f;
     [SerializeField] GameObject SE;
     // Start is called before the first frame update
     void Start()
@@ -31,8 +31,22 @@ public class ItemMove : MonoBehaviour
         }
         if(other.gameObject.tag == "Drug")
         {
-            Instantiate(SE, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
-            this.gameObject.SetActive(false);
+            if(this.gameObject.name == "MovesuperDrug(Clone)")
+            {
+                Debug.Log("Supe");
+                SuperDrugHp superdrughp = gameObject.GetComponent<SuperDrugHp>();
+                if(superdrughp.DrugHP == 1)
+                {
+                    Instantiate(SE, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+                    this.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                Instantiate(SE, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+                this.gameObject.SetActive(false);
+            }
+
         }
     }
 

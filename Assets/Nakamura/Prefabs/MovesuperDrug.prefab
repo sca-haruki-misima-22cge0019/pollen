@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8514296169995873669}
   - component: {fileID: 8514296169995873668}
   - component: {fileID: -5707605267869049036}
+  - component: {fileID: -7852411506521502410}
   m_Layer: 9
   m_Name: MovesuperDrug
   m_TagString: SuperDrugMove
@@ -132,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   SE: {fileID: 6825610577194042260, guid: 3ea2f81b3b426934f939cfa33b7037b9, type: 3}
+  super: {fileID: 8514296169995873671}
 --- !u!114 &-5707605267869049036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,3 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054dc10974d5f4649b25cfd8c08d3341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7852411506521502410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8514296169995873671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffff1aec57b19343803cf685e47a6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrugHP: 2
