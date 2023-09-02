@@ -3518,10 +3518,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4b62a854ddc59fc479d43a5428dc144a, type: 3}
   DrugObject: {fileID: 1666820462}
   BoostTime: 3
+  reloadtime: 1.5
   Shot: {fileID: 1302201520}
   SuperShot: {fileID: 1302201521}
   ShotSound: {fileID: 8300000, guid: b4c82ea93a848404ea5ddc12c6309315, type: 3}
   SuperShotSound: {fileID: 8300000, guid: 6e728bcd2e53d4647b18875d8ca732ca, type: 3}
+  DrugTextCount: {fileID: 1858595076}
 --- !u!114 &1302201517
 MonoBehaviour:
   m_ObjectHideFlags: 0
