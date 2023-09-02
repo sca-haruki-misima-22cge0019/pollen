@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 1cdfa7d96e8b4854bb7b43e89eb3ace6
   - enabled: 1
-    path: Assets/Misima/Scene/View of the world.unity
+    path: Assets/Scenes/View of the world.unity
     guid: 49f33d23b9cea2a4d8d9bdfe8f9781ed
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
