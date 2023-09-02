@@ -1769,6 +1769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyList:
   - {fileID: 7043490982799478258, guid: d56bdca71df51f443a5e0bb133504f09, type: 3}
+  - {fileID: 3414190121282512270, guid: 4861f1bf8e8dc06449d99d3eaffc4f81, type: 3}
   pos: {fileID: 1126563857}
   pos2: {fileID: 126515124}
   generateFrame: 200
@@ -3383,7 +3384,6 @@ MonoBehaviour:
   enemyList:
   - {fileID: 7400978218612909872, guid: cde44b7bed20860408deae1e6d21ced5, type: 3}
   - {fileID: 1606759889503778390, guid: 8f5d339bb24ad4643be0ba5a6ec76cc3, type: 3}
-  - {fileID: 3414190121282512270, guid: 4861f1bf8e8dc06449d99d3eaffc4f81, type: 3}
   pos: {fileID: 1594635152}
   pos2: {fileID: 25890192}
   generateFrame: 100
@@ -3536,7 +3536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinAngle: -60
   MaxAngle: 60
-  rotationSpeed: 1
+  rotationSpeed: 200
 --- !u!212 &1302201518
 SpriteRenderer:
   m_ObjectHideFlags: 0

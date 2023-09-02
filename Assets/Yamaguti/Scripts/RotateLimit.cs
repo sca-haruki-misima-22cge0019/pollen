@@ -39,7 +39,7 @@ public class RotateLimit : MonoBehaviour
         if ((currentYAngle >= MinAngle && horizontal < 0) || (currentYAngle <= MaxAngle && horizontal > 0))
         {
             // Y²‚ğŠî€‚É‰ñ“]‚³‚¹‚é
-            transform.Rotate(new Vector3(0, 0, horizontal * rotationSpeed));
+            transform.Rotate(new Vector3(0, 0, horizontal * rotationSpeed * Time.deltaTime));
         }
     }
 }
