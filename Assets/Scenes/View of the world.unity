@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 17711188}
   - component: {fileID: 17711190}
   - component: {fileID: 17711189}
+  - component: {fileID: 17711191}
   m_Layer: 5
   m_Name: Image_pollen5
   m_TagString: Untagged
@@ -507,6 +508,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17711187}
   m_CullTransparentMesh: 1
+--- !u!114 &17711191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17711187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bff6b38e3415440ae435dd20ab36c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 30
+  moveDistance: 60
 --- !u!1 &23102398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1104,7 @@ GameObject:
   - component: {fileID: 409220436}
   - component: {fileID: 409220438}
   - component: {fileID: 409220437}
+  - component: {fileID: 409220439}
   m_Layer: 5
   m_Name: Image_pollen4
   m_TagString: Untagged
@@ -1153,6 +1169,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409220435}
   m_CullTransparentMesh: 1
+--- !u!114 &409220439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409220435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bff6b38e3415440ae435dd20ab36c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 40
+  moveDistance: 20
 --- !u!1 &619027171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1194,7 @@ GameObject:
   - component: {fileID: 619027172}
   - component: {fileID: 619027174}
   - component: {fileID: 619027173}
+  - component: {fileID: 619027175}
   m_Layer: 5
   m_Name: Image_pollen1
   m_TagString: Untagged
@@ -1228,6 +1259,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619027171}
   m_CullTransparentMesh: 1
+--- !u!114 &619027175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619027171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bff6b38e3415440ae435dd20ab36c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 50
+  moveDistance: 50
 --- !u!1 &699983120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1284,7 @@ GameObject:
   - component: {fileID: 699983121}
   - component: {fileID: 699983123}
   - component: {fileID: 699983122}
+  - component: {fileID: 699983124}
   m_Layer: 5
   m_Name: Image_pollen2
   m_TagString: Untagged
@@ -1303,6 +1349,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699983120}
   m_CullTransparentMesh: 1
+--- !u!114 &699983124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699983120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bff6b38e3415440ae435dd20ab36c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 55
+  moveDistance: 55
 --- !u!1 &762285671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,6 +2411,7 @@ GameObject:
   - component: {fileID: 2018247289}
   - component: {fileID: 2018247291}
   - component: {fileID: 2018247290}
+  - component: {fileID: 2018247292}
   m_Layer: 5
   m_Name: Image_pollen3
   m_TagString: Untagged
@@ -2415,6 +2476,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018247288}
   m_CullTransparentMesh: 1
+--- !u!114 &2018247292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018247288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bff6b38e3415440ae435dd20ab36c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 55
+  moveDistance: 30
 --- !u!1 &2025780887
 GameObject:
   m_ObjectHideFlags: 0
