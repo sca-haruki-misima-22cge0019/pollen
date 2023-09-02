@@ -10,6 +10,7 @@ public class BosItemCre : MonoBehaviour
     int select;
     float X;
     float Y;
+    float starttime = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,18 @@ public class BosItemCre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time+= Time.deltaTime;
-        if (itemTime<=time)
+        float t = 0.0f;
+        t += Time.deltaTime;
+        if (t >= starttime)
         {
-            Cre();
-            time = 0.0f;
+            time += Time.deltaTime;
+            if (itemTime <= time)
+            {
+                Cre();
+                time = 0.0f;
+            }
         }
+        
         
     }
 
