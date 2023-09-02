@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -374,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &497075681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -488,6 +488,8 @@ GameObject:
   - component: {fileID: 742407152}
   - component: {fileID: 742407151}
   - component: {fileID: 742407154}
+  - component: {fileID: 742407156}
+  - component: {fileID: 742407155}
   m_Layer: 5
   m_Name: TitleButton
   m_TagString: Untagged
@@ -623,6 +625,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   push: {fileID: 21300000, guid: 7ea95dcf2ca55b543a0facf9258fc207, type: 3}
   up: {fileID: 21300000, guid: 076955311e86530478c74a0e6945de1a, type: 3}
+--- !u!114 &742407155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742407149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21adcf4aa564a1d4394307265f0e9e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTime: 2
+--- !u!225 &742407156
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742407149}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &814269961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2020460692
 RectTransform:
   m_ObjectHideFlags: 0
