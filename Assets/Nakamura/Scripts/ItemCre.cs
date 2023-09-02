@@ -21,6 +21,7 @@ public class ItemCre : MonoBehaviour
     private float[] Item = new float[3];
     private float ItemTotal;
     private float starttime = 10.0f;
+    float t = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +47,6 @@ public class ItemCre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float t = 0.0f;
         t+= Time.deltaTime;
         if(t >= starttime)
         {
