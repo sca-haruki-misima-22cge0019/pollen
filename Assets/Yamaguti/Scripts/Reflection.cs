@@ -4,34 +4,33 @@ using UnityEngine;
 
 public class Reflection : MonoBehaviour
 {
+    private Rigidbody2D rb;
 
-    Vector2 lastVelocity = Vector2.zero;
-    Rigidbody2D rb2d;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("当たった");
-        if(collision.gameObject.tag == "Border")
+        Debug.Log("hit1");
+        if (collision.gameObject.CompareTag("Border"))
         {
-            Debug.Log("反射");
-            Vector2 normalVector = collision.contacts[0].normal;
-
-            Vector2 refrectVector = Vector2.Reflect(lastVelocity, normalVector);
-
-            rb2d.velocity = refrectVector;
+            
+            // 衝突した法線ベクトルを取得
+            Vector2 normal = collision.contacts[0].normal;
+            
+            // 入射ベクトルを取得
+            Vector2 inDirection = rb.velocity.normalized;
+            
+            // 反射ベクトルを計算
+            Vector2 reflectDirection = Vector2.Reflect(inDirection, normal);
+            
+            // 反射後の速度を適用
+            rb.velocity = reflectDirection * rb.velocity.magnitude;
+            
         }
     }
-
 }
+
