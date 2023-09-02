@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletReflectionWall : MonoBehaviour
 {
+    //public static Vector2 Reflect(Vector2 inDirection, Vector2 inNormal);
     static int count = 0;
     //int count2 = 0;
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,7 +35,7 @@ public class BulletReflectionWall : MonoBehaviour
             //}
             //else
             //{
-            //    count = 0;
+                //count = 0;
             //}
         }
  
