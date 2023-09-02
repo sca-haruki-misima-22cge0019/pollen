@@ -38,7 +38,7 @@ public class SnotMove : MonoBehaviour
         
         if(spriteRenderer.sprite == nose2)
         {
-            Debug.Log("BBB");
+            //Debug.Log("BBB");
             front2.SetActive(true);
             elapsetime += Time.deltaTime;
             if(elapsetime >= rndtime)
@@ -49,7 +49,7 @@ public class SnotMove : MonoBehaviour
 
         if (spriteRenderer.sprite == nose3)
         {
-            Debug.Log("AAA");
+            //Debug.Log("AAA");
             front2.SetActive(false);
             front3.SetActive(true);
             Debug.Log(front3.activeSelf);

@@ -67,12 +67,5 @@ public class DrugCount : MonoBehaviour
            
             Item.drug = false;
         }
-        if(Input.GetKeyDown(KeyCode.M)&& SceneManager.GetActiveScene().name == "Bos")
-        {
-            if(drug >0)
-            {
-                drug--;
-            }
-        }
     }
 }

@@ -14,7 +14,7 @@ public class BulletDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("AAA");
+        //Debug.Log("AAA");
         if (transform.position.x >= 8.5f)
         {
             //Debug.Log("aaa");
@@ -25,21 +25,21 @@ public class BulletDestroy : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Enemy")) {
             //if(energy <= 0) {
-                Debug.Log("AAA");
+                //Debug.Log("AAA");
                 Destroy(gameObject);
             //}
         }
         if (collider.gameObject.CompareTag("Mask"))
         {
             //if(energy <= 0) {
-            Debug.Log("BBB");
+            //Debug.Log("BBB");
             Destroy(gameObject);
             //}
         }
         if (collider.gameObject.CompareTag("SuperDrugMove"))
         {
             //if(energy <= 0) {
-            Debug.Log("CCC");
+            //Debug.Log("CCC");
             Destroy(gameObject);
             //}
         }

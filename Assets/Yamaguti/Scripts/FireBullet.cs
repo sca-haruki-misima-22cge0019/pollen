@@ -43,11 +43,16 @@ public class FireBullet : MonoBehaviour
     private Text DrugText;
     GameObject Bullet;
     [SerializeField] int BoostTime;
+    [SerializeField] float  reloadtime = 1.5f;
+    bool reload = false;
     float time;
+    float nowtime = 0.0f;
     [SerializeField] private AudioSource Shot;
     [SerializeField] private AudioSource SuperShot;
     [SerializeField] private AudioClip ShotSound;
     [SerializeField] private AudioClip SuperShotSound;
+    [SerializeField] GameObject DrugTextCount;
+    private DrugCount drugCount;
 
     //[SerializeField] float angle; // Šp“x
     //Vector3 velocity; // ˆÚ“®—Ê
@@ -99,14 +104,26 @@ public class FireBullet : MonoBehaviour
             //    StartCoroutine(Shotwait());
             //}
 
-            if (Input.GetKeyDown(KeyCode.M) && SceneManager.GetActiveScene().name == "Bos")
+            if (Input.GetKeyDown(KeyCode.M) && SceneManager.GetActiveScene().name == "Bos" && !reload)
             {
                 SuperShot.PlayOneShot(SuperShotSound);
                 if (Numbersuperdrug > 0)
                 {
                     SuperdrugShot();
                 }
+                nowtime = 0.0f;
+                reload = true;
             }
+
+            if(reload)
+            {
+                nowtime+= Time.deltaTime;
+                if(nowtime >= reloadtime)
+                {
+                    reload = false;
+                }
+            }
+
 
             //ŠeU’e‚ğæ“¾‚µ‚Ä‚©‚çBoostTimeˆÈãŒo‰ß‚µ‚½‚È‚çŒ³‚É–ß‚·
             if (this.gameObject.CompareTag("Diffusion"))
@@ -190,6 +207,8 @@ public class FireBullet : MonoBehaviour
 
     private void SuperdrugShot()
     {
+        drugCount = DrugTextCount.GetComponent<DrugCount>();
+        drugCount.drug--;
         Numbersuperdrug -= 1;
         // ’e‚ğ”­Ë‚·‚éêŠ‚ğæ“¾
         Vector2 bulletPosition = firingPoint.transform.position;

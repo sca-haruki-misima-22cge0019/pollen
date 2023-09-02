@@ -20,7 +20,8 @@ public class ItemCre : MonoBehaviour
     public float super;
     private float[] Item = new float[3];
     private float ItemTotal;
-
+    private float starttime = 10.0f;
+    float t = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,18 +47,23 @@ public class ItemCre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(ItemTotal);
-        time += Time.deltaTime;
-        if (Itemcount <= time)
+        t+= Time.deltaTime;
+        if(t >= starttime)
         {
-            ItemRandom();
-            X = Random.Range(9.6f, 14.0f);
-            Y = Random.Range(-2.71f, 3.42f);
-            Instantiate(Itemselect[item], new Vector3(X, Y), Quaternion.identity);
-            time = 0.0f;
-            Item[2] += 0.5f;
-            ItemTotal += 0.5f;
+            Debug.Log(ItemTotal);
+            time += Time.deltaTime;
+            if (Itemcount <= time)
+            {
+                ItemRandom();
+                X = Random.Range(9.6f, 14.0f);
+                Y = Random.Range(-2.71f, 3.42f);
+                Instantiate(Itemselect[item], new Vector3(X, Y), Quaternion.identity);
+                time = 0.0f;
+                Item[2] += 0.5f;
+                ItemTotal += 0.5f;
+            }
         }
+        
 
     }
 
