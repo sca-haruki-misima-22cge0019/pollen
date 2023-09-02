@@ -3572,10 +3572,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4b62a854ddc59fc479d43a5428dc144a, type: 3}
   DrugObject: {fileID: 678411047}
   BoostTime: 3
+  reloadtime: 1.5
   Shot: {fileID: 1829248784}
   SuperShot: {fileID: 0}
   ShotSound: {fileID: 8300000, guid: b4c82ea93a848404ea5ddc12c6309315, type: 3}
   SuperShotSound: {fileID: 0}
+  DrugTextCount: {fileID: 0}
 --- !u!114 &1829248781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3588,8 +3590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5b5367e87388647822e85a29a395f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinAngle: -60
-  MaxAngle: 60
+  MinAngle: -35
+  MaxAngle: 35
   rotationSpeed: 200
 --- !u!212 &1829248782
 SpriteRenderer:
