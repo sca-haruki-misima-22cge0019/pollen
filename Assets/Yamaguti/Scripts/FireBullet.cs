@@ -44,7 +44,7 @@ public class FireBullet : MonoBehaviour
     GameObject Bullet;
     [SerializeField] int BoostTime;
     [SerializeField] float  reloadtime = 1.5f;
-    bool reload = false;
+    public bool reload = false;
     float time;
     float nowtime = 0.0f;
     [SerializeField] private AudioSource Shot;
