@@ -70,10 +70,8 @@ public class FireBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Time.timeScale == 1)//ポーズ画面が映っていないならば
         {
-
             // スペースキーが押されたかを判定
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -135,13 +133,8 @@ public class FireBullet : MonoBehaviour
                     time = 0.0f;
                 }
             }
-
-
         }
         
-
-        
-
         /*if (Input.GetKey(KeyCode.W))
         {
             transform.Rotate(0, 0, 0.2f);

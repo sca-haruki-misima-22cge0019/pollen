@@ -5,39 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class Bgm : MonoBehaviour
 {
-    private static bool music = false;
-    // Start is called before the first frame update
-    private  void Awake()
-    {
-        if (music)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        else
-        {
-            music = true;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
+    [SerializeField] GameObject Nose;
+    hit hp;
+    Animator bgmdown;
     void Start()
     {
-
+        hp = Nose.GetComponent<hit>();
+        bgmdown = this.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name != "TitleScene" && SceneManager.GetActiveScene().name != "TestScene")
+        if(hp.energy <=0)
         {
-            Debug.Log("S");
-            AudioSource audio = GetComponent<AudioSource>();
-            audio.volume = 0;
-        }
-        else
-        {
-            AudioSource audio = GetComponent<AudioSource>();
-            audio.volume = 0.4f;
+            bgmdown.enabled = true;
         }
     }
 }

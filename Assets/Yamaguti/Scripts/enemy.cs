@@ -43,7 +43,7 @@ public class enemy : MonoBehaviour
                     pos.y = Mathf.Sin(cycleRadian) * curveLength + centerY;
                 }
             }
-            pos += new Vector2(-1 * speed * Time.fixedDeltaTime, 0);
+            pos += new Vector2(-1 * speed * Time.deltaTime, 0);
 
             transform.position = pos;
 

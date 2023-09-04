@@ -10,8 +10,8 @@ public class PollenRandom : MonoBehaviour
     [SerializeField] Transform pos2;                // ¶¬ˆÊ’u
     float minX, maxX, minY, maxY;                   // ¶¬”ÍˆÍ
 
-    int frame = 0;
-    [SerializeField] int generateFrame;        // ¶¬‚·‚éŠÔŠu
+    float frame = 0;
+    [SerializeField] float generateFrame;        // ¶¬‚·‚éŠÔŠu
 
     GameObject bos;
 
@@ -49,11 +49,11 @@ public class PollenRandom : MonoBehaviour
 
     void Cre()
     {
-        ++frame;
+        frame+= Time.deltaTime;
 
         if (frame > generateFrame)
         {
-            frame = 0;
+            frame = 0.0f;
 
             // ƒ‰ƒ“ƒ_ƒ€‚ÅŽí—Þ‚ÆˆÊ’u‚ðŒˆ‚ß‚é
             int index = Random.Range(0, enemyList.Count);

@@ -18,9 +18,11 @@ public class SnotMove : MonoBehaviour
     private Animator GameOverAnim;
     private float elapsetime;
     public bool GameOverRoll = false;
+    AudioSource audioaource;
     // Start is called before the first frame update
     void Start()
     {
+        audioaource = gameObject.GetComponent<AudioSource>();
         NoseAnim = gameObject.GetComponent<Animator>();
         GameOverAnim = GaneOver.GetComponent<Animator>();
         rndtime = Random.Range(SnotMinTime, SnotMaxTime);
@@ -52,7 +54,7 @@ public class SnotMove : MonoBehaviour
             //Debug.Log("AAA");
             front2.SetActive(false);
             front3.SetActive(true);
-            Debug.Log(front3.activeSelf);
+            //Debug.Log(front3.activeSelf);
             elapsetime += Time.deltaTime;
             if (elapsetime >= rndtime)
             {
@@ -71,7 +73,7 @@ public class SnotMove : MonoBehaviour
 
     public void SnotStop2()
     {
-        Debug.Log("S");
+        
         NoseAnim.SetBool("SnotMoveBL2", false);
         rndtime = Random.Range(SnotMinTime, SnotMaxTime);
         elapsetime = 0.0f;
@@ -81,5 +83,10 @@ public class SnotMove : MonoBehaviour
     {
         GameOverAnim.SetBool("GameOverBL", true);
         GameOverRoll = true;
+    }
+
+    public void DieSound()
+    {
+        audioaource.enabled = true;
     }
 }
