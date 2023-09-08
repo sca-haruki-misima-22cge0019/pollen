@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class DrugCount : MonoBehaviour
 {
     [SerializeField] GameObject DrugObject;
+    [SerializeField] GameObject Nose;
+    hit hp;
     public int drug;
     private float Bostime = 0.0f;
     private float Normaltime = 0.0f;
@@ -14,6 +16,7 @@ public class DrugCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hp = Nose.GetComponent<hit>();
         if (SceneManager.GetActiveScene().name == "Bos")
         {
             drug = 5;
@@ -23,49 +26,52 @@ public class DrugCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SceneManager.GetActiveScene().name == "Bos" && drug == 0)
+        if(hp.energy>=0)
         {
-            Bostime +=Time.deltaTime;
-            if(Bostime >=7.0f)
+            if (SceneManager.GetActiveScene().name == "Bos" && drug == 0)
             {
-                SceneManager.LoadScene("GameOverScene");
+                Bostime += Time.deltaTime;
+                if (Bostime >= 7.0f)
+                {
+                    SceneManager.LoadScene("GameOverScene");
+                }
             }
-        }
 
-        Text DrugText = DrugObject.GetComponent<Text>();
-        DrugText.text = drug.ToString();
+            Text DrugText = DrugObject.GetComponent<Text>();
+            DrugText.text = drug.ToString();
 
-        if (SceneManager.GetActiveScene().name == "Stage1" && drug==0)
-        {
-            Normaltime += Time.deltaTime;
-            if(Normaltime >=0.3f)
+            if (SceneManager.GetActiveScene().name == "Stage1" && drug == 0)
             {
-                SceneManager.LoadScene("GameClearSceneStage1");
-                Normaltime = 0.0f;
-            }
-            
-        }
-        if (SceneManager.GetActiveScene().name == "Stage2" && drug == 0)
-        {
-            Normaltime += Time.deltaTime;
-            if (Normaltime >= 0.2f)
-            {
-                SceneManager.LoadScene("GameClearSceneStage2");
-                Normaltime = 0.0f;
-            }
-                
-        }
+                Normaltime += Time.deltaTime;
+                if (Normaltime >= 0.3f)
+                {
+                    SceneManager.LoadScene("GameClearSceneStage1");
+                    Normaltime = 0.0f;
+                }
 
-        if(Item.drug)
-        {
-            count++;
-            if(count == 2)
-            {
-                drug--;
-                count = 0;
             }
-           
-            Item.drug = false;
+            if (SceneManager.GetActiveScene().name == "Stage2" && drug == 0)
+            {
+                Normaltime += Time.deltaTime;
+                if (Normaltime >= 0.2f)
+                {
+                    SceneManager.LoadScene("GameClearSceneStage2");
+                    Normaltime = 0.0f;
+                }
+
+            }
+
+            if (Item.drug)
+            {
+                count++;
+                if (count == 2)
+                {
+                    drug--;
+                    count = 0;
+                }
+
+                Item.drug = false;
+            }
         }
     }
 }

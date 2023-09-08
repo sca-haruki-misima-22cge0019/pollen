@@ -5,10 +5,12 @@ using UnityEngine;
 public class BulletDestroy : MonoBehaviour
 {
     //public int energy = 1;
+    GameObject nose;
+    hit hp;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

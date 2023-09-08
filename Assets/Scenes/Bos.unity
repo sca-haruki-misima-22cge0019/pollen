@@ -5350,6 +5350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DrugObject: {fileID: 1858595076}
+  Nose: {fileID: 1125175788}
   drug: 5
 --- !u!114 &1858595079
 MonoBehaviour:
