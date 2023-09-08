@@ -51,8 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.8
   type: 1
-  cycleCount: 0.02
-  curveLength: 3
+  cycleCount: 0.1
+  curveLength: 4
 --- !u!114 &8083762515989294726
 MonoBehaviour:
   m_ObjectHideFlags: 0

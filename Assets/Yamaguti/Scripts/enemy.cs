@@ -50,7 +50,7 @@ public class enemy : MonoBehaviour
             if (type == ENEMY_TYPE.TRACKING)
             {
                 transform.LookAt(target.transform);
-                transform.position += transform.forward * speed / 50;
+                transform.position += transform.forward * speed * Time.deltaTime;
             }
         }
         
