@@ -13,7 +13,7 @@ public class TitleSelect : MonoBehaviour
 
     public List<GameObject> SecondButtonselect = new List<GameObject>();
     public List<Sprite> SecondImageselect = new List<Sprite>();
-    int Secondselect = 0;
+    public int Secondselect = 0;
 
     private Animator anim;
     // Start is called before the first frame update
@@ -88,11 +88,17 @@ public class TitleSelect : MonoBehaviour
                 else
                 {
                     SecondButtonselect[Secondselect].GetComponent<Image>().sprite = SecondImageselect[Secondselect +4];
-                    Application.Quit();
+                    Invoke("End",0.5f);
+                    
                 }
             }
             SecondButtonselect[Secondselect].GetComponent<Image>().sprite = SecondImageselect[Secondselect +2];
         }
     
+    }
+
+    public void End()
+    {
+        Application.Quit();
     }
 }
