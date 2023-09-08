@@ -39,7 +39,7 @@ public class enemy : MonoBehaviour
             {
                 if (cycleCount > 0)
                 {
-                    cycleRadian += (cycleCount * 2 * Mathf.PI) / 50;
+                    cycleRadian += (cycleCount * 2 * Mathf.PI*Time.deltaTime) / 50;
                     pos.y = Mathf.Sin(cycleRadian) * curveLength + centerY;
                 }
             }

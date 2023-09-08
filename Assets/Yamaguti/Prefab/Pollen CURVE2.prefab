@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2.4
   type: 1
-  cycleCount: 0.08
+  cycleCount: 10
   curveLength: 3
 --- !u!114 &8083762515989294726
 MonoBehaviour:
