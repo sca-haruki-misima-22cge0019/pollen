@@ -15973,32 +15973,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfe81819ce2782540bbc820f31fe0595, type: 3}
---- !u!61 &8180478872289821233
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8180478872289821245}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.014541149, y: -10.07616}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 10.198261, y: 19.608006}
-  m_EdgeRadius: 0
 --- !u!114 &8180478872289821236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16022,7 +15996,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8180478872289821245}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -16197,7 +16171,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8180478872289821245}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -16294,7 +16268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8180478872289821245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.5, y: 5.12, z: 0}
+  m_LocalPosition: {x: 16.386, y: 5.063, z: 0}
   m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_Children:
   - {fileID: 8180478873096130656}
@@ -16339,7 +16313,7 @@ GameObject:
   - component: {fileID: 8180478872289821236}
   - component: {fileID: 8180478872289821237}
   - component: {fileID: 8180478872289821242}
-  - component: {fileID: 8180478872289821233}
+  - component: {fileID: 8180478872289821248}
   m_Layer: 12
   m_Name: Boss
   m_TagString: Untagged
@@ -16407,6 +16381,78 @@ MonoBehaviour:
     layerMixModes: 01000000
     layerBlendModes: 01000000
   updateTiming: 1
+--- !u!60 &8180478872289821248
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8180478872289821245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: -0.28447258}
+      - {x: 0.26030645, y: -0.4267873}
+      - {x: 1.3929627, y: -2.612445}
+      - {x: 2.625357, y: -3.995216}
+      - {x: 2.5300095, y: -4.403599}
+      - {x: 1.8669913, y: -4.7241683}
+      - {x: -0.0056113675, y: -19.502758}
+      - {x: -1.0060858, y: -19.877142}
+      - {x: -2.3305464, y: -19.662046}
+      - {x: -2.7732697, y: -19.367935}
+      - {x: -2.7231193, y: -18.797398}
+      - {x: -2.8033826, y: -18.590374}
+      - {x: -2.7658076, y: -18.387339}
+      - {x: -2.2555752, y: -17.548471}
+      - {x: -1.8967116, y: -15.931126}
+      - {x: -2.6486497, y: -15.183296}
+      - {x: -2.5864556, y: -14.866061}
+      - {x: -2.2915645, y: -14.507714}
+      - {x: -1.6916801, y: -14.752693}
+      - {x: -1.4558597, y: -12.912736}
+      - {x: -1.6637967, y: -12.623904}
+      - {x: -2.5385685, y: -12.7036915}
+      - {x: -2.9165814, y: -12.360396}
+      - {x: -3.6648831, y: -12.248658}
+      - {x: -3.9320495, y: -11.843261}
+      - {x: -4.6469517, y: -11.799085}
+      - {x: -5.0763445, y: -11.382995}
+      - {x: -5.063574, y: -11.120309}
+      - {x: -4.8953457, y: -10.836533}
+      - {x: -4.255786, y: -10.371113}
+      - {x: -3.7095723, y: -9.78867}
+      - {x: -3.0244782, y: -8.898059}
+      - {x: -2.706362, y: -8.205715}
+      - {x: -3.3895638, y: -8.18006}
+      - {x: -3.9605815, y: -7.923654}
+      - {x: -4.3070173, y: -7.381655}
+      - {x: -4.2776427, y: -7.164118}
+      - {x: -2.908501, y: -6.134816}
+      - {x: -2.2326486, y: -5.4170494}
+      - {x: -1.8284836, y: -4.722494}
+      - {x: -2.2108457, y: -4.581233}
+      - {x: -2.5394604, y: -4.3252826}
+      - {x: -2.6077585, y: -4.148216}
+      - {x: -2.5850441, y: -3.983698}
+      - {x: -1.7640237, y: -3.1513772}
+      - {x: -1.1555074, y: -2.3261685}
+      - {x: -0.22176531, y: -0.42678735}
 --- !u!114 &8180478872355758849
 MonoBehaviour:
   m_ObjectHideFlags: 0
