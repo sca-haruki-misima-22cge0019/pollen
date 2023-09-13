@@ -13,6 +13,7 @@ public class BosAnimation : MonoBehaviour
 	[SerializeField] private AudioClip damageSound;
 	[SerializeField] private AudioClip dieSound;
 	[SerializeField] private AudioSource bgm;
+	[SerializeField] Fade fade;
 
 	/// <summary> ゲームオブジェクトに設定されているSkeletonAnimation 
 	private SkeletonAnimation skeletonAnimation = default;
@@ -96,6 +97,13 @@ public class BosAnimation : MonoBehaviour
 
 	private void End(TrackEntry trackEntry)
 	{
+		fade.FadeIn(0.5f, () => print("フェードイン完了"));
+		Invoke("Clear",0.6f);
+		
+	}
+
+	void Clear()
+    {
 		SceneManager.LoadScene("GameClearSceneFinal");
 	}
 }

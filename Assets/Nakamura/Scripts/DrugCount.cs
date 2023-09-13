@@ -13,6 +13,7 @@ public class DrugCount : MonoBehaviour
     private float Bostime = 0.0f;
     private float Normaltime = 0.0f;
     private int count= 0;
+    [SerializeField]Fade fade;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +46,8 @@ public class DrugCount : MonoBehaviour
                 Normaltime += Time.deltaTime;
                 if (Normaltime >= 0.3f)
                 {
-                    SceneManager.LoadScene("GameClearSceneStage1");
+                    fade.FadeIn(0.5f, () => print("フェードイン完了"));
+                    Invoke("Clear", 0.6f);
                     Normaltime = 0.0f;
                 }
 
@@ -55,7 +57,8 @@ public class DrugCount : MonoBehaviour
                 Normaltime += Time.deltaTime;
                 if (Normaltime >= 0.2f)
                 {
-                    SceneManager.LoadScene("GameClearSceneStage2");
+                    fade.FadeIn(0.5f, () => print("フェードイン完了"));
+                    Invoke("Clear", 0.6f);
                     Normaltime = 0.0f;
                 }
 
@@ -73,5 +76,18 @@ public class DrugCount : MonoBehaviour
                 Item.drug = false;
             }
         }
+    }
+
+    void Clear()
+    {
+        if(SceneManager.GetActiveScene().name == "Stage1")
+        {
+            SceneManager.LoadScene("GameClearSceneStage1");
+        }
+        else
+        {
+            SceneManager.LoadScene("GameClearSceneStage2");
+        }
+        
     }
 }

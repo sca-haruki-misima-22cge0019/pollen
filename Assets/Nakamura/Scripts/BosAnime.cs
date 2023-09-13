@@ -15,6 +15,8 @@ public class BosAnime : MonoBehaviour
     [SerializeField] private AudioClip dieSound;
     [SerializeField] private AudioSource bgm;
     [SerializeField]GameObject TimeCount;
+    [SerializeField] Fade fade;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,8 @@ public class BosAnime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(end)
+       
+        if (end)
         {
             transform.position -=new Vector3(0,Time.deltaTime*speed);
             if(transform.position.y <= -0.2811289f)
@@ -73,6 +76,7 @@ public class BosAnime : MonoBehaviour
 
     public void End()
     {
+        fade.FadeIn(1.0f, () => print("フェードイン完了"));
         end = true;
     }
 

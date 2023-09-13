@@ -23,42 +23,42 @@ public class BossHp : MonoBehaviour
     void Update()
     {
         //Debug.Log(death);
-
     }
+
 
     void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.gameObject.tag == "SuperDrug")
     {
-        if (other.gameObject.tag == "SuperDrug")
-        {
-            damage = true;
-            other.gameObject.SetActive(false);
-            StartCoroutine(DecreaseHPAnimation(maxhp, --hp));
-            Debug.Log(slider.value);
-        }
+        damage = true;
+        other.gameObject.SetActive(false);
+        StartCoroutine(DecreaseHPAnimation(maxhp, --hp));
+        Debug.Log(slider.value);
     }
+}
     IEnumerator DecreaseHPAnimation(int oldHP, int newHP)
+{
+    Debug.Log(hp);
+    if (hp == 0)
     {
-        Debug.Log(hp);
-        if (hp == 0)
-        {
-            Debug.Log("A");
-            damage = false;
-            death = true;
-        }
-        else
-        {
-            
-            Debug.Log("S");
-            
-        }
-
-        nowhp = (float)newHP / (float)oldHP;
-        //Debug.Log(nowhp);
-        while (slider.value >= nowhp)
-        {
-            slider.value -= 0.01f;
-            yield return null;
-        }
-        //Debug.Log(slider.value);
+        Debug.Log("A");
+        damage = false;
+        death = true;
     }
+    else
+    {
+
+        Debug.Log("S");
+
+    }
+
+    nowhp = (float)newHP / (float)oldHP;
+    //Debug.Log(nowhp);
+    while (slider.value >= nowhp)
+    {
+        slider.value -= 0.01f;
+        yield return null;
+    }
+    //Debug.Log(slider.value);
+}
 }
