@@ -15,7 +15,7 @@ public class ReflectionShot : MonoBehaviour
     void Update()
     {
         Debug.Log(count);
-        if(count >=3)
+        if(count >=2)
         {
             Destroy(gameObject);
         }
