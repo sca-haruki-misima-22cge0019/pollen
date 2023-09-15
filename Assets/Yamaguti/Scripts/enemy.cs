@@ -18,12 +18,15 @@ public class enemy : MonoBehaviour
     float cycleRadian = 0;          // サインに渡す値
     float centerY;                  // Y座標の中心
 
+    GameObject fade;
+    FadeIn fadein;
     // Start is called before the first frame update
     void Start()
     {
         centerY = transform.position.y;
         target = GameObject.Find("target");
-
+        fade = GameObject.Find("FadeIn");
+        fadein = fade.GetComponent<FadeIn>();
         //int test1 = LayerMask.NameToLayer("Enemy");
         //Physics.IgnoreLayerCollision(test1, test1);
     }
@@ -31,7 +34,7 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.timeScale !=0)
+        if(Time.timeScale !=0 && fadein.movestart)
         {
             Vector2 pos = transform.position;
             // 上下にカーブ

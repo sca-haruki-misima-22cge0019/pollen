@@ -26,7 +26,7 @@ public class BarrierPoint : MonoBehaviour
         Bar.RemoveAt(0);
         BarrierFlashanim = Barrier.GetComponent<Animator>();
         Baranim = BarrierBar.GetComponent<Animator>();
-        Invoke("firstpoint", 2.0f);
+        Invoke("firstpoint", 4.5f);
         hp = maxhp;
         BosHp.SetActive(false);
     }

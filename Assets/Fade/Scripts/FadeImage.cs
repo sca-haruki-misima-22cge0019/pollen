@@ -51,7 +51,15 @@ public class FadeImage : UnityEngine.UI.Graphic , IFade
 	private void UpdateMaskCutout (float range)
 	{
 		enabled = true;
-		material.SetFloat ("_Range", 1 - range);
+		if(this.gameObject.name =="FadeIn")
+        {
+			material.SetFloat("_Range",range);
+		}
+		else
+        {
+			material.SetFloat("_Range", 1 - range);
+		}
+		
 
 		if (range <= 0) {
 			this.enabled = false;

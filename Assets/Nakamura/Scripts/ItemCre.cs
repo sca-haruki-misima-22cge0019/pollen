@@ -25,6 +25,7 @@ public class ItemCre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         super = 0;
         Item[0] = mask;
         Item[1] = boost;
