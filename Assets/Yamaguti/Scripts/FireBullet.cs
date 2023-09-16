@@ -53,7 +53,8 @@ public class FireBullet : MonoBehaviour
     [SerializeField] private AudioClip SuperShotSound;
     [SerializeField] GameObject DrugTextCount;
     private DrugCount drugCount;
-
+    GameObject Nose;
+    hit hp;
     //[SerializeField] float angle; // 角度
     //Vector3 velocity; // 移動量
     //bool boost = false;
@@ -65,15 +66,17 @@ public class FireBullet : MonoBehaviour
         anim = DrugObject.GetComponent<Animator>();
         Numberbullet = 10;
         Numbersuperdrug = 5;
+        Nose = GameObject.Find("Nose");
+        hp = Nose.GetComponent<hit>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale == 1)//ポーズ画面が映っていないならば
+        if (Time.timeScale == 1 )//ポーズ画面が映っていないならば
         {
             // スペースキーが押されたかを判定
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && hp.energy > 0)
             {
                 Shot.PlayOneShot(ShotSound);
                 if (Numberbullet == 1)
