@@ -5,17 +5,20 @@ using UnityEngine;
 public class ReflectionShot : MonoBehaviour
 {
     int count= 0;
+    GameObject Nose;
+    hit hp;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Nose = GameObject.Find("Nose");
+        hp = Nose.GetComponent<hit>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Debug.Log(count);
-        if(count >=2)
+        if(count >=2 || hp.energy <=0)
         {
             Destroy(gameObject);
         }

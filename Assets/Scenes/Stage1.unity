@@ -5168,9 +5168,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1295899577728052374, guid: a1ebc72e8acdd9745a8d83b6ef01242d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295899577728052374, guid: a1ebc72e8acdd9745a8d83b6ef01242d, type: 3}
+      propertyPath: cutoutRange
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1295899577737695006, guid: a1ebc72e8acdd9745a8d83b6ef01242d, type: 3}
       propertyPath: m_Name
       value: FadeIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295899577881040292, guid: a1ebc72e8acdd9745a8d83b6ef01242d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1ebc72e8acdd9745a8d83b6ef01242d, type: 3}

@@ -20,7 +20,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MaskTex:
+<<<<<<< HEAD
         m_Texture: {fileID: 0}
+=======
+        m_Texture: {fileID: 2800000, guid: a8186992896e7ed41ac6e5b0a8723ebb, type: 3}
+>>>>>>> 8717a6826026caa0c09fce6c5c2d143b6377fa88
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -32,5 +36,9 @@ Material:
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
     m_Colors:
+<<<<<<< HEAD
     - _Color: {r: 0, g: 0, b: 0, a: 1}
+=======
+    - _Color: {r: 1, g: 0.8862746, b: 0.24705884, a: 1}
+>>>>>>> 8717a6826026caa0c09fce6c5c2d143b6377fa88
   m_BuildTextureStacks: []
