@@ -1498,8 +1498,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120, y: -1620}
-  m_SizeDelta: {x: 1500, y: 800}
+  m_AnchoredPosition: {x: 21, y: -2287}
+  m_SizeDelta: {x: 1920, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935626407
 MonoBehaviour:
@@ -1522,19 +1522,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_Font: {fileID: 12800000, guid: a035e93a040019d4282ef1a2b30fba47, type: 3}
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 80
+    m_MaxSize: 100
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u76EE\u306E\u75D2\u307F\u3001\u9F3B\u6C34\u3001\u304F\u3057\u3083\u307F\u30FB\u30FB\u30FB\u30FB\u30FB\u30FB\n\n\u82B1\u7C89\u75C7\u306B\u306A\u3063\u3066\u3057\u307E\u3063\u305F\u3042\u306A\u305F\u306F\n\n\u618E\u304D\u82B1\u7C89\u3092\u751F\u307F\u51FA\u3059\u82B1\u7C89\u306E\u738B\u3001\n\n<color=#ff0000>\u30C4\u30EA\u30FC</color>\u3092\u5012\u3059\u3053\u3068\u306B\u3057\u305F\u3002\n\n\u30C4\u30EA\u30FC\u3092\u5012\u3059\u306B\u306F\n\n<color=#4169e1>\u30B9\u30FC\u30D1\u30FC\u82B1\u7C89\u9320\u5264</color>\u3068\u3044\u3046\u85AC\u3092\u624B\u306B\u5165\u308C\u3001\n\n\u30D0\u30EA\u30A2\u3092\u7834\u58CA\u3057\u305F\u3046\u3048\u3067\n\n\u305D\u308C\u3092\u3076\u3064\u3051\u306A\u3051\u308C\u3070\u306A\u3089\u306A\u3044\n\n\u8972\u3044\u6765\u308B\u82B1\u7C89\u3092\u6483\u9000\u3057\u306A\u304C\u3089\n\n\u30B9\u30FC\u30D1\u30FC\u82B1\u7C89\u9320\u5264\u3092\u624B\u306B\u5165\u308C\u3001\n\n\u30C4\u30EA\u30FC\u3092\u6253\u3061\u5012\u3057\u3001\n\n\u82B1\u7C89\u3092\u64B2\u6EC5\u3057\u3088\u3046\uFF01"
+  m_Text: "\u76EE\u306E\u75D2\u307F\u3001\u9F3B\u6C34\u3001\u304F\u3057\u3083\u307F\u30FB\u30FB\u30FB\n\n\u82B1\u7C89\u75C7\u306B\u306A\u3063\u3066\u3057\u307E\u3063\u305F\u3042\u306A\u305F\u306F\n\n\u618E\u304D\u82B1\u7C89\u3092\u751F\u307F\u51FA\u3059\u82B1\u7C89\u306E\u738B\u3001\n\n<color=#ff0000>\u30C4\u30EA\u30FC</color>\u3092\u5012\u3059\u3053\u3068\u306B\u3057\u305F\u3002\n\n\u30C4\u30EA\u30FC\u3092\u5012\u3059\u306B\u306F\n\n<color=#00ffffff>\u30B9\u30FC\u30D1\u30FC\u82B1\u7C89\u9320\u5264</color>\u3068\u3044\u3046\u85AC\u3092\u624B\u306B\u5165\u308C\u3001\n\n\u30D0\u30EA\u30A2\u3092\u7834\u58CA\u3057\u305F\u3046\u3048\u3067\n\n\u305D\u308C\u3092\u3076\u3064\u3051\u306A\u3051\u308C\u3070\u306A\u3089\u306A\u3044\n\n\u8972\u3044\u6765\u308B\u82B1\u7C89\u3092\u6483\u9000\u3057\u306A\u304C\u3089\n\n\u30B9\u30FC\u30D1\u30FC\u82B1\u7C89\u9320\u5264\u3092\u624B\u306B\u5165\u308C\u3001\n\n\u30C4\u30EA\u30FC\u3092\u6253\u3061\u5012\u3057\u3001\n\n\u82B1\u7C89\u3092\u64B2\u6EC5\u3057\u3088\u3046\uFF01"
 --- !u!222 &935626408
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1555,8 +1555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f2754cbe7fa40545a9b8d329487fe52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textScrollSpeed: 1
-  limitPosition: 5
+  textScrollSpeed: 1.8
+  limitPosition: 11
 --- !u!1 &942044486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,8 +1591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 30, y: 0}
-  m_SizeDelta: {x: 1980, y: 360}
+  m_AnchoredPosition: {x: 25, y: 0}
+  m_SizeDelta: {x: 2000, y: 360}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &942044488
 MonoBehaviour:
@@ -2273,8 +2273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 30, y: 0}
-  m_SizeDelta: {x: 1980, y: 360}
+  m_AnchoredPosition: {x: 25, y: 0}
+  m_SizeDelta: {x: 2000, y: 360}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1846679417
 MonoBehaviour:
