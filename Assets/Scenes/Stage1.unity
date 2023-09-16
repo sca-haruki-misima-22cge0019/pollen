@@ -5072,8 +5072,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
-=======
 --- !u!1001 &1295899577516141860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5183,4 +5181,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1ebc72e8acdd9745a8d83b6ef01242d, type: 3}
->>>>>>> 12d37c58afe1a75eb787c05d2d7b714d4d90fc72
