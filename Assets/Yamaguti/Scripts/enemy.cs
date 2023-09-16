@@ -25,8 +25,6 @@ public class enemy : MonoBehaviour
     {
         centerY = transform.position.y;
         target = GameObject.Find("target");
-        fade = GameObject.Find("FadeIn");
-        fadein = fade.GetComponent<FadeIn>();
         //int test1 = LayerMask.NameToLayer("Enemy");
         //Physics.IgnoreLayerCollision(test1, test1);
     }
@@ -34,7 +32,7 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.timeScale !=0 && fadein.movestart)
+        if(Time.timeScale !=0)
         {
             Vector2 pos = transform.position;
             // è„â∫Ç…ÉJÅ[Éu
