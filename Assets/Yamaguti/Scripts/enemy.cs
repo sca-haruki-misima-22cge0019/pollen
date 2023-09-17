@@ -18,8 +18,6 @@ public class enemy : MonoBehaviour
     float cycleRadian = 0;          // サインに渡す値
     float centerY;                  // Y座標の中心
 
-    GameObject fade;
-    FadeIn fadein;
     // Start is called before the first frame update
     void Start()
     {
