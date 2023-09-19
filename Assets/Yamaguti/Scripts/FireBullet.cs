@@ -76,7 +76,7 @@ public class FireBullet : MonoBehaviour
         if (Time.timeScale == 1 )//ポーズ画面が映っていないならば
         {
             // スペースキーが押されたかを判定
-            if (Input.GetKeyDown(KeyCode.Space) && hp.energy > 0)
+            if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.L) && hp.energy > 0)
             {
                 Shot.PlayOneShot(ShotSound);
                 if (Numberbullet == 1)
@@ -84,7 +84,6 @@ public class FireBullet : MonoBehaviour
                     LauncherShot();
                     anim.SetBool("DrugBL", true);
                     StartCoroutine(Shotwait());
- 
                 }
                 if(Numberbullet > 0)
                 {
@@ -105,7 +104,7 @@ public class FireBullet : MonoBehaviour
             //    StartCoroutine(Shotwait());
             //}
 
-            if (Input.GetKeyDown(KeyCode.M) && SceneManager.GetActiveScene().name == "Bos" && !reload)
+            if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name == "Bos" && !reload)
             {
                 SuperShot.PlayOneShot(SuperShotSound);
                 if (Numbersuperdrug > 0)
@@ -118,8 +117,8 @@ public class FireBullet : MonoBehaviour
 
             if(reload)
             {
-                nowtime+= Time.deltaTime;
-                if(nowtime >= reloadtime)
+                nowtime += Time.deltaTime;
+                if (nowtime >= reloadtime)
                 {
                     reload = false;
                 }
