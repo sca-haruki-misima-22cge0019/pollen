@@ -116,7 +116,6 @@ public class PoseSelect : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Return))
             {
                 expl2.transform.localScale = new Vector3(0, 0, 0);
-                expl2.SetActive(false);
                 explanim2.SetBool("ExplBL", false);
             }
         }
@@ -172,8 +171,6 @@ public class PoseSelect : MonoBehaviour
                         warning.SetActive(true);
                         warninganim.SetBool("WarningBL", true);
                         break;
-
-
                 }
             }
 

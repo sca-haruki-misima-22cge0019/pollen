@@ -69,7 +69,7 @@ public class TitleSelect : MonoBehaviour
         
         else
         {
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 Secondselect = 1;
                 SecondButtonselect[Secondselect].GetComponent<Image>().sprite = SecondImageselect[Secondselect+2];
@@ -77,7 +77,7 @@ public class TitleSelect : MonoBehaviour
             }
 
             
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.S))
             {
                 Secondselect = 0;
                 SecondButtonselect[Secondselect].GetComponent<Image>().sprite = SecondImageselect[Secondselect + 2];
