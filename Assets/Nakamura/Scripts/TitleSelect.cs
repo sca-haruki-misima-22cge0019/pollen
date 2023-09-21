@@ -15,14 +15,17 @@ public class TitleSelect : MonoBehaviour
     public List<Sprite> SecondImageselect = new List<Sprite>();
     public int Secondselect = 0;
 
-    private Animator anim;
+    private Animator StartAnim;
+    private Animator ReturnAnim;
     // Start is called before the first frame update
     void Start()
     {
         FirstButtonselect[Firstselect].GetComponent<Image>().sprite = FirstImageselect[Firstselect];
         SecondButtonselect[Secondselect].GetComponent<Image>().sprite = SecondImageselect[Secondselect+2];
 
-        anim = Exit.GetComponent<Animator>();
+        StartAnim = FirstButtonselect[0].GetComponent<Animator>();
+        ReturnAnim = FirstButtonselect[1].GetComponent<Animator>();
+        StartAnim.SetBool("ButtomBL", true);
     }
 
     // Update is called once per frame
@@ -33,6 +36,8 @@ public class TitleSelect : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S))
             {
                 Firstselect = 1;
+                ReturnAnim.SetBool("ButtomBL", true);
+                StartAnim.SetBool("ButtomBL", false);
                 FirstButtonselect[Firstselect - 1].GetComponent<Image>().sprite = FirstImageselect[Firstselect + 1];
                 FirstButtonselect[Firstselect].GetComponent<Image>().sprite = FirstImageselect[Firstselect];
             }
@@ -40,6 +45,8 @@ public class TitleSelect : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W))
             {
                 Firstselect = 0;
+                ReturnAnim.SetBool("ButtomBL", false);
+                StartAnim.SetBool("ButtomBL", true);
                 FirstButtonselect[Firstselect].GetComponent<Image>().sprite = FirstImageselect[Firstselect];
                 FirstButtonselect[Firstselect + 1].GetComponent<Image>().sprite = FirstImageselect[Firstselect + 3];
 
