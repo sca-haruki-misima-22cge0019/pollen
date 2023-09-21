@@ -13,7 +13,7 @@ public class ExplanationSelect : MonoBehaviour
     [SerializeField] Image K;
     [SerializeField] Image L;
     [SerializeField] Image P;
-    [SerializeField] Image sp;
+    [SerializeField] GameObject sp;
     [SerializeField] Image en;
     [SerializeField] GameObject start;
     [SerializeField] GameObject ButtonFlash;
@@ -69,11 +69,11 @@ public class ExplanationSelect : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            sp.enabled = true;
+            sp.SetActive(true);
         }
         else
         {
-            sp.enabled = false;
+            sp.SetActive(false);
         }
         if (Input.GetKey(KeyCode.Return))
         {
@@ -83,31 +83,36 @@ public class ExplanationSelect : MonoBehaviour
         {
             en.enabled = false;
         }
-        if (!Second.activeSelf)
+
+        if(SceneManager.GetActiveScene().name == "TestScene")
         {
-            if(Input.GetKeyDown(KeyCode.Return))
+            if (!Second.activeSelf)
             {
-                GameObject.Find("Panel Chenge").GetComponent<PanelChenge>().NextView();
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    GameObject.Find("Panel Chenge").GetComponent<PanelChenge>().NextView();
+                }
+            }
+            else
+            {
+                anim = start.GetComponent<Animator>();
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    if (anim.enabled)
+                    {
+                        SceneManager.LoadScene("Stage1");
+                    }
+                    else
+                    {
+                        anim.enabled = true;
+                        Flashanim = ButtonFlash.GetComponent<Animator>();
+                        Flashanim.enabled = true;
+                    }
+
+                }
             }
         }
-        else
-        {
-            anim = start.GetComponent<Animator>();
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                if(anim.enabled)
-                {
-                    SceneManager.LoadScene("Stage1");
-                }
-                else
-                {
-                    anim.enabled = true;
-                    Flashanim = ButtonFlash.GetComponent<Animator>();
-                    Flashanim.enabled = true;
-                }
-                
-            }
-        }
+        
        
     }
 }
