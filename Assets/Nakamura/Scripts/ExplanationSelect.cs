@@ -16,7 +16,6 @@ public class ExplanationSelect : MonoBehaviour
     [SerializeField] GameObject sp;
     [SerializeField] Image en;
     [SerializeField] GameObject start;
-    [SerializeField] GameObject ButtonFlash;
     Animator anim;
     Animator Flashanim;
     // Start is called before the first frame update
@@ -105,8 +104,6 @@ public class ExplanationSelect : MonoBehaviour
                     else
                     {
                         anim.enabled = true;
-                        Flashanim = ButtonFlash.GetComponent<Animator>();
-                        Flashanim.enabled = true;
                     }
 
                 }
