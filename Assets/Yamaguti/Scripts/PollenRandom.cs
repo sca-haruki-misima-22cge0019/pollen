@@ -14,8 +14,6 @@ public class PollenRandom : MonoBehaviour
     [SerializeField] float generateFrame;        // ê∂ê¨Ç∑ÇÈä‘äu
 
     GameObject bos;
-    GameObject fade;
-    FadeIn fadein;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +21,7 @@ public class PollenRandom : MonoBehaviour
         maxX = Mathf.Max(pos.position.x, pos2.position.x);
         minY = Mathf.Min(pos.position.y, pos2.position.y);
         maxY = Mathf.Max(pos.position.y, pos2.position.y);
+
     }
 
     // Update is called once per frame

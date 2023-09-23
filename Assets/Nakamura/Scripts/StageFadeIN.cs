@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StageFadeIN : MonoBehaviour
 {
-    public bool finish;
+    public bool finish = true;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -19,6 +19,6 @@ public class StageFadeIN : MonoBehaviour
 
     public void FadeFinish()
     {
-        finish = true;
+        finish = false;
     }
 }

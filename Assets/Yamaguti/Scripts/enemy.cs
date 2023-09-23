@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class enemy : MonoBehaviour
 {
@@ -17,12 +19,12 @@ public class enemy : MonoBehaviour
     public float curveLength = 2;   // カーブの最大距離
     float cycleRadian = 0;          // サインに渡す値
     float centerY;                  // Y座標の中心
-
     // Start is called before the first frame update
     void Start()
     {
         centerY = transform.position.y;
         target = GameObject.Find("target");
+
         //int test1 = LayerMask.NameToLayer("Enemy");
         //Physics.IgnoreLayerCollision(test1, test1);
     }
@@ -30,7 +32,7 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.timeScale !=0)
+        if(Time.timeScale !=0 )
         {
             Vector2 pos = transform.position;
             // 上下にカーブ
