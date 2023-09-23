@@ -55,6 +55,10 @@ public class FireBullet : MonoBehaviour
     private DrugCount drugCount;
     GameObject Nose;
     hit hp;
+
+    [SerializeField] float shottime = 10.0f;
+    public bool shot = false;
+
     //[SerializeField] float angle; // 角度
     //Vector3 velocity; // 移動量
     //bool boost = false;
@@ -76,7 +80,7 @@ public class FireBullet : MonoBehaviour
         if (Time.timeScale == 1 )//ポーズ画面が映っていないならば
         {
             // スペースキーが押されたかを判定
-            if (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.L) && hp.energy > 0)
+            if ((Input.GetKeyDown(KeyCode.K)  || Input.GetKeyDown(KeyCode.L)) && hp.energy > 0 && !shot)
             {
                 Shot.PlayOneShot(ShotSound);
                 if (Numberbullet == 1)
@@ -90,13 +94,28 @@ public class FireBullet : MonoBehaviour
                     // 弾を発射する
                     LauncherShot();
                 }
-               
+                Debug.Log("tama1");
+                nowtime = 0.0f;
+                shot = true;
+
+                
 
                 //if (Numberbullet >= 0)
                 //{
                 //  Numberbullet--;
                 //}
-                
+
+            }
+
+            if (shot)
+            {
+                Debug.Log("tama2");
+                nowtime += Time.deltaTime;
+                if (nowtime >= shottime)
+                {
+                    Debug.Log("tama3");
+                    shot = false;
+                }
             }
             //if (Input.GetKeyDown(KeyCode.R))
             //{
@@ -120,6 +139,7 @@ public class FireBullet : MonoBehaviour
                 nowtime += Time.deltaTime;
                 if (nowtime >= reloadtime)
                 {
+                    Debug.Log("tama4");
                     reload = false;
                 }
             }

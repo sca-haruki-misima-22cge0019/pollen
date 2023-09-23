@@ -3412,7 +3412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinAngle: -45
   MaxAngle: 45
-  rotationSpeed: 200
+  rotationSpeed: 250
 --- !u!114 &1415172185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3455,6 +3455,8 @@ MonoBehaviour:
   ShotSound: {fileID: 8300000, guid: b4c82ea93a848404ea5ddc12c6309315, type: 3}
   SuperShotSound: {fileID: 0}
   DrugTextCount: {fileID: 0}
+  shottime: 0.1
+  shot: 0
 --- !u!114 &1415172186
 MonoBehaviour:
   m_ObjectHideFlags: 0

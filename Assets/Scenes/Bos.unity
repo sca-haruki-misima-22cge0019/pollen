@@ -3202,6 +3202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 141186, guid: 53c22e1773be7f84aad8ed8b7b58fa6e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11486218, guid: 53c22e1773be7f84aad8ed8b7b58fa6e, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -3458,6 +3462,8 @@ MonoBehaviour:
   ShotSound: {fileID: 8300000, guid: b4c82ea93a848404ea5ddc12c6309315, type: 3}
   SuperShotSound: {fileID: 8300000, guid: 6e728bcd2e53d4647b18875d8ca732ca, type: 3}
   DrugTextCount: {fileID: 1858595076}
+  shottime: 1
+  shot: 0
 --- !u!114 &1302201517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3472,7 +3478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinAngle: -45
   MaxAngle: 45
-  rotationSpeed: 200
+  rotationSpeed: 250
 --- !u!212 &1302201518
 SpriteRenderer:
   m_ObjectHideFlags: 0
