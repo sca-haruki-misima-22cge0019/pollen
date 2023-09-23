@@ -58,7 +58,7 @@ public class FireBullet : MonoBehaviour
 
     [SerializeField] float shottime = 10.0f;
     public bool shot = false;
-
+    float nowshottime = 0.0f;
     //[SerializeField] float angle; // Šp“x
     //Vector3 velocity; // ˆÚ“®—Ê
     //bool boost = false;
@@ -95,7 +95,7 @@ public class FireBullet : MonoBehaviour
                     LauncherShot();
                 }
                 Debug.Log("tama1");
-                nowtime = 0.0f;
+                nowshottime = 0.0f;
                 shot = true;
 
                 
@@ -110,8 +110,8 @@ public class FireBullet : MonoBehaviour
             if (shot)
             {
                 Debug.Log("tama2");
-                nowtime += Time.deltaTime;
-                if (nowtime >= shottime)
+                nowshottime += Time.deltaTime;
+                if (nowshottime >= shottime)
                 {
                     Debug.Log("tama3");
                     shot = false;
