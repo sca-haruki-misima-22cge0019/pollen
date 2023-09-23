@@ -26,7 +26,7 @@ public class RotateLimit : MonoBehaviour
     void Update()
     {
         // 左右キーの入力を取得
-        float horizontal = Input.GetAxis("Vertical");
+        float vertical = Input.GetAxis("Vertical");
         // 現在のGameObjectのY軸方向の角度を取得
         float currentYAngle = transform.eulerAngles.z;
         // 現在の角度が180より大きい場合
@@ -36,10 +36,10 @@ public class RotateLimit : MonoBehaviour
             currentYAngle = currentYAngle - 360;
         }
         // (現在の角度が最小角度以上かつキー入力が0未満(左キー押下)) または (現在の角度が最大角度以下かつキー入力が0より大きい(右キー押下))の時
-        if ((currentYAngle >= MinAngle && horizontal < 0) || (currentYAngle <= MaxAngle && horizontal > 0))
+        if ((currentYAngle >= MinAngle && vertical < 0) || (currentYAngle <= MaxAngle && vertical > 0))
         {
             // Y軸を基準に回転させる
-            transform.Rotate(new Vector3(0, 0, horizontal * rotationSpeed * Time.deltaTime));
+            transform.Rotate(new Vector3(0, 0, vertical * rotationSpeed * Time.deltaTime));
         }
     }
 }
