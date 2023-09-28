@@ -66,13 +66,13 @@ public class PoseSelect : MonoBehaviour
         {
             Debug.Log("D");
 
-            if (Input.GetKeyUp(KeyCode.A))
+            if (Input.GetKeyUp(KeyCode.S))
             {
                 Buttonselect2[select2].GetComponent<Image>().sprite = Imageselect2[select2];
                 select2 = 0;
 
             }
-            if (Input.GetKeyUp(KeyCode.D))
+            if (Input.GetKeyUp(KeyCode.W))
             {
                 Buttonselect2[select2].GetComponent<Image>().sprite = Imageselect2[select2];
                 select2 = 1;

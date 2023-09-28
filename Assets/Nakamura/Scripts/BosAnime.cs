@@ -16,7 +16,7 @@ public class BosAnime : MonoBehaviour
     [SerializeField] private AudioSource bgm;
     [SerializeField]GameObject TimeCount;
     [SerializeField] Fade fade;
-
+    [SerializeField] GameObject blast;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +27,7 @@ public class BosAnime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        BossHp bosHp = GetComponent<BossHp>();
         if (end)
         {
             transform.position -=new Vector3(0,Time.deltaTime*speed);
@@ -36,7 +36,7 @@ public class BosAnime : MonoBehaviour
                 SceneManager.LoadScene("GameClearSceneFinal");
             }
         }
-        BossHp bosHp = GetComponent<BossHp>();
+        //BossHp bosHp = GetComponent<BossHp>();
         if (!bosHp.damage)
         {
             time += Time.deltaTime;
@@ -74,6 +74,10 @@ public class BosAnime : MonoBehaviour
         animator.SetBool("DamageBL", false);
     }
 
+    public void Outburst()
+    {
+        blast.SetActive(true);
+    }
     public void End()
     {
         fade.FadeIn(1.0f, () => print("フェードイン完了"));
