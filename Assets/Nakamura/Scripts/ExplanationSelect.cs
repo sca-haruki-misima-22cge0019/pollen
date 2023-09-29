@@ -16,8 +16,9 @@ public class ExplanationSelect : MonoBehaviour
     [SerializeField] GameObject sp;
     [SerializeField] Image en;
     [SerializeField] GameObject start;
+    [SerializeField] GameObject fadeout;
     Animator anim;
-    Animator Flashanim;
+    Animator FadeAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -95,10 +96,13 @@ public class ExplanationSelect : MonoBehaviour
             else
             {
                 anim = start.GetComponent<Animator>();
+                FadeAnim = fadeout.GetComponent<Animator>();
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
                     if (anim.enabled)
                     {
+                        //FadeAnim.enabled = true;
+                        //Invoke("Feed",1.1f);
                         SceneManager.LoadScene("Stage1");
                     }
                     else
@@ -111,5 +115,10 @@ public class ExplanationSelect : MonoBehaviour
         }
         
        
+    }
+
+    void Feed()
+    {
+        SceneManager.LoadScene("Stage1");
     }
 }
