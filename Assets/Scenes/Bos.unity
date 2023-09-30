@@ -14881,7 +14881,7 @@ MonoBehaviour:
   dieSound: {fileID: 8300000, guid: f266b30992208e041aadd86f32ef2fe5, type: 3}
   bgm: {fileID: 882397157}
   TimeCount: {fileID: 1453441476}
-  fade: {fileID: 0}
+  fade: {fileID: 2134871224}
   blast: {fileID: 306123055}
 --- !u!1 &8180478872289821245
 GameObject:
