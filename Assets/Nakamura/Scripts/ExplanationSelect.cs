@@ -101,9 +101,9 @@ public class ExplanationSelect : MonoBehaviour
                 {
                     if (anim.enabled)
                     {
-                        //FadeAnim.enabled = true;
-                        //Invoke("Feed",1.1f);
-                        SceneManager.LoadScene("Stage1");
+                        FadeAnim.enabled = true;
+                        Invoke("Feed",1.1f);
+                        //SceneManager.LoadScene("Stage1");
                     }
                     else
                     {

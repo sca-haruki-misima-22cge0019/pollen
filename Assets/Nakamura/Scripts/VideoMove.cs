@@ -3,28 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverScene : MonoBehaviour
+public class VideoMove : MonoBehaviour
 {
-    public bool des;
+    float time;
+    [SerializeField] float starttime;
     // Start is called before the first frame update
     void Start()
     {
-        des = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+        if (time >= starttime)
+        {
+            SceneManager.LoadScene("VideoScene");
+            time = 0.0f;
+        }
 
-    }
-
-    void End()
-    {
-        SceneManager.LoadScene("GameOverScene");
-    }
-
-    void Destroy()
-    {
-        des = true;
     }
 }
