@@ -31,10 +31,7 @@ public class BosAnime : MonoBehaviour
         if (end)
         {
             transform.position -=new Vector3(0,Time.deltaTime*speed);
-            if(transform.position.y <= -0.2811289f)
-            {
-                SceneManager.LoadScene("GameClearSceneFinal");
-            }
+            fade.FadeIn(1.0f, () => print("フェードイン完了"));
         }
         //BossHp bosHp = GetComponent<BossHp>();
         if (!bosHp.damage)
@@ -77,11 +74,15 @@ public class BosAnime : MonoBehaviour
     public void Outburst()
     {
         blast.SetActive(true);
+        end = true;
     }
     public void End()
     {
-        fade.FadeIn(1.0f, () => print("フェードイン完了"));
-        end = true;
+        if (transform.position.y <= -0.2811289f)
+        {
+            SceneManager.LoadScene("GameClearSceneFinal");
+        }
+        
     }
 
 }
