@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PollenDestroy : MonoBehaviour
 {
-    GameObject nose;
-    hit hp;
+    GameObject end;
+    GameOverScene scene;
     // Start is called before the first frame update
     void Start()
     {
-        nose = GameObject.Find("Nose");
-        hp = nose.GetComponent<hit>();
+        end = GameObject.Find("GameOver");
+        scene = end.GetComponent<GameOverScene>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -10 || hp.energy <=0)
+        if (transform.position.x < -10 || scene.des)
         {
             Debug.Log("sinderu");
             Destroy(gameObject);
