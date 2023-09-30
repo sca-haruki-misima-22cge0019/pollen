@@ -618,7 +618,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &369716665
 GameObject:
@@ -1686,7 +1686,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &673790154
 GameObject:
@@ -1716,7 +1716,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &678411047
 GameObject:
@@ -2085,11 +2085,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919405256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: 3.5, z: 21.161938}
+  m_LocalPosition: {x: 13, y: 1.5, z: 21.161938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &919521679
 GameObject:
@@ -2190,7 +2190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950911265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: -1.5, z: 21.161938}
+  m_LocalPosition: {x: 13, y: -3, z: 21.161938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2398,11 +2398,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115857132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: -3, z: 21.161938}
+  m_LocalPosition: {x: 13, y: -1.5, z: 21.161938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177416004
 GameObject:
@@ -2753,11 +2753,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyList:
-  - {fileID: 7043490982799478258, guid: d56bdca71df51f443a5e0bb133504f09, type: 3}
-  - {fileID: 3414190121282512270, guid: 4861f1bf8e8dc06449d99d3eaffc4f81, type: 3}
+  - {fileID: 1606759889503778390, guid: 8f5d339bb24ad4643be0ba5a6ec76cc3, type: 3}
   pos: {fileID: 950911266}
   pos2: {fileID: 1906944372}
-  generateFrame: 5
+  generateFrame: 1.5
 --- !u!4 &1461674223
 Transform:
   m_ObjectHideFlags: 0
@@ -2770,7 +2769,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489332530
 GameObject:
@@ -3680,10 +3679,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyList:
-  - {fileID: 1606759889503778390, guid: 8f5d339bb24ad4643be0ba5a6ec76cc3, type: 3}
+  - {fileID: 7043490982799478258, guid: d56bdca71df51f443a5e0bb133504f09, type: 3}
+  - {fileID: 3414190121282512270, guid: 4861f1bf8e8dc06449d99d3eaffc4f81, type: 3}
   pos: {fileID: 1115857133}
   pos2: {fileID: 919405257}
-  generateFrame: 1.5
+  generateFrame: 5
 --- !u!4 &1685761853
 Transform:
   m_ObjectHideFlags: 0
@@ -3696,7 +3696,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745784516
 GameObject:
@@ -4012,7 +4012,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1829248779
 GameObject:
@@ -4593,7 +4593,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906944371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: 1.5, z: 21.161938}
+  m_LocalPosition: {x: 13, y: 3.5, z: 21.161938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5261,6 +5261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1809935e6b7b70478749824af3e8dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  des: 0
 --- !u!95 &2070189603
 Animator:
   serializedVersion: 3
