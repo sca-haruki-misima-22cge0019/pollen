@@ -18,7 +18,7 @@ public class VideoFade : MonoBehaviour
     void Update()
     {
         nowtime+= Time.deltaTime;
-        if(nowtime >= StartTime)
+        if(nowtime >= StartTime || Input.GetKey(KeyCode.V))
         {
             this.gameObject.GetComponent<Animator>().enabled  = true;
         }
